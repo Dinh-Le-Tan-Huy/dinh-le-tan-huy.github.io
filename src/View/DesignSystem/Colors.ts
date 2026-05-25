@@ -14,6 +14,7 @@ const Colors = {
     navyBorder: 'rgba(26, 37, 64, 0.8)',
 
     // --- Text ---
+    text: "#0f0e0eff",
     textPrimary: '#e8edf5',
     textSecondary: '#8892a4',
     textMuted: '#4a5568',

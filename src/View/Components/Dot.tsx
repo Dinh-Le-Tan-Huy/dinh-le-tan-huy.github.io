@@ -59,7 +59,7 @@ function computePositions(state: "open" | "hovered" | "default", C: number): Dot
     // Biến thành 1 dấu chấm (.) ở giữa thay vì dấu X
     const dotSize = 6; // Kích thước của dấu chấm khi mở (bạn có thể tăng giảm tùy ý)
 
-    return squarePositions.map((pos, i) => {
+    return squarePositions.map((_, i) => {
       // Giữ lại chấm số 4 (chính giữa) và cho nó hiện ra
       if (i === 4) {
         return {
@@ -83,7 +83,9 @@ export function DotGrid({ hovered, open }: { hovered: boolean; open: boolean }) 
   const state = open ? "open" : hovered ? "hovered" : "default";
   const positions = computePositions(state, C);
   return (
-    <motion.div style={{ position: "relative", flexShrink: 0 }} animate={{ width: C, height: C }} initial={{ width: 24, height: 24 }} transition={{ type: "spring", stiffness: 400, damping: 26 }}>
+    <motion.div style={{ position: "relative", flexShrink: 0 }} animate={{ width: C, height: C }}
+      initial={{ width: 24, height: 24 }}
+      transition={{ type: "spring", stiffness: 400, damping: 26 }}>
       {positions.map((pos, i) => (
         <motion.div key={i} style={{ position: "absolute", borderRadius: "150px" }}
           animate={{
@@ -92,7 +94,7 @@ export function DotGrid({ hovered, open }: { hovered: boolean; open: boolean }) 
             width: pos.w,
             height: pos.h,
             rotate: pos.rotate || 0,
-            backgroundColor: open ? "#1e3a5f" : "rgb(117, 132, 214)", // Đổi màu xanh đậm khi mở
+            backgroundColor: "#ffffff",
             opacity: pos.w === 0 ? 0 : 1
           }}
           initial={false} transition={{ type: "spring", stiffness: 420, damping: 26, delay: i * 0.01 }} />

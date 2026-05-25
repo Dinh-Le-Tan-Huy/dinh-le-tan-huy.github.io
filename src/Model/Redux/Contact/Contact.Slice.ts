@@ -1,6 +1,5 @@
-import { createAsyncThunk, createSlice, type PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { ContactState } from "./Contact.Type";
-import emailjs from '@emailjs/browser';
 import { sendContactEmail } from "./Contact.Thunk";
 
 const initialState: ContactState = {

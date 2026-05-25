@@ -1,4 +1,10 @@
-export const Headerstyle: Record<string, React.CSSProperties> = {
+import React from 'react';
+import { Colors } from '../../DesignSystem/Colors';
+import { radius } from '../../DesignSystem/Radius';
+import { spacing } from '../../DesignSystem/Spacing';
+import { typography } from '../../DesignSystem/Typography';
+
+export const Headerstyle = {
     HeaderWrapper: {
         position: "fixed",
         top: "clamp(10px, 2vw, 20px)",
@@ -6,61 +12,107 @@ export const Headerstyle: Record<string, React.CSSProperties> = {
         right: 0,
         margin: "0 auto",
         width: "fit-content",
-        maxWidth: "98vw", // increased slightly to give more room
+        maxWidth: "98vw",
         display: "flex",
         alignItems: "center",
-        padding: "0 clamp(5px, 2vw, 20px)", // reduced min padding
+        padding: `0 ${spacing.md}`,
         height: "clamp(55px, 8vw, 70px)",
-        backgroundColor: "#1c498a",
-        fontFamily: "sans-serif",
-        borderRadius: "40px",
-        gap: "clamp(5px, 2vw, 20px)", // reduced min gap
+        backgroundColor: "rgba(11, 38, 102, 0.75)",
+        backdropFilter: "blur(8px)",
+        WebkitBackdropFilter: "blur(8px)",
+        border: `1px solid ${Colors.glassBorder}`,
+        borderRadius: radius.circle,
+        gap: spacing.md,
         zIndex: 9999,
-        overflow: "hidden", 
-        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.15)",
-    },
+        overflow: "hidden",
+        boxShadow: "0 10px 30px rgba(0, 0, 0, 0.25)",
+    } as React.CSSProperties,
+
+    LogoLink: {
+        textDecoration: 'none',
+        display: 'flex',
+        alignItems: 'center',
+    } as React.CSSProperties,
+
+    LogoContainer: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        marginRight: spacing.sm,
+        flexShrink: 0,
+        gap: spacing.xs,
+    } as React.CSSProperties,
+
+    LogoImg: {
+        height: "clamp(28px, 6vw, 42px)",
+        width: "auto",
+        objectFit: "contain",
+    } as React.CSSProperties,
+
     ContainerText: {
         flex: 1,
         display: "flex",
         justifyContent: "center",
-        marginRight: "clamp(5px, 2vw, 30px)", // reduced min margin
-    },
+        marginRight: spacing.sm,
+    } as React.CSSProperties,
+
+    NavListWrapper: {
+        display: "flex",
+        gap: spacing.lg,
+        whiteSpace: "nowrap",
+    } as React.CSSProperties,
 
     ContainerButton: {
         display: "flex",
         justifyContent: "flex-end",
         alignItems: "center",
-        gap: "clamp(5px, 2vw, 30px)", // reduced min gap
-        flexShrink: 0, // don't shrink the buttons container
-    },
+        gap: spacing.sm,
+        flexShrink: 0,
+    } as React.CSSProperties,
+
     ButtonDot: {
-        borderRadius: "50%",
+        borderRadius: radius.circle,
         border: "none",
         cursor: "pointer",
-        padding: "clamp(4px, 1vw, 10px)",
+        padding: spacing.sm,
+        backgroundColor: "rgba(163, 163, 165, 0.23)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
         flexShrink: 0,
-    },
+        transition: "background-color 0.2s ease",
+    } as React.CSSProperties,
 
     NavLink: {
-        color: "#d1e2fa",
-        fontSize: "clamp(11px, 1.5vw, 15px)", // reduced min font size
-        fontWeight: "400",
+        color: Colors.textSecondary,
+        ...typography.body2,
         cursor: "pointer",
-        transition: "color 0.3s",
-    },
+        transition: "color 0.2s ease",
+        textDecoration: "none",
+    } as React.CSSProperties,
 
     ButtonContact: {
-        borderRadius: "8px",
+        borderRadius: radius.button,
         border: "none",
         cursor: "pointer",
-        padding: "clamp(6px, 1.5vw, 10px) clamp(8px, 2vw, 24px)", // reduced min padding
-        backgroundColor: "rgb(28, 219, 230)",
-        color: "#0a254a",
-        fontWeight: "bold",
-        fontSize: "clamp(11px, 1.5vw, 15px)", // reduced min font size
-        boxShadow: "0 4px 15px rgba(28, 219, 230, 0.3)",
+        padding: "8px 20px",
+        backgroundColor: Colors.cyan,
+        color: Colors.navyDark,
+        ...typography.label2,
+        boxShadow: `0 4px 15px ${Colors.cyanDim}`,
         transition: "all 0.3s ease",
         whiteSpace: "nowrap",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
         flexShrink: 0,
-    },
+    } as React.CSSProperties,
+
+    ButtonContactLink: {
+        textDecoration: "none",
+        color: "inherit",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+    } as React.CSSProperties,
 };

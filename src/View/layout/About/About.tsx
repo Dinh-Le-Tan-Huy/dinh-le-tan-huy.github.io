@@ -1,43 +1,13 @@
-import { useState, useEffect } from "react"
-import { Link, useSearchParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import CardInfo from "../../Components/CardInfo/CardInfo"
 import CardItem from "../../Components/CardItem/CardItem"
-import { skillsData, projectsData, educationData } from "./dataAbout"
+import { skillsData, projectsData, educationData, awardsData } from "./dataAbout"
 import { styles, sectionBadge, sectionTitle, sectionDivider } from "./AboutStyle"
 import { Colors } from "../../DesignSystem/Colors"
-
-
+import { useAbout } from "../../../ViewModel/useAbout"
 
 const About = () => {
-    const [btnHover, setBtnHover] = useState(false)
-    const [searchParams] = useSearchParams()
-    const [highlightedId, setHighlightedId] = useState<string | null>(null)
-
-    useEffect(() => {
-        const project = searchParams.get('project');
-        if (project) {
-            const targetId = decodeURIComponent(project).trim();
-            setHighlightedId(targetId);
-
-            // Wait slightly for DOM to render completely
-            const timer = setTimeout(() => {
-                const element = document.getElementById(targetId);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            }, 200);
-
-            // Clear highlight after 3 seconds
-            const clearTimer = setTimeout(() => {
-                setHighlightedId(null);
-            }, 3000);
-
-            return () => {
-                clearTimeout(timer);
-                clearTimeout(clearTimer);
-            };
-        }
-    }, [searchParams]);
+    const { highlightedId, btnHover, setBtnHover } = useAbout();
 
     return (
         <section id="about" style={styles.mainSection}>
@@ -248,6 +218,31 @@ const About = () => {
                                     </div>
                                 </div>
                             </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Awards section */}
+                <div style={styles.sectionWrapper}>
+                    <div style={sectionBadge}>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                        Awards
+                    </div>
+                    <h2 style={sectionTitle}>Honors & Recognition</h2>
+                    <div style={sectionDivider} />
+
+                    <div style={styles.gridContainer2Col}>
+                        {awardsData.map((item) => (
+                            <CardItem
+                                key={item.id}
+                                title={item.title}
+                                des={item.des}
+                                responsibilities={item.responsibilities}
+                                variant="note"
+                                containerStyle={{}}
+                            />
                         ))}
                     </div>
                 </div>

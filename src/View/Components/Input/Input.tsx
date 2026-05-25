@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, type ChangeEvent, type CSSProperties } from 'react'
 import { InputStyle } from './InputStyle';
+import { Colors } from '../../DesignSystem/Colors';
 
 interface Inputprops {
   title?: string;
@@ -14,14 +15,19 @@ interface Inputprops {
   value?: string;
   onChangeText?: (value: string) => void;
   showError?: boolean;
+  type?: React.HTMLInputTypeAttribute;
+  errorMessage?: string;
 }
 
 
 
-const Input = ({ title, titleStyle, placeholder, style, maxLength = 200, statusCountText, multiline = false, wrapperStyle, value: externalValue, onChangeText, showError }: Inputprops) => {
+const Input = ({ title, titleStyle, placeholder, style, maxLength = 200, statusCountText,
+  multiline = false, wrapperStyle, value: externalValue, onChangeText,
+  showError, type = "text", errorMessage }: Inputprops) => {
   const [countText, setCountText] = useState<string>(externalValue ?? "");
   const [isFocused, setIsFocused] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // Auto-resize textarea theo nội dung
   useEffect(() => {
@@ -48,27 +54,22 @@ const Input = ({ title, titleStyle, placeholder, style, maxLength = 200, statusC
   // Xác định màu sắc của status dựa trên độ dài
   const isLimit = countText.length === maxLength;
 
+  const hasError = showError || !!errorMessage;
   const borderBottomColor = isLimit
-    ? "red"
-    : showError
-      ? "#e74c3c"
+    ? Colors.coral
+    : hasError
+      ? Colors.coral
       : isFocused
-        ? "var(--accent)"
-        : "var(--border)";
+        ? Colors.cyan
+        : Colors.navyLight;
 
   return (
-    <div style={{ ...wrapperStyle, width: "100%", marginBottom: "16px" }}>
+    <div style={{ ...InputStyle.wrapper, ...wrapperStyle }}>
       {title && (
         <label
           htmlFor={title}
           style={{
-            display: "block",
-            textAlign: "left",
-            fontSize: "13px",
-            color: "var(--text-h)",
-            marginBottom: "6px",
-            fontWeight: 500,
-            opacity: 0.85,
+            ...InputStyle.label,
             ...titleStyle
           }}>
           {title}
@@ -96,8 +97,9 @@ const Input = ({ title, titleStyle, placeholder, style, maxLength = 200, statusC
         />
       ) : (
         <input
+          ref={inputRef}
           id={title}
-          type="text"
+          type={type}
           placeholder={placeholder}
           onChange={handleChange}
           onFocus={() => setIsFocused(true)}
@@ -110,13 +112,16 @@ const Input = ({ title, titleStyle, placeholder, style, maxLength = 200, statusC
           }}
         />
       )}
-
+      {hasError && (
+        <span style={{ color: Colors.coral, fontSize: '12px', marginTop: '4px', display: 'block' }}>
+          {errorMessage}
+        </span>
+      )}
       {statusCountText && maxLength && (
         <div
           style={{
             ...InputStyle.statusStyle,
-            color: isLimit ? "red" : "var(--text)",
-            fontWeight: "normal",
+            color: isLimit ? Colors.coral : Colors.textMuted,
           }}>
           {formatNumber(countText.length)}/{formatNumber(maxLength)}
         </div>

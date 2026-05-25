@@ -2,7 +2,7 @@
 
 > A modern, high-performance personal portfolio built with **React 19**, **TypeScript**, and **Vite 8** — designed to showcase professional experience, technical skills, and project history to HR teams and technical interviewers.
 
-**Live:** [huy-quan-dui.github.io/Portfolio](https://huy-quan-dui.github.io/Portfolio) &nbsp;|&nbsp; **GitHub:** [github.com/huy-quan-dui/Portfolio](https://github.com/huy-quan-dui/Portfolio)
+**Live:** [Dinh-Le-Tan-Huy.github.io/Portfolio](https://Dinh-Le-Tan-Huy.github.io/Portfolio) &nbsp;|&nbsp; **GitHub:** [https://github.com/Dinh-Le-Tan-HuyPortfolio](https://github.com/Dinh-Le-Tan-Huy/Portfolio)
 
 ---
 
@@ -12,7 +12,7 @@
 
 Experienced in building scalable end-to-end web and mobile applications within the JavaScript/TypeScript ecosystem. Strong background in React Native, Next.js, Node.js, RESTful APIs, secure authentication flows, and real-time systems. Comfortable working independently or leading a small freelance team from UI/UX design through to production deployment.
 
-- 📧 contact@huyle.dev
+- 📧 t.huy030826@gmail.com
 - 📍 Ho Chi Minh City, Vietnam
 - 🔗 [LinkedIn](https://www.linkedin.com/in/tan-huy-673408342/)
 - 🏆 TOEIC 600 | Scholarship Recipient | Top 5 Graduate Project
@@ -55,6 +55,21 @@ src/
     └── useHeader.ts
 ```
 
+### 🧱 MVVM Architecture Overview
+
+- **Model Layer (`src/Model`)**: Represents the data structures, types, and business rules.
+  - **Redux Slice (`Contact.Slice.ts`)** manages the form state (email, name, message, network status, errors).
+  - **Async Thunk (`Contact.Thunk.ts`)** interacts with external resources, sending emails via the EmailJS API. It accepts form data directly as input parameters to remain decoupled from store implementation.
+  
+- **ViewModel Layer (`src/ViewModel`)**: Acts as the state compiler and business logic handler.
+  - Custom React Hooks (such as `useContact.ts`) wrap Redux dispatchers and state selectors.
+  - **Input Validation**: Uses **Zod Schema validation** to enforce field rules (required inputs, name lengths, email address formats).
+  - Exposes derived validation states (`isFormValid`, `errors`), UI-level flags (`submitted`), and dispatch handler wrappers (`handleChangeField`, `handleSend`) to the View.
+
+- **View Layer (`src/View`)**: Renders components and layouts declaratively.
+  - Layouts (like `Contact.tsx`) bind form fields and click listeners directly to VM-exposed states.
+  - Style configurations (e.g. `InputStyle.ts`, `ContactStyle.ts`) are separated from markup files and styled strictly using the global **Design System** variables (Colors, Spacing, Typography, Radius).
+
 ---
 
 ## ⚙️ Tech Stack
@@ -64,6 +79,7 @@ src/
 | **Framework** | React 19, TypeScript |
 | **Bundler** | Vite 8 |
 | **State Management** | Redux Toolkit + React Redux |
+| **Validation** | Zod (`zod`) |
 | **Routing** | React Router DOM v7 |
 | **Animations** | Framer Motion |
 | **Email Service** | EmailJS (`@emailjs/browser`) |
@@ -112,7 +128,7 @@ src/
 
 ```bash
 # Clone the repository
-git clone https://github.com/huy-quan-dui/Portfolio.git
+git clone https://github.com/Dinh-Le-Tan-Huy/Portfolio.git
 cd Portfolio
 
 # Install dependencies
@@ -152,6 +168,7 @@ These are used by `Contact.Thunk.ts` to send emails client-side via EmailJS.
 | Decision | Rationale |
 |---|---|
 | **MVVM pattern** | Clean separation of UI logic, business logic, and data — maps directly to team-based workflows |
+| **Zod Schema Validation** | Safe, declarative, and robust schema validation for inputs and form submissions |
 | **Inline CSS-in-JS with Design System tokens** | Full type safety, co-located styles, no CSS class name conflicts, no Tailwind dependency |
 | **Redux Toolkit for contact form** | Demonstrates state management skills beyond `useState`; scalable for future form states |
 | **CSS Grid + Flexbox for layout** | Avoids framework lock-in; shows strong fundamental CSS knowledge |
@@ -184,7 +201,7 @@ Animated sticky header using **Framer Motion layout animations**. The navigation
 
 Feel free to reach out for collaboration, freelance work, or job opportunities:
 
-- **Email:** contact@huyle.dev
+- **Email:** t.huy030826@gmail.com
 - **LinkedIn:** [linkedin.com/in/tan-huy-673408342](https://www.linkedin.com/in/tan-huy-673408342/)
 
 ---

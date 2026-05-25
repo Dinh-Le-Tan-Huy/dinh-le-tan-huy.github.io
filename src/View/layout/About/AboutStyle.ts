@@ -120,6 +120,13 @@ export const styles = {
         width: '100%',
     } as React.CSSProperties,
 
+    gridContainer2Col: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+        gap: '20px',
+        width: '100%',
+    } as React.CSSProperties,
+
     listContainer: {
         display: 'flex',
         flexDirection: 'column',

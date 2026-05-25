@@ -1,14 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import type { ContactState } from "./Contact.Type";
 import emailjs from '@emailjs/browser';
 import { ENV } from "../../env";
 
 export const sendContactEmail = createAsyncThunk(
     "contact/sendContactEmail",
-    async (_, { getState, rejectWithValue }) => {
+    async (contactData: { name: string; email: string; message: string }, { rejectWithValue }) => {
         try {
-            const state = getState() as { contact: ContactState };
-            const { email, name, message } = state.contact;
+            const { email, name, message } = contactData;
             const templateParams = {
                 from_name: name,
                 from_email: email,
@@ -36,8 +34,8 @@ export const sendContactEmail = createAsyncThunk(
                 }
             }
             return res.status;
-        } catch (error) {
-            return rejectWithValue(error.text || "Có lỗi xảy ra khi gửi email");
+        } catch (error: any) {
+            return rejectWithValue(error?.text || "Có lỗi xảy ra khi gửi email");
         }
     }
 )

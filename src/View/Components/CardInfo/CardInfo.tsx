@@ -1,6 +1,14 @@
-import { Colors } from '../../DesignSystem/Colors';
+import { CardInfoStyle } from './CardInfoStyle';
 
-const educationData = [
+interface EducationItem {
+    id: number;
+    school: string;
+    degree: string;
+    year: string;
+    icon: string;
+}
+
+const educationData: EducationItem[] = [
     {
         id: 1,
         school: "University of Information Technology – UIT",
@@ -26,84 +34,35 @@ const educationData = [
 
 const EducationTimeline = () => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0', width: '100%' }}>
-            {educationData.map((item, idx) => (
-                <div key={item.id} style={{ display: 'flex', gap: '16px', position: 'relative' }}>
+        <div style={CardInfoStyle.wrapper}>
+            {educationData.map((item: EducationItem, idx: number) => (
+                <div key={item.id} style={CardInfoStyle.timelineItem}>
                     {/* Timeline column */}
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '32px', flexShrink: 0 }}>
+                    <div style={CardInfoStyle.timelineCol}>
                         {/* Dot */}
-                        <div style={{
-                            width: '12px',
-                            height: '12px',
-                            borderRadius: '50%',
-                            backgroundColor: Colors.cyan,
-                            boxShadow: `0 0 10px ${Colors.cyanGlow}`,
-                            marginTop: '18px',
-                            flexShrink: 0,
-                            zIndex: 1,
-                        }} />
+                        <div style={CardInfoStyle.dot} />
                         {/* Line */}
                         {idx < educationData.length - 1 && (
-                            <div style={{
-                                width: '1px',
-                                flex: 1,
-                                background: `linear-gradient(to bottom, ${Colors.cyanBorder}, transparent)`,
-                                marginTop: '6px',
-                            }} />
+                            <div style={CardInfoStyle.line} />
                         )}
                     </div>
 
                     {/* Content */}
                     <div style={{
-                        flex: 1,
+                        ...CardInfoStyle.contentWrapper,
                         paddingBottom: idx < educationData.length - 1 ? '32px' : '0',
                     }}>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            gap: '6px',
-                            padding: '14px 18px',
-                            borderRadius: '12px',
-                            background: Colors.glassSurface,
-                            border: `1px solid ${Colors.glassBorder}`,
-                            transition: 'border-color 0.3s ease',
-                        }}>
+                        <div style={CardInfoStyle.card}>
                             {/* Year badge */}
-                            <span style={{
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: '6px',
-                                padding: '3px 10px',
-                                backgroundColor: Colors.cyanDim,
-                                border: `1px solid ${Colors.cyanBorder}`,
-                                borderRadius: '99px',
-                                fontSize: '11px',
-                                fontWeight: 700,
-                                color: Colors.cyan,
-                                letterSpacing: '0.06em',
-                                width: 'fit-content',
-                                marginBottom: '4px',
-                            }}>
+                            <span style={CardInfoStyle.yearBadge}>
                                 <span>{item.icon}</span>
                                 {item.year}
                             </span>
 
-                            <h3 style={{
-                                fontSize: 'clamp(14px, 1.8vw, 16px)',
-                                fontWeight: 700,
-                                margin: 0,
-                                color: Colors.textPrimary,
-                                fontFamily: "'Inter', sans-serif",
-                            }}>
+                            <h3 style={CardInfoStyle.schoolTitle}>
                                 {item.school}
                             </h3>
-                            <p style={{
-                                color: Colors.textSecondary,
-                                margin: 0,
-                                fontSize: '13px',
-                                fontFamily: "'Inter', sans-serif",
-                                lineHeight: 1.5,
-                            }}>
+                            <p style={CardInfoStyle.degreeText}>
                                 {item.degree}
                             </p>
                         </div>

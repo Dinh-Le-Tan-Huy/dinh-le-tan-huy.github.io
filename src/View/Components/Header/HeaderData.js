@@ -8,12 +8,7 @@ export const HeaderNav = [
         path: "/about",
     },
     {
-        name: "Portfolio",
-        path: "/portfolio",
-    },
-
-    {
         name: "FAQ",
         path: "/#FAQ",
     },
-]
+];

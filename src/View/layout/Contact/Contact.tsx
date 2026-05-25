@@ -42,7 +42,7 @@ const EmailLink = ({ email }: { email: string }) => {
 
 const Contact = () => {
     const {
-        email, name, message, isLoading, submitted, isFormValid,
+        email, name, message, isLoading, submitted, isFormValid, errors,
         handleChangeField, handleSend
     } = useContact();
 
@@ -88,7 +88,7 @@ const Contact = () => {
                     <div style={ContactStyle.infoList}>
                         <div style={ContactStyle.infoItem}>
                             <h3 style={ContactStyle.infoLabel}>Email</h3>
-                            <EmailLink email="contact@huyle.dev" />
+                            <EmailLink email="t.huy030826@gmail.com" />
                         </div>
                         <div style={ContactStyle.infoItem}>
                             <h3 style={ContactStyle.infoLabel}>Location</h3>
@@ -115,11 +115,8 @@ const Contact = () => {
                     titleStyle={ContactStyle.inputTitle}
                     value={name}
                     onChangeText={(val) => handleChangeField("name", val)}
-                    showError={submitted && !name.trim()}
+                    errorMessage={submitted ? errors.name : undefined}
                 />
-                {submitted && !name.trim() && (
-                    <span style={ContactStyle.errorText}>Please enter your name</span>
-                )}
 
                 <Input
                     title="Email*"
@@ -127,11 +124,8 @@ const Contact = () => {
                     titleStyle={ContactStyle.inputTitle}
                     value={email}
                     onChangeText={(val) => handleChangeField("email", val)}
-                    showError={submitted && !email.trim()}
+                    errorMessage={submitted ? errors.email : undefined}
                 />
-                {submitted && !email.trim() && (
-                    <span style={ContactStyle.errorText}>Please enter your email address</span>
-                )}
 
                 <Input
                     title="Message"
@@ -142,6 +136,7 @@ const Contact = () => {
                     titleStyle={ContactStyle.inputTitle}
                     value={message}
                     onChangeText={(val) => handleChangeField("message", val)}
+                    errorMessage={submitted ? errors.message : undefined}
                 />
 
                 <button
