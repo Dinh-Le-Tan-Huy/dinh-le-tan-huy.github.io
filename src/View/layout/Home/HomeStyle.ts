@@ -6,6 +6,9 @@ export const sectionWrapper: CSSProperties = {
     width: '100%',
     padding: '0 clamp(16px, 5vw, 80px)',
     marginBottom: '100px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
 };
 
 // ─── Reusable section header (pill badge + title) ────────────────────────────
@@ -41,6 +44,7 @@ export const sectionDivider: CSSProperties = {
     background: `linear-gradient(90deg, ${Colors.cyan}, transparent)`,
     marginTop: '12px',
     marginBottom: '40px',
+    alignSelf: 'flex-start',
 };
 
 // ─── Main page styles ─────────────────────────────────────────────────────────
@@ -153,16 +157,17 @@ export const styles = {
     } as CSSProperties,
 
     skillsGridMobile: {
-        display: 'grid',
-        gridTemplateColumns: '1fr',
+        display: 'flex',
+        flexDirection: 'column' as const,
+        alignItems: 'center',
         gap: '16px',
         width: '100%',
     } as CSSProperties,
 
     // ── Legacy skill grids (kept for backward compat with Home.tsx) ───────────
     skillsGridDesktop: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+        display: 'flex',
+        flexWrap: 'wrap' as const,
         justifyContent: 'center',
         gap: '20px',
         width: '100%',
@@ -183,9 +188,6 @@ export const styles = {
     faqSection: {
         ...sectionWrapper,
         paddingBottom: '80px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
     } as CSSProperties,
 
     faqContainer: {
