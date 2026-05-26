@@ -3,9 +3,8 @@ name: Deploy Vite React App to GitHub Pages
 on:
   push:
     branches:
-      - main # Tự động chạy mỗi khi push code vào nhánh main
+      - main
 
-# Cấp quyền cho robot GitHub Actions được ghi dữ liệu lên GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -29,16 +28,13 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name: Cấu hình GitHub Pages (lấy base URL trước khi build)
-        uses: actions/configure-pages@v4
-
-      - name: Cài đặt thư viện (Dependencies)
+      - name: Cài đặt thư viện
         run: npm ci
 
-      - name: Biên dịch dự án (Build)
+      - name: Biên dịch dự án
         run: npm run build
 
-      - name: Gom thư mục dist để chuẩn bị deploy
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
@@ -51,6 +47,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Đẩy lên GitHub Pages live công khai
+      - name: Deploy lên GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4
