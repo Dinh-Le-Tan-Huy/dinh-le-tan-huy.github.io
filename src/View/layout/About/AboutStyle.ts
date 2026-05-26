@@ -1,7 +1,8 @@
+import type { CSSProperties } from 'react'
 import { Colors } from "../../DesignSystem/Colors"
 
 
-export const sectionBadge: React.CSSProperties = {
+export const sectionBadge: CSSProperties = {
     display: 'inline-flex',
     alignItems: 'center',
     gap: '8px',
@@ -18,7 +19,7 @@ export const sectionBadge: React.CSSProperties = {
     width: 'fit-content',
 }
 
-export const sectionTitle: React.CSSProperties = {
+export const sectionTitle: CSSProperties = {
     fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
     fontWeight: 700,
     color: Colors.textPrimary,
@@ -27,7 +28,7 @@ export const sectionTitle: React.CSSProperties = {
     lineHeight: 1.2,
 }
 
-export const sectionDivider: React.CSSProperties = {
+export const sectionDivider: CSSProperties = {
     width: '48px',
     height: '3px',
     borderRadius: '4px',
@@ -45,7 +46,7 @@ export const styles = {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     contentContainer: {
         width: '100%',
@@ -54,7 +55,7 @@ export const styles = {
         flexDirection: 'column',
         gap: '64px',
         paddingBottom: '80px',
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     headerContainer: {
         padding: 'clamp(40px, 8vw, 80px) 0',
@@ -65,7 +66,7 @@ export const styles = {
         gap: '20px',
         borderBottom: `1px solid ${Colors.glassBorder}`,
         background: `radial-gradient(ellipse 60% 40% at 50% 10%, rgba(0,216,255,0.05) 0%, transparent 80%)`,
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     headerTitle: {
         fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
@@ -74,12 +75,12 @@ export const styles = {
         letterSpacing: '-0.03em',
         margin: 0,
         color: Colors.textPrimary,
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     headerSpan: {
         color: Colors.cyan,
         textShadow: `0 0 30px ${Colors.cyanGlow}`,
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     headerText: {
         fontSize: 'clamp(0.95rem, 1.8vw, 1.1rem)',
@@ -87,7 +88,7 @@ export const styles = {
         maxWidth: '760px',
         color: Colors.textSecondary,
         margin: '0 auto',
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     contactBtn: {
         display: 'inline-flex',
@@ -104,33 +105,33 @@ export const styles = {
         boxShadow: `0 4px 20px ${Colors.cyanGlow}`,
         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         textDecoration: 'none',
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     sectionWrapper: {
         width: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     gridContainer: {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
         gap: '20px',
         width: '100%',
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     gridContainer2Col: {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
         gap: '20px',
         width: '100%',
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     listContainer: {
         display: 'flex',
         flexDirection: 'column',
         gap: '20px',
         width: '100%',
-    } as React.CSSProperties,
+    } as CSSProperties,
 }

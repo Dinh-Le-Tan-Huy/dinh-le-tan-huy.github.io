@@ -1,4 +1,4 @@
-import React from 'react';
+import type { CSSProperties } from 'react';
 import { Colors } from '../../DesignSystem/Colors';
 import { radius } from '../../DesignSystem/Radius';
 import { spacing } from '../../DesignSystem/Spacing';
@@ -26,13 +26,13 @@ export const Headerstyle = {
         zIndex: 9999,
         overflow: "hidden",
         boxShadow: "0 10px 30px rgba(0, 0, 0, 0.25)",
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     LogoLink: {
         textDecoration: 'none',
         display: 'flex',
         alignItems: 'center',
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     LogoContainer: {
         display: 'flex',
@@ -41,26 +41,26 @@ export const Headerstyle = {
         marginRight: spacing.sm,
         flexShrink: 0,
         gap: spacing.xs,
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     LogoImg: {
         height: "clamp(28px, 6vw, 42px)",
         width: "auto",
         objectFit: "contain",
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     ContainerText: {
         flex: 1,
         display: "flex",
         justifyContent: "center",
         marginRight: spacing.sm,
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     NavListWrapper: {
         display: "flex",
         gap: spacing.lg,
         whiteSpace: "nowrap",
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     ContainerButton: {
         display: "flex",
@@ -68,7 +68,7 @@ export const Headerstyle = {
         alignItems: "center",
         gap: spacing.sm,
         flexShrink: 0,
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     ButtonDot: {
         borderRadius: radius.circle,
@@ -81,7 +81,7 @@ export const Headerstyle = {
         justifyContent: "center",
         flexShrink: 0,
         transition: "background-color 0.2s ease",
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     NavLink: {
         color: Colors.textSecondary,
@@ -89,7 +89,7 @@ export const Headerstyle = {
         cursor: "pointer",
         transition: "color 0.2s ease",
         textDecoration: "none",
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     ButtonContact: {
         borderRadius: radius.button,
@@ -106,7 +106,7 @@ export const Headerstyle = {
         alignItems: "center",
         justifyContent: "center",
         flexShrink: 0,
-    } as React.CSSProperties,
+    } as CSSProperties,
 
     ButtonContactLink: {
         textDecoration: "none",
@@ -114,5 +114,5 @@ export const Headerstyle = {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-    } as React.CSSProperties,
+    } as CSSProperties,
 };

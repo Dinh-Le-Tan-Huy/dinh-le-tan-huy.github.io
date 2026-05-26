@@ -1,5 +1,5 @@
 // Bỏ import TextStyle của react-native
-import React from 'react';
+import type { CSSProperties } from 'react';
 
 // Chuyển đổi px sang rem (giả sử 16px = 1rem)
 const sizes = {
@@ -78,4 +78,4 @@ export const typography = {
         lineHeight: '1rem', // ~16px
         fontWeight: 500,
     },
-} satisfies Record<string, React.CSSProperties>;
+} satisfies Record<string, CSSProperties>;

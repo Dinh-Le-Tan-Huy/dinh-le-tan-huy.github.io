@@ -1,4 +1,4 @@
-import React, { type CSSProperties } from 'react';
+import { type CSSProperties } from 'react';
 import { styles } from './CardItemStyle';
 
 interface CardItemProps {
@@ -99,8 +99,8 @@ const CardItem = ({ title, des, time, responsibilities, variant = 'default', con
 
             <div style={styles.rightColumn}>
                 {responsibilities.map((item, index) => (
-                    <div key={index} style={styles.responsibilityItem as React.CSSProperties}>
-                        <span style={styles.responsibilityDot as React.CSSProperties} />
+                    <div key={index} style={styles.responsibilityItem as CSSProperties}>
+                        <span style={styles.responsibilityDot as CSSProperties} />
                         <span>{item}</span>
                     </div>
                 ))}
