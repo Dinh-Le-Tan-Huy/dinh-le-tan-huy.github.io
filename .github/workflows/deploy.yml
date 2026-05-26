@@ -33,6 +33,11 @@ jobs:
 
       - name: Biên dịch dự án
         run: npm run build
+        env:
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+          VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -49,4 +54,4 @@ jobs:
     steps:
       - name: Deploy lên GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4
