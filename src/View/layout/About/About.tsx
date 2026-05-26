@@ -66,7 +66,7 @@ const About = () => {
                     <div style={sectionDivider} />
 
                     <div style={styles.gridContainer}>
-                        {skillsData.map((item) => (
+                        {skillsData.map((item: any) => (
                             <CardItem
                                 key={item.id}
                                 title={item.title}
@@ -91,7 +91,7 @@ const About = () => {
                     <div style={sectionDivider} />
 
                     <div style={styles.listContainer}>
-                        {projectsData.map((item) => {
+                        {projectsData.map((item: any) => {
                             const trimmedTitle = item.title.trim();
                             const isSelected = highlightedId === trimmedTitle;
                             return (
@@ -132,7 +132,7 @@ const About = () => {
                     <div style={sectionDivider} />
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0', width: '100%' }}>
-                        {educationData.map((item, idx) => (
+                        {educationData.map((item: any, idx: number) => (
                             <div key={item.id} style={{ display: 'flex', gap: '16px', position: 'relative' }}>
                                 {/* Timeline column */}
                                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '32px', flexShrink: 0 }}>
@@ -211,7 +211,7 @@ const About = () => {
                                             lineHeight: 1.6,
                                             fontFamily: "'Inter', sans-serif",
                                         }}>
-                                            {item.responsibilities.map((resp, rIdx) => (
+                                            {item.responsibilities.map((resp: string, rIdx: number) => (
                                                 <li key={rIdx} style={{ marginBottom: '4px' }}>{resp}</li>
                                             ))}
                                         </ul>
@@ -234,7 +234,7 @@ const About = () => {
                     <div style={sectionDivider} />
 
                     <div style={styles.gridContainer2Col}>
-                        {awardsData.map((item) => (
+                        {awardsData.map((item: any) => (
                             <CardItem
                                 key={item.id}
                                 title={item.title}

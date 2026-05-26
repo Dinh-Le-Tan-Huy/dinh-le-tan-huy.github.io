@@ -109,7 +109,7 @@ export const Home = () => {
                 <div style={sectionDivider} />
 
                 <div style={isMobile ? styles.skillsGridMobile : styles.skillsGridDesktop}>
-                    {skillsData.map((skill) => (
+                    {skillsData.map((skill: any) => (
                         <div key={skill.id} style={{ width: '100%' }}>
                             <CardItem
                                 key={skill.id}
@@ -167,7 +167,7 @@ export const Home = () => {
                 <div style={sectionDivider} />
 
                 <div style={styles.faqContainer}>
-                    {dataFAQs.map((faq, index) => (
+                    {dataFAQs.map((faq: any, index: number) => (
                         <ChatBubbleItem
                             key={index}
                             question={faq.question}

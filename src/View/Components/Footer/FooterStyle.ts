@@ -18,13 +18,23 @@ export const styles: Record<string, CSSProperties> = {
         paddingBottom: '40px',
     },
 
+    topRowMobile: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '24px',
+        paddingBottom: '30px',
+    },
+
     name: {
-        fontSize: 'clamp(36px, 6vw, 72px)',
+        fontSize: 'clamp(28px, 6vw, 72px)',
         fontWeight: 800,
         color: Colors.textPrimary,
         margin: 0,
         lineHeight: 1.1,
         letterSpacing: '-1px',
+        textAlign: 'center',
     },
 
     linkList: {
@@ -32,6 +42,15 @@ export const styles: Record<string, CSSProperties> = {
         flexDirection: 'column',
         gap: '10px',
         alignItems: 'flex-start',
+    },
+
+    linkListMobile: {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        gap: '20px',
+        alignItems: 'center',
     },
 
     link: {
@@ -52,6 +71,12 @@ export const styles: Record<string, CSSProperties> = {
         paddingTop: '20px',
         display: 'flex',
         justifyContent: 'flex-start',
+    },
+
+    bottomRowMobile: {
+        paddingTop: '20px',
+        display: 'flex',
+        justifyContent: 'center',
     },
 
     copyright: {
