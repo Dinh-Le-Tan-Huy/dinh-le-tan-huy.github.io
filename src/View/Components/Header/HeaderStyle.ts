@@ -201,4 +201,48 @@ export const Headerstyle = {
         width: "100%",
         textAlign: "left" as const,
     } as CSSProperties,
+
+    HeaderWrapperMobile: {
+        gap: spacing.sm,
+        padding: `0 ${spacing.sm}`,
+        top: "10px",
+    } as CSSProperties,
+
+    ContainerTextMobile: {
+        position: "absolute",
+        top: "calc(100% + 15px)",
+        left: "50%",
+        transform: "translateX(-50%)",
+        backgroundColor: "rgba(11, 38, 102, 0.95)",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
+        border: `1px solid ${Colors.glassBorder}`,
+        borderRadius: radius.message,
+        padding: spacing.lg,
+        width: "max-content",
+        minWidth: "200px",
+        boxShadow: "0 20px 60px rgba(0,0,0,0.5)",
+        zIndex: 99999,
+        display: "flex",
+        flexDirection: "column",
+    } as CSSProperties,
+
+    NavListWrapperMobile: {
+        display: "flex",
+        flexDirection: "column",
+        gap: spacing.md,
+        alignItems: "center",
+        width: "100%",
+        whiteSpace: "normal",
+    } as CSSProperties,
+
+    ButtonContactMobile: {
+        padding: "8px 12px",
+        fontSize: "12px",
+    } as CSSProperties,
+
+    LangButtonMobile: {
+        padding: "6px 8px",
+        fontSize: "12px",
+    } as CSSProperties,
 };

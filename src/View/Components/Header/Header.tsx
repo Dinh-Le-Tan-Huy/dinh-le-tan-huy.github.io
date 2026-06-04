@@ -62,8 +62,19 @@ const CheckIcon = () => (
     </svg>
 );
 
+const useIsMobile = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    return isMobile;
+};
+
 const Header = () => {
     const { t, i18n } = useTranslation();
+    const isMobile = useIsMobile();
     const location = useLocation();
     const navigate = useNavigate();
     const [open, setOpen] = useState(false);
@@ -105,7 +116,10 @@ const Header = () => {
     return (
         <motion.header
             className="header"
-            style={Headerstyle.HeaderWrapper}
+            style={{
+                ...Headerstyle.HeaderWrapper,
+                ...(isMobile ? Headerstyle.HeaderWrapperMobile : {})
+            }}
             layout
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
         >
@@ -124,13 +138,19 @@ const Header = () => {
                     <motion.div
                         className="containerText"
                         layout
-                        style={Headerstyle.ContainerText}
-                        initial={{ opacity: 0, filter: "blur(10px)" }}
-                        animate={{ opacity: 1, filter: "blur(0px)" }}
-                        exit={{ opacity: 0, filter: "blur(10px)" }}
+                        style={{
+                            ...Headerstyle.ContainerText,
+                            ...(isMobile ? Headerstyle.ContainerTextMobile : {})
+                        }}
+                        initial={{ opacity: 0, filter: "blur(10px)", y: isMobile ? -10 : 0 }}
+                        animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                        exit={{ opacity: 0, filter: "blur(10px)", y: isMobile ? -10 : 0 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <div style={Headerstyle.NavListWrapper}>
+                        <div style={{
+                            ...Headerstyle.NavListWrapper,
+                            ...(isMobile ? Headerstyle.NavListWrapperMobile : {})
+                        }}>
                             {HeaderNav.map((item, index) => (
                                 <Link to={item.path} key={index} style={{ textDecoration: "none" }} onClick={() => setOpen(false)}>
                                     <span style={Headerstyle.NavLink}>
@@ -156,6 +176,7 @@ const Header = () => {
                     <button
                         style={{
                             ...Headerstyle.LangButton,
+                            ...(isMobile ? Headerstyle.LangButtonMobile : {}),
                             ...(langOpen
                                 ? {
                                     borderColor: "rgba(0,216,255,0.35)",
@@ -169,7 +190,7 @@ const Header = () => {
                     >
                         <GlobeIcon />
                         <span>{currentLang.flag}</span>
-                        <span>{currentLang.code.toUpperCase()}</span>
+                        {!isMobile && <span>{currentLang.code.toUpperCase()}</span>}
                         <ChevronIcon open={langOpen} />
                     </button>
 
@@ -223,7 +244,10 @@ const Header = () => {
                 </div>
 
                 {/* ── Contact Button ── */}
-                <button style={Headerstyle.ButtonContact}>
+                <button style={{
+                    ...Headerstyle.ButtonContact,
+                    ...(isMobile ? Headerstyle.ButtonContactMobile : {})
+                }}>
                     <Link to="/contact" style={Headerstyle.ButtonContactLink}>
                         <span>{t("nav.contact")}</span>
                     </Link>

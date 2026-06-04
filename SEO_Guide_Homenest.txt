@@ -1,0 +1,256 @@
+============================================================
+   SEO TECHNICAL GUIDE – HOMENEST SOFTWARE (Next.js App Router)
+============================================================
+
+TONG QUAN KIEN TRUC SEO
+------------------------
+Du an dung Next.js App Router voi WordPress + RankMath lam CMS backend.
+SEO duoc xu ly o SERVER SIDE (khong phai client) de Google doc duoc HTML day
+du ma khong can chay JavaScript.
+
+
+============================================================
+CAC FILE DA SUA / CAN SUA DE DAY SEO
+============================================================
+
+------------------------------------------------------------
+1. app/layout.jsx — Global Metadata + JSON-LD Schema
+------------------------------------------------------------
+CHINH O DAY KHI:
+- Muon thay doi title/description mac dinh toan site
+- Thay doi Open Graph chung, favicon
+- Thay doi Structured Data (Schema.org) toan trang
+
+Vi du code:
+  export const metadata = {
+    metadataBase: new URL("https://homenest.software"),
+    title: {
+      default: "Homenest | Web Design & Software Development",
+      template: "%s | Homenest",   // trang con tu ghep ten vao day
+    },
+    description: "We build websites, mobile apps...",
+    openGraph: { siteName: "Homenest Software", type: "website", locale: "en_US" },
+    twitter: { card: "summary_large_image" },
+    icons: { icon: "/favicon.webp" },
+  };
+
+NHUNG GI DA LAM:
+- Set metadataBase → Next.js tu build URL tuyet doi cho canonical, OG image
+- template: "%s | Homenest" → moi trang con chi can export title rieng, se tu ghep
+- JSON-LD dang @graph gop nhieu entity trong 1 block → tranh trung @context
+- Schema bao gom: Corporation, Organization, Service, WebSite entities
+
+
+------------------------------------------------------------
+2. utils/seo.js — Trung tam xu ly SEO dong
+------------------------------------------------------------
+CHINH O DAY KHI:
+- Can thay doi logic lay metadata tu WordPress/RankMath
+- Thay doi cach build canonical URL
+- Sua fallback khi WP khong tra ve du lieu
+
+CAC HAM CHINH:
+  buildMetadata(slug, routeKey, fallback)   → Goi cho static pages
+  buildPostMetadata(slug, fallback)         → Goi cho Wiki/Blog posts
+  getCaseStudySeo(slug)                     → Goi cho Case Study pages
+  getIndustrySeo(slug)                      → Goi cho Industry pages
+  mapWpToSeo(item, canonicalUrl)            → Map data WP → Next.js metadata object
+  decodeHtmlEntities(text)                  → Decode ky tu dac biet RankMath
+  processSchema(schema)                     → Replace URL CRM backend → frontend URL
+
+DIEM QUAN TRONG:
+  // Canonical URL duoc build chinh xac o day
+  alternates: { canonical: canonicalUrl }
+
+  // Robots tag lay tu RankMath setting cua tung page
+  robots: seo.robots || { index: true, follow: true }
+
+
+------------------------------------------------------------
+3. app/**/page.jsx — Per-page Metadata (moi trang rieng)
+------------------------------------------------------------
+CHINH O DAY KHI:
+- Muon thay title/description/OG rieng cho 1 trang cu the
+
+Moi page export generateMetadata() — Next.js App Router dac trung:
+
+  // Vi du: app/services/ai-development/page.jsx
+  export async function generateMetadata() {
+    return await buildMetadata("ai-development", "services/ai-development", {
+      title: "AI Development Services",       // fallback neu WP khong co
+      description: "Custom AI and ML services...",
+    });
+  }
+
+  // Vi du: app/page.jsx (trang Home)
+  export async function generateMetadata() {
+    return await buildMetadata("home", "", {
+      title: "Homenest | Web Design & Software Development",
+      description: "We build websites, mobile apps...",
+    });
+  }
+
+LUONG HOAT DONG:
+  1. buildMetadata → goi WordPress API lay metadata tu RankMath plugin
+  2. Neu RankMath co du lieu → dung cua RankMath (uu tien)
+  3. Neu khong → fallback ve gia tri hardcode trong code
+
+
+------------------------------------------------------------
+4. app/robots.js — robots.txt
+------------------------------------------------------------
+CHINH O DAY KHI:
+- Muon cho/chan bot nao crawl trang
+- Them sitemap moi
+
+Noi dung chinh:
+  // Cho Googlebot va Bingbot crawl tat ca
+  { userAgent: 'Googlebot', allow: '/' }
+  { userAgent: 'Google-Extended', allow: '/' }   // AI Overview cua Google
+
+  // Chan AI training bots
+  { userAgent: 'GPTBot', disallow: '/' }
+  { userAgent: 'ClaudeBot', disallow: '/' }
+  { userAgent: 'CCBot', disallow: '/' }
+  ... (va nhieu bot khac)
+
+  // Chan cac duong nhay cam
+  disallow: ['/api/', '/admin/', '/*?preview=', '/*?token=']
+
+  // Khai bao sitemap
+  sitemap: 'https://homenest.software/sitemap.xml'
+
+
+------------------------------------------------------------
+5. app/sitemap.js — Sitemap XML dong
+------------------------------------------------------------
+CHINH O DAY KHI:
+- Them trang moi, thay doi priority, thay doi tan suat crawl
+
+Noi dung chinh:
+  // Static pages: hardcode voi priority ro rang
+  { path: '', priority: 1.0, changeFrequency: 'hourly' }     // Home
+  { path: 'services', priority: 0.9, changeFrequency: 'hourly' }
+  { path: 'about-us', priority: 0.8, changeFrequency: 'daily' }
+
+  // Dynamic pages: tu fetch tu WordPress GraphQL
+  // Wiki posts, Industry pages, Case Studies
+  // lastModified lay tu post.modified cua WP
+
+TOI UU DAC BIET:
+  export const dynamic = 'force-dynamic';
+  export const revalidate = 3600; // ISR: re-generate sitemap moi 1 gio
+
+→ Sitemap luon cap nhat bai moi ma khong can build lai toan bo app.
+
+
+============================================================
+SO DO LUONG SEO
+============================================================
+
+  WordPress (RankMath)
+        ↓
+  utils/seo.js (fetchSeo + mapWpToSeo)
+        ↓
+  generateMetadata() trong moi page.jsx
+        ↓
+  <head> HTML tra ve cho Google
+
+  + JSON-LD Schema nhung trong layout.jsx va page.jsx
+
+
+============================================================
+CAU HOI PHONG VAN & CACH TRA LOI
+============================================================
+
+------------------------------------------------------------
+Q: "Em da lam gi de toi uu SEO cho du an nay?"
+------------------------------------------------------------
+A: "Du an dung Next.js App Router nen toan bo metadata duoc render o server
+side — Google doc duoc HTML day du ma khong can chay JavaScript. Em ket noi
+voi WordPress + RankMath qua REST API de lay title, description, canonical URL,
+Open Graph tu CMS. Phan fallback duoc hardcode trong code de dam bao trang
+khong bao gio bi thieu metadata. Em cung viet sitemap dong bang app/sitemap.js
+— tu fetch bai moi tu WordPress GraphQL va dung ISR de revalidate moi gio ma
+khong can build lai."
+
+
+------------------------------------------------------------
+Q: "Em hieu canonical URL la gi va tai sao quan trong?"
+------------------------------------------------------------
+A: "Canonical URL chi dinh cho Google biet URL 'chinh thuc' cua 1 trang la URL
+nao — tranh duplicate content khi co nhieu URL dan den cung noi dung (vi du
+?page=1 hay ?utm_source=...). Trong du an nay, canonical duoc build tu
+utils/seo.js, trong ham mapWpToSeo, set vao alternates.canonical — Next.js tu
+render thanh <link rel='canonical'> trong <head>."
+
+
+------------------------------------------------------------
+Q: "JSON-LD Schema la gi? Em dung de lam gi?"
+------------------------------------------------------------
+A: "JSON-LD Schema la structured data theo chuan Schema.org giup Google hieu ro
+hon ve noi dung trang — vi du day la trang cua cong ty nao, cung cap dich vu gi,
+dia chi, so dien thoai... Khi Google hieu duoc, trang co the xuat hien voi rich
+result (ket qua noi bat, review stars, FAQ...). Trong du an nay, em nhung Schema
+dang @graph — gop nhieu entity (Corporation, Organization, Service, WebSite)
+trong 1 block — vao layout.jsx cho toan site, va moi trang con co the override
+bang schema rieng lay tu RankMath."
+
+
+------------------------------------------------------------
+Q: "Tai sao dung Next.js App Router thay vi Pages Router cho SEO?"
+------------------------------------------------------------
+A: "App Router render mac dinh o server (Server Components), nen HTML tra ve cho
+Google da chua day du noi dung va metadata — khong can cho JS chay.
+generateMetadata() cung chay tren server, cho phep fetch data tu API de build
+metadata dong cho tung trang. Voi Pages Router cu phai dung getServerSideProps
+rieng, phuc tap hon va khong co tinh nang ISR granular nhu App Router."
+
+
+------------------------------------------------------------
+Q: "Em da xu ly Open Graph va Twitter Card nhu the nao?"
+------------------------------------------------------------
+A: "Open Graph va Twitter Card la metadata de mang xa hoi (Facebook, Twitter/X,
+LinkedIn) lay title, description, thumbnail khi co nguoi share link. Em set trong
+metadata object cua Next.js, va trong mapWpToSeo se lay og_title, og_description,
+og_image tu RankMath cua tung trang. Neu trang khong co anh rieng, fallback ve
+/og-image.jpg mac dinh."
+
+
+------------------------------------------------------------
+Q: "Robots.txt co vai tro gi trong SEO?"
+------------------------------------------------------------
+A: "Robots.txt chi dan bot nao duoc crawl trang nao. Trong du an nay, em cho phep
+Googlebot va Bingbot crawl toan bo, nhung chan cac AI training bots nhu GPTBot,
+ClaudeBot... de tranh noi dung bi dung train AI ma khong co su dong y. Dong thoi
+chan /api/, /admin/ va cac URL co query preview/token de tranh noi dung nhap bi
+index nham."
+
+
+------------------------------------------------------------
+Q: "Em co biet ISR la gi khong?"
+------------------------------------------------------------
+A: "ISR – Incremental Static Regeneration – la tinh nang cua Next.js cho phep
+re-generate tung trang hoac file (nhu sitemap) theo chu ky thoi gian ma khong
+can build lai toan bo app. Trong du an nay, sitemap dung revalidate: 3600 —
+Next.js se tu generate lai sitemap moi gio de cap nhat bai moi tu WordPress, dam
+bao Google luon biet co URL moi ma khong can deploy lai."
+
+
+============================================================
+CHECKLIST SEO DA IMPLEMENT
+============================================================
+
+  [x] Server-side metadata voi generateMetadata() moi page
+  [x] Canonical URL chinh xac cho tung route
+  [x] Open Graph + Twitter Card metadata
+  [x] JSON-LD Schema (Organization, Service, WebSite)
+  [x] robots.js — chan AI bots, cho phep search engine bots
+  [x] sitemap.js — sitemap dong voi ISR, bao gom wiki/industries/case-studies
+  [x] Font preload (rel="preload") de cai thien LCP (Core Web Vitals)
+  [x] Lazy loading component nang (dynamic import)
+  [x] HTML lang="en" cho accessibility va multilingual SEO
+  [x] Favicon dung format (webp)
+  [x] URL CDN thay the backend URL trong images (tranh lo internal URL)
+
+============================================================

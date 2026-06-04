@@ -1,0 +1,97 @@
+================================================================================
+  LÊ TẤN HUY  —  Full-Stack Software Engineer
+================================================================================
+
+  📧 t.huy030826@gmail.com
+  📍 Ho Chi Minh City, Vietnam
+  🔗 linkedin.com/in/tan-huy-673408342
+  🌐 Dinh-Le-Tan-Huy.github.io/Portfolio
+
+================================================================================
+  SUMMARY
+================================================================================
+
+  Full-Stack Engineer specializing in cross-platform mobile (React Native,
+  Flutter) and web (Next.js, React). Shipped production apps to App Store &
+  Google Play. Comfortable owning full stack: UI → API → Database → CI/CD.
+
+================================================================================
+  TECHNICAL SKILLS
+================================================================================
+
+  Languages   : JavaScript, TypeScript, Dart, Java, Kotlin
+  Frontend    : React.js, Next.js, React Native, Flutter, Jetpack Compose
+  Backend     : Node.js, Express, PostgreSQL (Prisma), MongoDB
+  Auth        : JWT, OTP, Google Login, Social Login
+  Real-time   : Socket.IO + RTK Query
+  DevOps/Tools: Docker, GitHub Actions, Codemagic (CI/CD), Swagger UI
+  Design/PM   : Figma, Postman, Jira, Trello
+  Architecture: MVVM, Clean Architecture, RESTful API, Agile/Scrum
+
+================================================================================
+  PROFESSIONAL EXPERIENCE
+================================================================================
+
+  Web / Mobile Developer  |  HomeNest Software        Aug 2024 – Present
+  ─────────────────────────────────────────────────────────────────────────────
+  Tech Stack:
+  • Mobile  : React Native, TypeScript, RTK Query, Socket.IO, react-i18next
+  • Web     : Next.js, React, WordPress CMS, GraphQL
+  • Backend : Node.js, Prisma, PostgreSQL, Docker, JWT/OTP/Google Login
+  • Docs    : Swagger UI  |  Payments: Helcim via JS Bridge/WebView
+
+  Results:
+  • Shipped cross-platform app to App Store & Google Play (resolved rejections)
+  • Zero-latency real-time chat via Socket.IO + RTK Query (stable 60 FPS)
+  • Secure auth system: JWT + OTP + Google Login, end-to-end tested via Swagger
+
+  ─────────────────────────────────────────────────────────────────────────────
+  Mobile Developer  |  Choi Xanh Media               Nov 2024 – Jan 2025
+  ─────────────────────────────────────────────────────────────────────────────
+  Tech Stack:
+  • Mobile  : Flutter, Dart, AutoRoute, Service Layer architecture, ImageKit
+  • Backend : Node.js, Express, MongoDB, Mapbox API
+  • CI/CD   : Codemagic, GitHub Actions  |  Auth: Social Login, Email OTP
+
+  Results:
+  • Delivered full-stack Food Delivery app (iOS + Android + backend)
+  • Automated CI/CD → rapid releases with stable data flow in Agile/Jira env
+
+================================================================================
+  PROJECTS
+================================================================================
+
+  Personal Portfolio Website
+  URL   : Dinh-Le-Tan-Huy.github.io/Portfolio
+  GitHub: github.com/Dinh-Le-Tan-Huy/Portfolio
+  ─────────────────────────────────────────────────────────────────────────────
+  Tech Stack:
+  • React 19, TypeScript, Vite 8, Redux Toolkit, React Router v7
+  • Zod (validation), Framer Motion, EmailJS, i18next, MVVM Architecture
+
+  Results:
+  • Custom design system (colors, typography, spacing) — zero UI library deps
+  • Redux-managed contact form with Zod validation + EmailJS delivery
+  • Deep-link navigation with animated project highlight (neon glow 3s fade)
+  • Fully responsive, multi-language (EN/VI), dark-mode-first
+
+================================================================================
+  EDUCATION
+================================================================================
+
+  🎓 B.Sc. Computer Science  —  University of Information Technology (UIT) | 2025
+  💻 A.Sc. Information Technology  —  Ly Tu Trong College (LTTC) | 2021–2024
+  🔒 Intermediate Cybersecurity Certificate  —  LTTC | 2018–2021
+
+================================================================================
+  CERTIFICATIONS & AWARDS
+================================================================================
+
+  • AWS Cloud Computing — Udemy | 2026
+  • React Native Developer — CSC / University of Science | 2025
+  • TOEIC 600 (Official Certificate)
+  • 🏆 Academic Scholarship (50% tuition) — LTTC
+  • 🥇 Top 5 Final Project — LTTC Mobile App Showcase 2024
+       (Evaluated on UI/UX, Technical Complexity, Problem-Solving)
+
+================================================================================
