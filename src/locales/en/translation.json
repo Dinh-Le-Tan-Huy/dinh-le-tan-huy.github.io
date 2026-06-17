@@ -114,7 +114,8 @@
                     "Built RESTful APIs and backend services utilizing Node.js, Prisma, and PostgreSQL (managed via pgAdmin & Docker), implementing secure authentication flows (JWT, OTP, Google Login).",
                     "Designed interactive API documentation via Swagger UI, ensuring seamless API testing and frontend-backend synchronization.",
                     "Supported deployed apps to Appstore and Google Play, resolving technical rejections.",
-                    "Collaborated in an Agile/Scrum environment, utilizing Jira for task tracking and daily stand-ups."
+                    "Collaborated in an Agile/Scrum environment, utilizing Jira for task tracking and daily stand-ups.",
+                    "Utilized AI tools to speed up application development by 30%."
                 ]
             },
             {
@@ -137,7 +138,8 @@
                 "des": "Certificates & Specialized Courses",
                 "responsibilities": [
                     "AWS Cloud Computing Course \u2013 Udemy | 2026",
-                    "React Native Developer \u2013 CSC / University of Science | 2025"
+                    "React Native Developer \u2013 CSC / University of Science | 2025",
+                    { "text": "Front-End Development Libraries V8 - FreeCodeCamp | 2026", "link": "https://www.freecodecamp.org/certification/tanhuy/front-end-development-libraries" }
                 ]
             },
             {

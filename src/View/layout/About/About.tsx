@@ -216,8 +216,32 @@ const About = () => {
                                             lineHeight: 1.6,
                                             fontFamily: "'Inter', sans-serif",
                                         }}>
-                                            {item.responsibilities.map((resp: string, rIdx: number) => (
-                                                <li key={rIdx} style={{ marginBottom: '4px' }}>{resp}</li>
+                                            {item.responsibilities.map((resp: any, rIdx: number) => (
+                                                <li key={rIdx} style={{ marginBottom: '4px' }}>
+                                                    {typeof resp === 'object' && resp.link ? (
+                                                        <a
+                                                            href={resp.link}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            style={{
+                                                                color: Colors.cyan,
+                                                                textDecoration: 'none',
+                                                                borderBottom: `1px dashed ${Colors.cyanBorder}`,
+                                                                transition: 'color 0.2s ease, border-color 0.2s ease',
+                                                            }}
+                                                            onMouseEnter={e => {
+                                                                (e.currentTarget as HTMLAnchorElement).style.color = Colors.textPrimary;
+                                                                (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = Colors.textPrimary;
+                                                            }}
+                                                            onMouseLeave={e => {
+                                                                (e.currentTarget as HTMLAnchorElement).style.color = Colors.cyan;
+                                                                (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = Colors.cyanBorder;
+                                                            }}
+                                                        >
+                                                            {resp.text}
+                                                        </a>
+                                                    ) : resp}
+                                                </li>
                                             ))}
                                         </ul>
                                     </div>

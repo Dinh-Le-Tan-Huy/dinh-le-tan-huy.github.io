@@ -19,7 +19,6 @@
         },
         "projectTemplate": "Xin chào Huy, tôi muốn thảo luận về dự án của bạn: "
     },
-
     "nav": {
         "home": "Trang chủ",
         "about": "Giới thiệu",
@@ -130,7 +129,8 @@
                     "Xây dựng RESTful APIs và các dịch vụ backend bằng Node.js, Prisma và PostgreSQL (quản lý qua pgAdmin & Docker), triển khai các luồng xác thực bảo mật (JWT, OTP, Google Login).",
                     "Thiết kế tài liệu API tương tác qua Swagger UI, đảm bảo việc test API và đồng bộ Frontend-Backend diễn ra liền mạch.",
                     "Hỗ trợ triển khai ứng dụng lên App Store và Google Play, xử lý các vấn đề từ chối kỹ thuật (technical rejections) từ store.",
-                    "Làm việc trong môi trường Agile/Scrum, sử dụng Jira để theo dõi tiến độ công việc và họp hằng ngày (daily stand-ups)."
+                    "Làm việc trong môi trường Agile/Scrum, sử dụng Jira để theo dõi tiến độ công việc và họp hằng ngày (daily stand-ups).",
+                    "Sử dụng công cụ AI để tăng tốc độ phát triển ứng dụng lên 30%."
                 ]
             },
             {
@@ -153,7 +153,11 @@
                 "des": "Chứng chỉ & Khóa học chuyên sâu",
                 "responsibilities": [
                     "Khóa học Điện toán đám mây AWS – Udemy | 2026",
-                    "Lập trình viên React Native – Trung tâm Tin học KHTN | 2025"
+                    "Lập trình viên React Native – Trung tâm Tin học KHTN | 2025",
+                    {
+                        "text": "Thư viện Front-End Development Libraries V8 - FreeCodeCamp | 2026",
+                        "link": "https://www.freecodecamp.org/certification/tanhuy/front-end-development-libraries"
+                    }
                 ]
             },
             {
