@@ -147,22 +147,6 @@ npm run build
 npm run preview
 ```
 
----
-
-## 🌍 Environment Variables
-
-Create a `.env` file at the project root (see `.env.example` if provided):
-
-```env
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
-```
-
-These are used by `Contact.Thunk.ts` to send emails client-side via EmailJS.
-
----
-
 ## 🗂️ Design Decisions
 
 | Decision | Rationale |
