@@ -122,15 +122,16 @@
                 "des": "Lập trình viên Web/Mobile",
                 "responsibilities": [
                     "Phát triển ứng dụng di động đa nền tảng (React Native, TypeScript) và nền tảng web chuẩn SEO (Next.js, React).",
-                    "Cấu hình WordPress CMS và GraphQL cho nội dung web động.",
-                    "Tích hợp cổng thanh toán Helcim qua JS Bridge/WebView với đồng bộ hóa thời gian thực.",
                     "Tích hợp react-i18next để đa ngôn ngữ hóa (i18n) ứng dụng React Native.",
+                    "Tích hợp cổng thanh toán Helcim qua JS Bridge/WebView với đồng bộ hóa thời gian thực.",
                     "Tích hợp Socket.IO với RTK Query để xử lý chat realtime không độ trễ, cập nhật bộ nhớ đệm (cache) trực tiếp và đăng ký theo yêu cầu.",
+                    "Cấu hình WordPress CMS và GraphQL cho nội dung web động.",
                     "Xây dựng RESTful APIs và các dịch vụ backend bằng Node.js, Prisma và PostgreSQL (quản lý qua pgAdmin & Docker), triển khai các luồng xác thực bảo mật (JWT, OTP, Google Login).",
                     "Thiết kế tài liệu API tương tác qua Swagger UI, đảm bảo việc test API và đồng bộ Frontend-Backend diễn ra liền mạch.",
+                    "Tối ưu hóa quy trình phát triển bằng cách áp dụng GitHub Actions để tự động hóa việc kiểm tra và triển khai (CI/CD), giảm thời gian phát hành thủ công xuống bằng không.",
                     "Hỗ trợ triển khai ứng dụng lên App Store và Google Play, xử lý các vấn đề từ chối kỹ thuật (technical rejections) từ store.",
-                    "Làm việc trong môi trường Agile/Scrum, sử dụng Jira để theo dõi tiến độ công việc và họp hằng ngày (daily stand-ups).",
-                    "Sử dụng công cụ AI để tăng tốc độ phát triển ứng dụng lên 30%."
+                    "Sử dụng công cụ AI để tăng tốc độ phát triển ứng dụng lên 30%.",
+                    "Làm việc trong môi trường Agile/Scrum, sử dụng Jira để theo dõi tiến độ công việc và họp hằng ngày (daily stand-ups)."
                 ]
             },
             {

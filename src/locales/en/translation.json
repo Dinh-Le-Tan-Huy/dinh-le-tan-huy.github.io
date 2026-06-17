@@ -113,9 +113,10 @@
                     "Integrated Socket.IO with RTK Query for zero-latency chat, direct cache updates, and on-demand subscriptions.",
                     "Built RESTful APIs and backend services utilizing Node.js, Prisma, and PostgreSQL (managed via pgAdmin & Docker), implementing secure authentication flows (JWT, OTP, Google Login).",
                     "Designed interactive API documentation via Swagger UI, ensuring seamless API testing and frontend-backend synchronization.",
+                    "Optimized development workflow by implementing GitHub Actions for automated testing and deployment, reducing manual release time to zero.",
                     "Supported deployed apps to Appstore and Google Play, resolving technical rejections.",
-                    "Collaborated in an Agile/Scrum environment, utilizing Jira for task tracking and daily stand-ups.",
-                    "Utilized AI tools to speed up application development by 30%."
+                    "Utilized AI tools to speed up application development by 30%.",
+                    "Collaborated in an Agile/Scrum environment, utilizing Jira for task tracking and daily stand-ups."
                 ]
             },
             {
