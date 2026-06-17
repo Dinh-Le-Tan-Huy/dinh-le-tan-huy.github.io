@@ -105,8 +105,8 @@ const Contact = () => {
 
                 <div style={ContactStyle.socialLinks}>
                     <SocialLink label="LinkedIn" href="https://www.linkedin.com/in/tan-huy-673408342/" />
-                    <SocialLink label="GitHub" href="https://github.com" />
-                    <SocialLink label={t('contactPage.resume')} href="#" />
+                    <SocialLink label="GitHub" href="https://github.com/Dinh-Le-Tan-Huy" />
+
                 </div>
             </div>
 
