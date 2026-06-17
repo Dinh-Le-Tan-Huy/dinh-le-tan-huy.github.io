@@ -139,7 +139,10 @@
                 "responsibilities": [
                     "AWS Cloud Computing Course \u2013 Udemy | 2026",
                     "React Native Developer \u2013 CSC / University of Science | 2025",
-                    { "text": "Front-End Development Libraries V8 - FreeCodeCamp | 2026", "link": "https://www.freecodecamp.org/certification/tanhuy/front-end-development-libraries" }
+                    {
+                        "text": "Front-End Development Libraries V8 - FreeCodeCamp | 2026",
+                        "link": "https://www.freecodecamp.org/certification/tanhuy/front-end-development-libraries"
+                    }
                 ]
             },
             {
@@ -147,7 +150,7 @@
                 "title": "Languages",
                 "des": "English Proficiency",
                 "responsibilities": [
-                    "TOEIC 600 (Official Certificate)"
+                    "TOEIC 600 "
                 ]
             }
         ],
