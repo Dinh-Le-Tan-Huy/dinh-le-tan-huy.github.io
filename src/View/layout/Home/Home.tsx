@@ -65,7 +65,14 @@ export const Home = () => {
 
                 {/* CTA row */}
                 <div style={styles.heroCtas}>
-                    <a href="#FAQ" style={styles.heroBtnPrimary}>
+                    <a 
+                        href="#FAQ" 
+                        style={styles.heroBtnPrimary}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById('FAQ')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                    >
                         {t('homePage.askMe')}
                     </a>
                     <span style={{

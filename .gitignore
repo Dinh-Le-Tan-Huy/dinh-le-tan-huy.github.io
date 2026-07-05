@@ -25,3 +25,6 @@ dist-ssr
 READMEPROFILE.MD
 /env
 .env 
+
+# Private CV notes - do not push to GitHub
+CV_note/

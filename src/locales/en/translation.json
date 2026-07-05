@@ -70,8 +70,10 @@
                 "des": "Server-side & Infrastructure",
                 "responsibilities": [
                     "Node.js",
-                    "Express",
-                    "MongoDB"
+                    "PostgreSQL & MongoDB",
+                    "Prisma ORM",
+                    "Redis (caching & pub/sub)",
+                    "Socket.IO (real-time)"
                 ]
             },
             {
@@ -92,9 +94,9 @@
                 "des": "Productivity & Collaboration Tools",
                 "responsibilities": [
                     "Figma (Design UI/UX)",
-                    "Postman & Swagger",
-                    "Docker",
-                    "GitHub (Version Control)",
+                    "Postman & Swagger UI",
+                    "Docker & docker-compose",
+                    "GitHub Actions CI/CD",
                     "Jira & Trello (Management)"
                 ]
             }
@@ -104,30 +106,61 @@
                 "id": "proj_homenest_01",
                 "title": "HomeNest Software",
                 "time": "Jun 2025 - Present",
-                "des": "Web/Mobile Developer",
+                "des": "Frontend Developer · SEO Engineer · DevOps · CMS Admin",
                 "responsibilities": [
-                    "Developed both a cross-platform mobile application (React Native, TypeScript) and an SEO optimized web platform (Next.js, React).",
-                    "Configured WordPress CMS and GraphQL for dynamic web content.",
-                    "Integrated Helcim payments via JS Bridge/WebView with real-time synchronization.",
-                    "Integrated react-i18next for React Native app localization (i18n).",
-                    "Integrated Socket.IO with RTK Query for zero-latency chat, direct cache updates, and on-demand subscriptions.",
-                    "Built RESTful APIs and backend services utilizing Node.js, Prisma, and PostgreSQL (managed via pgAdmin & Docker), implementing secure authentication flows (JWT, OTP, Google Login).",
-                    "Designed interactive API documentation via Swagger UI, ensuring seamless API testing and frontend-backend synchronization.",
-                    "Optimized development workflow by implementing GitHub Actions for automated testing and deployment, reducing manual release time to zero.",
-                    "Supported deployed apps to Appstore and Google Play, resolving technical rejections.",
-                    "Utilized AI tools to speed up application development by 30%.",
-                    "Collaborated in an Agile/Scrum environment, utilizing Jira for task tracking and daily stand-ups."
+                    "Developed two multilingual corporate websites (EN + VI), 20+ pages each, using Next.js 16 App Router and CSS Modules component-based architecture.",
+                    "Integrated headless WordPress CMS via GraphQL API for dynamic content management (case studies, wiki, industries, services).",
+                    "Configured WordPress: custom post types, custom fields (ACF), and editorial templates — enabling the content team to publish independently without code.",
+                    "Implemented comprehensive SEO: generateMetadata per page, JSON-LD Schema.org (Corporation, Organization, 18-service OfferCatalog, ContactPoint), OpenGraph, Twitter Card.",
+                    "Built dynamic XML sitemaps and robots.js; implemented multi-level sitemap hierarchy (5 sitemaps) for Vietnamese site.",
+                    "Integrated @splinetool/react-spline for 3D interactive UI elements on the Vietnamese site.",
+                    "Refactored Vietnamese routing (/linh-vuc, dynamic slug-based) for improved SEO performance.",
+                    "Set up GitHub Actions CI/CD → GitHub Container Registry (ghcr.io) with SHA-tagged Docker images and SSH auto-deploy to VPS."
                 ]
             },
             {
-                "id": "proj_choixanh_02",
+                "id": "proj_lovelawn_02",
+                "title": "Love Lawn Service",
+                "time": "2025",
+                "des": "Mobile Developer · Backend Contributor · DevOps",
+                "responsibilities": [
+                    "Built a dual-role on-demand lawn care platform (React Native + Expo) for customers (booking, real-time job tracking, payment) and field workers (GPS check-in, photo upload, incident reporting, time tracking).",
+                    "Integrated Helcim payment gateway via WebView/JS Bridge, handling checkout session, real-time event messaging, and transaction persistence.",
+                    "Implemented real-time 1-on-1 chat (Socket.IO) between customer, worker, and admin roles.",
+                    "Implemented push notifications (expo-notifications + expo-server-sdk) including a scheduled notification system (node-cron).",
+                    "Managed GPS-based worker check-in (expo-location + MapLibre maps) and photo uploads (BEFORE/AFTER/MATERIAL/INCIDENT) to AWS S3.",
+                    "Contributed to RESTful APIs documented with Swagger UI (Node.js + Prisma): booking workflow, worker assignment, zone management, payment/invoice pipeline (20+ Prisma models).",
+                    "Generated PDF invoices (PDFKit) and email notifications (nodemailer); secured API with JWT, bcrypt, helmet, rate-limiting, and Zod validation.",
+                    "Dockerized backend + admin-web; configured docker-compose stack (PostgreSQL 15, Redis 7, Nginx, pgadmin) and GitHub Actions CI/CD for auto-deploy to VPS.",
+                    "Deployed mobile app via EAS Build to App Store and Google Play."
+                ]
+            },
+            {
+                "id": "proj_vietplus_03",
+                "title": "VIET PLUS — Classifieds Super App",
+                "time": "2025",
+                "des": "Mobile Developer · Backend Contributor · DevOps",
+                "responsibilities": [
+                    "Built a multi-category classifieds super app (React Native + Expo) with 10+ feature modules targeting Vietnamese expat communities.",
+                    "Developed listing flows for 6 categories: new/used items, vehicles, housing rentals, job postings, ride-sharing, and an online marketplace (smarket).",
+                    "Integrated real-time 1-on-1 chat (Socket.IO + @socket.io/redis-adapter) for Redis-backed horizontal scaling, linked directly to listings.",
+                    "Implemented shopping cart, order management, and payment flow; state management with Redux Toolkit (18 slices) + redux-persist.",
+                    "Contributed to RESTful APIs documented with Swagger UI (Node.js + Prisma): listing CRUD, order processing, user profile, report & block, chat, notification modules (21 route modules).",
+                    "Built a comprehensive statistics service (analytics dashboard) for admin and integrated region-based data system.",
+                    "Worked in a real team with Jira tracking, Git PR review, and production VPS deployment.",
+                    "Set up dual CI/CD pipeline: GitHub Actions + GitLab CI for auto build → Docker Hub → SSH deploy to VPS.",
+                    "Deployed mobile app via EAS Build to App Store and Google Play."
+                ]
+            },
+            {
+                "id": "proj_choixanh_04",
                 "title": "Choi Xanh Media",
                 "time": "Nov 2024 - May 2025",
                 "des": "Mobile Developer",
                 "responsibilities": [
                     "Developed a full-stack Food Delivery application, building a high-performance mobile interface (Flutter, Dart) and scalable backend services (Node.js, MongoDB).",
                     "Architected mobile front-end solutions: Implemented Service Layer architecture and AutoRoute for robust navigation, while enhancing UI/UX with Flutter Animations, optimized lists (ListView.builder), and dynamic media handling (ImageKit).",
-                    "Built secure backend APIs & integrations: Developed RESTful APIs using Express, integrated multi-method authentication (Social Login & Email OTP), and utilized Mapbox API for location-based delivery features.",
+                    "Built secure backend APIs & integrations: Developed RESTful APIs documented with Swagger UI, integrated multi-method authentication (Social Login & Email OTP), and utilized Mapbox API for location-based delivery features.",
                     "Streamlined deployment workflows: Automated CI/CD pipelines utilizing Codemagic and GitHub Actions to ensure stable data flow and rapid releases within an Agile/Jira environment."
                 ]
             }
@@ -217,7 +250,8 @@
         "typewriter": [
             "Full Stack Developer",
             "Mobile Developer",
-            "Web Developer"
+            "Web Developer",
+            "DevOps Engineer"
         ],
         "summary": "Building scalable end-to-end solutions using the JS/TS ecosystem — React Native, Next.js, Node.js. Specializing in RESTful APIs, secure integrations, real-time systems, and delivering product-driven applications from database architecture to optimized UI.",
         "askMe": "Ask me anything ↓",
@@ -284,8 +318,9 @@
                 "des": "Backend Infrastructure",
                 "responsibilities": [
                     "Node.js",
-                    "Express",
-                    "MongoDB"
+                    "PostgreSQL & MongoDB",
+                    "Prisma ORM",
+                    "Redis & Socket.IO"
                 ]
             },
             {
@@ -295,7 +330,7 @@
                 "responsibilities": [
                     "Figma",
                     "Postman & Swagger UI",
-                    "Docker & Git",
+                    "Docker & GitHub Actions",
                     "Jira & Trello"
                 ]
             }
