@@ -8,10 +8,6 @@ import { Colors } from '../../DesignSystem/Colors'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-// Filter: highlight the most impactful / technically specific bullet points
-const KEY_TECH_FILTER = /Helcim|Socket\.IO|Appstore|Mapbox|Flutter/i
-
-
 export const Home = () => {
     const { t } = useTranslation()
     const hrFAQs = t('homePage.hrFAQs', { returnObjects: true }) as any[]
