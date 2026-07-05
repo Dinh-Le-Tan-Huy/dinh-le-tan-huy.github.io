@@ -5,13 +5,14 @@ interface CardItemProps {
     title: string;
     des?: string;
     time?: string;
-    responsibilities: string[];
+    responsibilities?: string[];
     variant?: 'default' | 'note';
     containerStyle?: CSSProperties;
     onActionClick?: () => void;
+    centerContent?: boolean;
 }
 
-const CardItem = ({ title, des, time, responsibilities, variant = 'default', containerStyle, onActionClick }: CardItemProps) => {
+const CardItem = ({ title, des, time, responsibilities, variant = 'default', containerStyle, onActionClick, centerContent }: CardItemProps) => {
 
     // --- GIAO DIỆN MỚI (DẠNG THẺ NOTE) ---
     if (variant === 'note') {
@@ -34,18 +35,20 @@ const CardItem = ({ title, des, time, responsibilities, variant = 'default', con
                     {time && <p style={styles.noteTime}>{time}</p>}
                 </div>
 
-                <div style={styles.noteRightColumn}>
-                    {responsibilities.map((item, index) => (
-                        <div key={index} style={styles.noteResponsibilityItem}>
-                            <span style={styles.noteListIcon}>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" stroke="rgba(0,216,255,0.6)" strokeWidth="1.5" strokeLinejoin="round" />
-                                </svg>
-                            </span>
-                            <p style={styles.noteItemText}>{item}</p>
-                        </div>
-                    ))}
-                </div>
+                {responsibilities && responsibilities.length > 0 && (
+                    <div style={styles.noteRightColumn}>
+                        {responsibilities.map((item, index) => (
+                            <div key={index} style={styles.noteResponsibilityItem}>
+                                <span style={styles.noteListIcon}>
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" stroke="rgba(0,216,255,0.6)" strokeWidth="1.5" strokeLinejoin="round" />
+                                    </svg>
+                                </span>
+                                <p style={styles.noteItemText}>{item}</p>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
         );
     }
@@ -53,13 +56,16 @@ const CardItem = ({ title, des, time, responsibilities, variant = 'default', con
     // --- GIAO DIỆN card item ---
     return (
         <div style={{ ...styles.container, ...containerStyle }}>
-            <div style={styles.leftColumn}>
+            <div style={{
+                ...styles.leftColumn,
+                ...(centerContent ? { alignItems: 'center', textAlign: 'center', flex: 1 } : {})
+            }}>
                 <p style={styles.title}>{title}</p>
                 <p style={styles.description}>{des}</p>
                 {time && <p style={styles.time}>{time}</p>}
-                
+
                 {onActionClick && (
-                    <button 
+                    <button
                         onClick={onActionClick}
                         style={{
                             marginTop: '16px',
@@ -97,14 +103,16 @@ const CardItem = ({ title, des, time, responsibilities, variant = 'default', con
                 )}
             </div>
 
-            <div style={styles.rightColumn}>
-                {responsibilities.map((item, index) => (
-                    <div key={index} style={styles.responsibilityItem as CSSProperties}>
-                        <span style={styles.responsibilityDot as CSSProperties} />
-                        <span>{item}</span>
-                    </div>
-                ))}
-            </div>
+            {responsibilities && responsibilities.length > 0 && (
+                <div style={styles.rightColumn}>
+                    {responsibilities.map((item, index) => (
+                        <div key={index} style={styles.responsibilityItem as CSSProperties}>
+                            <span style={styles.responsibilityDot as CSSProperties} />
+                            <span>{item}</span>
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };

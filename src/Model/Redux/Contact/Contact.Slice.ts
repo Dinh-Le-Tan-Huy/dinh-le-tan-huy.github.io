@@ -6,6 +6,7 @@ const initialState: ContactState = {
     name: "",
     email: "",
     message: "",
+    phone: "",
     status: 'idle',
     error: null
 };
@@ -24,6 +25,7 @@ const contactSlice = createSlice({
             state.name = "";
             state.email = "";
             state.message = "";
+            state.phone = "";
             state.status = 'idle';
             state.error = null;
         }
@@ -39,6 +41,7 @@ const contactSlice = createSlice({
                 state.name = "";
                 state.email = "";
                 state.message = "";
+                state.phone = "";
             })
             .addCase(sendContactEmail.rejected, (state, action) => {
                 state.status = 'failed';

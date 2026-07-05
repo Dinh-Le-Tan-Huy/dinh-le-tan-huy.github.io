@@ -19,22 +19,26 @@ const contactSchema = z.object({
         .max(200, "Message must be under 200 characters")
         .optional()
         .or(z.literal("")),
+    phone: z.string()
+        .regex(/^\+?[0-9\s\-()]{7,20}$/, "Please enter a valid phone number")
+        .optional()
+        .or(z.literal("")),
 });
 
 export const useContact = () => {
     const dispatch = useDispatch<AppDispatch>();
-    const { email, name, message, status, error } = useSelector((state: RootState) => state.contact);
+    const { email, name, message, phone, status, error } = useSelector((state: RootState) => state.contact);
 
     // Local state cho UI
     const [submitted, setSubmitted] = useState(false);
 
     // Validate using Zod
-    const validationResult = contactSchema.safeParse({ name, email, message });
+    const validationResult = contactSchema.safeParse({ name, email, message, phone });
     const isFormValid = validationResult.success;
     const isLoading = status === "loading";
 
     // Extract errors
-    const errors: { name?: string; email?: string; message?: string } = {};
+    const errors: { name?: string; email?: string; message?: string; phone?: string } = {};
     if (!validationResult.success) {
         validationResult.error.issues.forEach((err) => {
             const field = err.path[0] as keyof typeof errors;
@@ -54,7 +58,7 @@ export const useContact = () => {
         if (!isFormValid) {
             return;
         }
-        const resultAction = await dispatch(sendContactEmail({ name, email, message }));
+        const resultAction = await dispatch(sendContactEmail({ name, email, message, phone }));
 
         if (sendContactEmail.fulfilled.match(resultAction)) {
             console.log("Tin nhắn của bạn đã được gửi thành công!");
@@ -68,6 +72,7 @@ export const useContact = () => {
         name,
         email,
         message,
+        phone,
         status,
         error,
         isLoading,

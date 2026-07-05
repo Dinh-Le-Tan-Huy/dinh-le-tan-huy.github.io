@@ -13,6 +13,8 @@
             "messagePlaceholder": "Hãy cho tôi biết về yêu cầu, mục tiêu hoặc câu hỏi của bạn...",
             "nameLabel": "Tên*",
             "emailLabel": "Email*",
+            "phoneLabel": "Số điện thoại",
+            "phonePlaceholder": "Ví dụ: +84 932 224 895",
             "messageLabel": "Tin nhắn",
             "send": "Gửi tin nhắn",
             "sending": "Đang gửi..."
@@ -120,8 +122,8 @@
             {
                 "id": "proj_homenest_01",
                 "title": "Công ty HomeNest Software",
-                "time": "Tháng 6/2025 - Hiện tại",
-                "des": "Lập trình viên Frontend · Kỹ sư SEO · DevOps · Quản trị CMS",
+                "time": "2025 - Hiện tại",
+                "des": "Lập trình viên Frontend · Quản trị CMS",
                 "responsibilities": [
                     "Phát triển hai website doanh nghiệp đa ngôn ngữ (EN + VI), mỗi site 20+ trang, sử dụng Next.js 16 App Router và kiến trúc CSS Modules.",
                     "Tích hợp WordPress Headless CMS qua GraphQL API để quản lý nội dung động (case studies, wiki, lĩnh vực, dịch vụ).",
@@ -136,7 +138,7 @@
             {
                 "id": "proj_lovelawn_02",
                 "title": "Love Lawn Service",
-                "time": "2025",
+                "time": "2025 - Hiện tại",
                 "des": "Lập trình viên Mobile · Đóng góp Backend · DevOps",
                 "responsibilities": [
                     "Xây dựng nền tảng dịch vụ cắt cỏ theo yêu cầu (React Native + Expo) với 2 vai trò: khách hàng (đặt lịch, theo dõi công việc thời gian thực, thanh toán) và thợ (GPS check-in, tải ảnh, báo cáo sự cố, chấm công).",
@@ -144,7 +146,7 @@
                     "Triển khai chat 1-1 thời gian thực (Socket.IO) giữa khách hàng, thợ và admin.",
                     "Triển khai push notifications (expo-notifications + expo-server-sdk) bao gồm hệ thống thông báo lên lịch (node-cron).",
                     "Quản lý GPS check-in cho thợ (expo-location + MapLibre maps) và tải ảnh (TRƯỚC/SAU/VẬT LIỆU/SỰ CỐ) lên AWS S3.",
-                    "Đóng góp vào RESTful APIs, tài liệu hóa bằng Swagger UI (Node.js + Prisma): quy trình đặt lịch, phân công thợ, quản lý zone, pipeline thanh toán/hóa đơn (20+ Prisma models).",
+                    "Đóng góp vào RESTful APIs, tài liệu hóa bằng Swagger UI (Node.js + Prisma): phân công thợ, pipeline thanh toán/hóa đơn (20+ Prisma models).",
                     "Tạo PDF hóa đơn (PDFKit) và gửi email thông báo (nodemailer); bảo mật API với JWT, bcrypt, helmet, rate-limiting và Zod validation.",
                     "Dockerize backend + admin-web; cấu hình docker-compose stack (PostgreSQL 15, Redis 7, Nginx, pgadmin) và GitHub Actions CI/CD để tự động deploy lên VPS.",
                     "Deploy ứng dụng mobile qua EAS Build lên App Store và Google Play."
@@ -153,7 +155,7 @@
             {
                 "id": "proj_vietplus_03",
                 "title": "VIET PLUS — Ứng dụng Rao vặt Đa danh mục",
-                "time": "2025",
+                "time": "2025 - Hiện tại",
                 "des": "Lập trình viên Mobile · Đóng góp Backend · DevOps",
                 "responsibilities": [
                     "Xây dựng ứng dụng super app rao vặt đa danh mục (React Native + Expo) với 10+ module tính năng dành cho cộng đồng người Việt ở nước ngoài.",
@@ -189,8 +191,12 @@
                     "Khóa học Điện toán đám mây AWS – Udemy | 2026",
                     "Lập trình viên React Native – Trung tâm Tin học KHTN | 2025",
                     {
-                        "text": "Thư viện Front-End Development Libraries V8 - FreeCodeCamp | 2026",
+                        "text": "Front-End Development Libraries V8 | 2026",
                         "link": "https://www.freecodecamp.org/certification/tanhuy/front-end-development-libraries"
+                    },
+                    {
+                        "text": "SQL (Advanced) Certificate | 2026",
+                        "link": "https://www.hackerrank.com/certificates/703ab0191123"
                     }
                 ]
             },
@@ -266,6 +272,7 @@
             "academicBackground": "Nền tảng Học vấn",
             "technicalSkills": "Kỹ năng Kỹ thuật",
             "experience": "Kinh nghiệm",
+            "desc_experience": "Là một Lập trình viên Full Stack và Mobile, tôi chuyên cung cấp dịch vụ thiết kế website chuyên nghiệp và phát triển ứng dụng di động đa nền tảng. Tôi cam kết mang đến các giải pháp công nghệ với hiệu năng cao, giao diện UI/UX đẹp mắt, giúp doanh nghiệp của bạn tối ưu hóa trải nghiệm người dùng và gia tăng tỷ lệ chuyển đổi.",
             "frequentlyAsked": "Câu hỏi Thường gặp"
         },
         "hrFAQs": [

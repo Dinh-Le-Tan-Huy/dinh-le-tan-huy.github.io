@@ -13,6 +13,8 @@
             "messagePlaceholder": "Tell me about your project requirements, goals, or questions...",
             "nameLabel": "Name*",
             "emailLabel": "Email*",
+            "phoneLabel": "Phone Number",
+            "phonePlaceholder": "e.g. +84 932 224 895",
             "messageLabel": "Message",
             "send": "Send Message",
             "sending": "Sending..."
@@ -105,8 +107,8 @@
             {
                 "id": "proj_homenest_01",
                 "title": "HomeNest Software",
-                "time": "Jun 2025 - Present",
-                "des": "Frontend Developer · SEO Engineer · DevOps · CMS Admin",
+                "time": "2025 - Present",
+                "des": "Frontend Developer · CMS Admin",
                 "responsibilities": [
                     "Developed two multilingual corporate websites (EN + VI), 20+ pages each, using Next.js 16 App Router and CSS Modules component-based architecture.",
                     "Integrated headless WordPress CMS via GraphQL API for dynamic content management (case studies, wiki, industries, services).",
@@ -121,7 +123,7 @@
             {
                 "id": "proj_lovelawn_02",
                 "title": "Love Lawn Service",
-                "time": "2025",
+                "time": "2025 - Present",
                 "des": "Mobile Developer · Backend Contributor · DevOps",
                 "responsibilities": [
                     "Built a dual-role on-demand lawn care platform (React Native + Expo) for customers (booking, real-time job tracking, payment) and field workers (GPS check-in, photo upload, incident reporting, time tracking).",
@@ -129,7 +131,7 @@
                     "Implemented real-time 1-on-1 chat (Socket.IO) between customer, worker, and admin roles.",
                     "Implemented push notifications (expo-notifications + expo-server-sdk) including a scheduled notification system (node-cron).",
                     "Managed GPS-based worker check-in (expo-location + MapLibre maps) and photo uploads (BEFORE/AFTER/MATERIAL/INCIDENT) to AWS S3.",
-                    "Contributed to RESTful APIs documented with Swagger UI (Node.js + Prisma): booking workflow, worker assignment, zone management, payment/invoice pipeline (20+ Prisma models).",
+                    "Contributed to RESTful APIs documented with Swagger UI (Node.js + Prisma): worker assignment, payment/invoice pipeline (20+ Prisma models).",
                     "Generated PDF invoices (PDFKit) and email notifications (nodemailer); secured API with JWT, bcrypt, helmet, rate-limiting, and Zod validation.",
                     "Dockerized backend + admin-web; configured docker-compose stack (PostgreSQL 15, Redis 7, Nginx, pgadmin) and GitHub Actions CI/CD for auto-deploy to VPS.",
                     "Deployed mobile app via EAS Build to App Store and Google Play."
@@ -138,7 +140,7 @@
             {
                 "id": "proj_vietplus_03",
                 "title": "VIET PLUS — Classifieds Super App",
-                "time": "2025",
+                "time": "2025 - Present",
                 "des": "Mobile Developer · Backend Contributor · DevOps",
                 "responsibilities": [
                     "Built a multi-category classifieds super app (React Native + Expo) with 10+ feature modules targeting Vietnamese expat communities.",
@@ -174,8 +176,12 @@
                     "AWS Cloud Computing Course \u2013 Udemy | 2026",
                     "React Native Developer \u2013 CSC / University of Science | 2025",
                     {
-                        "text": "Front-End Development Libraries V8 - FreeCodeCamp | 2026",
+                        "text": "Front-End Development Libraries V8 | 2026",
                         "link": "https://www.freecodecamp.org/certification/tanhuy/front-end-development-libraries"
+                    },
+                    {
+                        "text": "SQL (Advanced) Certificate | 2026",
+                        "link": "https://www.hackerrank.com/certificates/703ab0191123"
                     }
                 ]
             },
@@ -266,6 +272,7 @@
             "academicBackground": "Academic Background",
             "technicalSkills": "Technical Skills",
             "experience": "Experience",
+            "desc_experience": "As a Full Stack and Mobile Developer, I specialize in providing professional website design services and cross-platform mobile app development. I am committed to delivering high-performance technology solutions with stunning UI/UX designs, helping your business optimize user experience and increase conversion rates.",
             "frequentlyAsked": "Frequently Asked"
         },
         "hrFAQs": [

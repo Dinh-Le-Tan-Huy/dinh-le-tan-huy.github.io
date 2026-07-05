@@ -44,7 +44,7 @@ const EmailLink = ({ email }: { email: string }) => {
 const Contact = () => {
     const { t } = useTranslation();
     const {
-        email, name, message, isLoading, submitted, isFormValid, errors,
+        email, name, message, phone, isLoading, submitted, isFormValid, errors,
         handleChangeField, handleSend
     } = useContact();
 
@@ -72,6 +72,7 @@ const Contact = () => {
             ...ContactStyle.container,
             flexDirection: isMobile ? "column" : "row",
             marginTop: isMobile ? "80px" : "140px",
+            marginBottom: isMobile ? "80px" : "140px",
             minHeight: isMobile ? "auto" : "600px",
             borderRadius: isMobile ? "16px" : "24px",
         }}>
@@ -131,6 +132,14 @@ const Contact = () => {
                     value={email}
                     onChangeText={(val) => handleChangeField("email", val)}
                     errorMessage={submitted ? errors.email : undefined}
+                />
+
+                <Input
+                    title={t('contactPage.form.phoneLabel')}
+                    placeholder={t('contactPage.form.phonePlaceholder')}
+                    titleStyle={ContactStyle.inputTitle}
+                    value={phone ?? ""}
+                    onChangeText={(val) => handleChangeField("phone", val)}
                 />
 
                 <Input

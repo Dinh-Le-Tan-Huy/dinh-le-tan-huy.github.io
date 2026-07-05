@@ -180,8 +180,11 @@ export const styles = {
 
     experiencesInner: {
         width: '100%',
-        maxWidth: '900px',
+        maxWidth: '1200px',
         margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
+        gap: '32px',
     } as CSSProperties,
 
     // ── FAQs Section ─────────────────────────────────────────────────────────

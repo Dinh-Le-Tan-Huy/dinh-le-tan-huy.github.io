@@ -58,7 +58,7 @@ export const styles = {
     } as CSSProperties,
 
     headerContainer: {
-        padding: 'clamp(40px, 8vw, 80px) 0',
+        padding: 'clamp(40px, 8vw, 60px) 0',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -85,7 +85,7 @@ export const styles = {
     headerText: {
         fontSize: 'clamp(0.95rem, 1.8vw, 1.1rem)',
         lineHeight: 1.8,
-        maxWidth: '760px',
+        maxWidth: '1000px',
         color: Colors.textSecondary,
         margin: '0 auto',
     } as CSSProperties,

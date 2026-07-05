@@ -65,8 +65,8 @@ export const Home = () => {
 
                 {/* CTA row */}
                 <div style={styles.heroCtas}>
-                    <a 
-                        href="#FAQ" 
+                    <a
+                        href="#FAQ"
                         style={styles.heroBtnPrimary}
                         onClick={(e) => {
                             e.preventDefault();
@@ -150,6 +150,9 @@ export const Home = () => {
                         {t('homePage.badges.work')}
                     </div>
                     <h2 style={sectionTitle}>{t('homePage.titles.experience')}</h2>
+                    <p style={{ ...styles.summaryDescription, marginTop: '16px', maxWidth: '1500px' }}>
+                        {t('homePage.titles.desc_experience')}
+                    </p>
                 </div>
                 <div style={sectionDivider} />
 
@@ -160,9 +163,7 @@ export const Home = () => {
                             title={item.title}
                             des={item.des}
                             time={item.time}
-                            responsibilities={item.responsibilities.filter((resp: string) =>
-                                KEY_TECH_FILTER.test(resp)
-                            )}
+                            centerContent={true}
                             onActionClick={() => navigate(`/About?project=${encodeURIComponent(item.title.trim())}`)}
                         />
                     ))}
