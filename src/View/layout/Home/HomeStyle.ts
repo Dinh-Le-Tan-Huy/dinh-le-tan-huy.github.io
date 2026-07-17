@@ -1,226 +1,371 @@
-import { type CSSProperties } from 'react';
-import { Colors } from '../../DesignSystem/Colors';
+/* Hallmark · redesign · pre-emit critique: P5 H5 E5 S5 R5 V4
+ * genre: modern-minimal · macrostructure: Long Document / Workbench
+ * theme: custom-tuned "Refined Slate" (light-mode, single indigo accent)
+ * audience: senior hiring managers / tech leads
+ * use: demonstrate Full-stack JS/TS engineering depth → drive contact
+ * tone: utilitarian · technical-austere
+ */
 
-// ─── Reusable section wrapper style ──────────────────────────────────────────
+import { type CSSProperties } from 'react';
+
+// ─── Token Block ─────────────────────────────────────────────────────────────
+// All colour and type values flow through named tokens.
+// Override here to retheme the entire page.
+
+export const tokens = {
+    // Paper scale (light mode)
+    paper:       'oklch(98.5% 0.005 250)',   // near-white, barely-cool tint
+    paperSubtle: 'oklch(96.5% 0.008 250)',   // slightly recessed surface
+    paperCard:   'oklch(100% 0 0)',          // pure white card surface
+
+    // Ink scale
+    ink:         'oklch(14% 0.015 260)',     // near-black primary text
+    inkMid:      'oklch(42% 0.012 255)',     // secondary text
+    inkMuted:    'oklch(66% 0.008 255)',     // muted / meta text
+
+    // Accent — single restrained indigo
+    accent:      'oklch(52% 0.18 265)',      // indigo
+    accentLight: 'oklch(52% 0.18 265 / 0.08)',  // tinted bg
+    accentMid:   'oklch(52% 0.18 265 / 0.20)',  // border
+
+    // Rule & border
+    rule:        'oklch(90% 0.01 250)',      // hairline separator
+    ruleDark:    'oklch(84% 0.012 250)',     // slightly heavier border
+
+    // Shadow
+    shadow:      '0 2px 12px oklch(0% 0 0 / 0.06)',
+    shadowMd:    '0 4px 24px oklch(0% 0 0 / 0.08)',
+
+    // Typography
+    fontSans: "'Inter', system-ui, -apple-system, sans-serif",
+    fontMono: "'ui-monospace', 'Cascadia Code', 'Consolas', monospace",
+} as const;
+
+// ─── Reusable section wrapper ─────────────────────────────────────────────────
 export const sectionWrapper: CSSProperties = {
     width: '100%',
-    padding: '0 clamp(16px, 5vw, 80px)',
-    marginBottom: '100px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
+    maxWidth: '960px',
+    margin: '0 auto',
+    padding: 'clamp(72px, 10vw, 112px) clamp(20px, 5vw, 40px)',
 };
 
-// ─── Reusable section header (pill badge + title) ────────────────────────────
+// ─── Section label (replaces pill badge — lean left-accent style) ─────────────
 export const sectionBadge: CSSProperties = {
     display: 'inline-flex',
     alignItems: 'center',
-    gap: '8px',
-    padding: '4px 14px',
-    borderRadius: '99px',
-    backgroundColor: Colors.cyanDim,
-    border: `1px solid ${Colors.cyanBorder}`,
-    color: Colors.cyan,
+    gap: '10px',
+    paddingLeft: '12px',
+    borderLeft: `3px solid ${tokens.accent}`,
+    color: tokens.accent,
     fontSize: '11px',
     fontWeight: 700,
-    letterSpacing: '0.1em',
+    letterSpacing: '0.14em',
     textTransform: 'uppercase',
-    marginBottom: '12px',
+    marginBottom: '16px',
+    fontFamily: tokens.fontMono,
 };
 
+// ─── Section title ────────────────────────────────────────────────────────────
 export const sectionTitle: CSSProperties = {
-    fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
+    fontSize: 'clamp(1.6rem, 3.5vw, 2.1rem)',
     fontWeight: 700,
-    color: Colors.textPrimary,
+    color: tokens.ink,
     margin: 0,
-    letterSpacing: '-0.02em',
+    letterSpacing: '-0.025em',
     lineHeight: 1.2,
+    fontStyle: 'normal',
 };
 
+// ─── Section divider (hairline rule) ─────────────────────────────────────────
 export const sectionDivider: CSSProperties = {
-    width: '48px',
-    height: '3px',
-    borderRadius: '4px',
-    background: `linear-gradient(90deg, ${Colors.cyan}, transparent)`,
-    marginTop: '12px',
-    marginBottom: '40px',
-    alignSelf: 'flex-start',
+    width: '100%',
+    height: '1px',
+    backgroundColor: tokens.rule,
+    border: 'none',
+    margin: '32px 0 48px 0',
 };
 
 // ─── Main page styles ─────────────────────────────────────────────────────────
 export const styles = {
+
     mainContainer: {
         marginTop: '80px',
-        color: Colors.textPrimary,
         minHeight: '100vh',
-        backgroundColor: Colors.navyDark,
-        fontFamily: "'Inter', sans-serif",
+        backgroundColor: tokens.paper,
+        color: tokens.ink,
+        fontFamily: tokens.fontSans,
+        overflowX: 'hidden' as const,
     } as CSSProperties,
 
     // ── Hero / Summary ────────────────────────────────────────────────────────
     summaryContainer: {
-        padding: 'clamp(48px, 8vw, 100px) clamp(16px, 5vw, 80px)',
-        background: `
-            radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0,216,255,0.08) 0%, transparent 60%),
-            ${Colors.navyDark}
-        `,
-        borderBottom: `1px solid ${Colors.glassBorder}`,
-        marginBottom: '16px',
+        width: '100%',
+        maxWidth: '960px',
+        margin: '0 auto',
+        padding: 'clamp(72px, 10vw, 120px) clamp(20px, 5vw, 40px) clamp(64px, 8vw, 100px)',
+        borderBottom: `1px solid ${tokens.rule}`,
+        marginBottom: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        textAlign: 'left',
     } as CSSProperties,
 
     greetingTag: {
         display: 'inline-flex',
         alignItems: 'center',
         gap: '8px',
-        padding: '6px 16px',
-        borderRadius: '99px',
-        backgroundColor: Colors.cyanDim,
-        border: `1px solid ${Colors.cyanBorder}`,
-        color: Colors.cyan,
-        fontSize: '12px',
+        padding: '4px 12px 4px 4px',
+        borderRadius: '4px',
+        backgroundColor: tokens.accentLight,
+        border: `1px solid ${tokens.accentMid}`,
+        color: tokens.accent,
+        fontSize: '11.5px',
         fontWeight: 600,
         letterSpacing: '0.08em',
-        marginBottom: '28px',
+        textTransform: 'uppercase' as const,
+        marginBottom: '32px',
+        fontFamily: tokens.fontMono,
     } as CSSProperties,
 
     greetingDot: {
         width: '6px',
         height: '6px',
         borderRadius: '50%',
-        backgroundColor: Colors.cyan,
-        boxShadow: `0 0 8px ${Colors.cyan}`,
+        backgroundColor: tokens.accent,
+        // No glow — solid colour only
+        flexShrink: 0,
+        marginLeft: '6px',
     } as CSSProperties,
 
     greetingTitle: {
-        fontSize: 'clamp(2.4rem, 6vw, 4rem)',
+        fontSize: 'clamp(2.6rem, 6vw, 4rem)',
         fontWeight: 800,
-        lineHeight: 1.1,
-        letterSpacing: '-0.03em',
-        margin: '0 0 28px 0',
-        color: Colors.textPrimary,
+        lineHeight: 1.08,
+        letterSpacing: '-0.035em',
+        margin: '0 0 12px 0',
+        color: tokens.ink,
+        fontStyle: 'normal',
+        overflowWrap: 'anywhere' as const,
+        minWidth: 0,
     } as CSSProperties,
 
+    // Typewriter line — accent colour, no glow
     highlightText: {
-        color: Colors.cyan,
-        textShadow: `0 0 40px ${Colors.cyanGlow}`,
+        color: tokens.accent,
+        // No textShadow — clean, no glow
+    } as CSSProperties,
+
+    // Hero role tagline (static line below h1)
+    heroTagline: {
+        fontSize: 'clamp(0.9rem, 1.6vw, 1rem)',
+        lineHeight: 1.6,
+        color: tokens.inkMid,
+        margin: '0 0 28px 0',
+        fontFamily: tokens.fontMono,
+        display: 'flex',
+        flexWrap: 'wrap' as const,
+        gap: '6px 0',
+    } as CSSProperties,
+
+    heroTaglineSeparator: {
+        color: tokens.inkMuted,
+        margin: '0 10px',
     } as CSSProperties,
 
     summaryDescription: {
-        fontSize: 'clamp(0.95rem, 1.8vw, 1.1rem)',
+        fontSize: 'clamp(0.95rem, 1.8vw, 1.05rem)',
         lineHeight: 1.8,
-        width: '100%',
-        maxWidth: '100%',
-        color: Colors.textSecondary,
-        margin: 0,
+        color: tokens.inkMid,
+        margin: '0 0 40px 0',
+        maxWidth: '640px',
     } as CSSProperties,
 
     heroCtas: {
         display: 'flex',
         alignItems: 'center',
-        gap: '16px',
-        marginTop: '40px',
+        gap: '20px',
         flexWrap: 'wrap' as const,
     } as CSSProperties,
 
+    // Primary CTA: solid dark-ink fill — no gradient, no glow
     heroBtnPrimary: {
         display: 'inline-flex',
         alignItems: 'center',
         gap: '8px',
-        padding: '12px 28px',
-        borderRadius: '12px',
-        background: `linear-gradient(135deg, ${Colors.cyan}, #0097b2)`,
-        color: Colors.navyDark,
-        fontWeight: 700,
-        fontSize: '14px',
+        padding: '11px 26px',
+        borderRadius: '6px',
+        backgroundColor: tokens.ink,
+        color: tokens.paper,
+        fontWeight: 600,
+        fontSize: '13.5px',
         border: 'none',
         cursor: 'pointer',
         textDecoration: 'none',
-        boxShadow: `0 4px 24px ${Colors.cyanGlow}`,
-        transition: 'all 0.3s ease',
+        letterSpacing: '0.01em',
+        transition: 'background-color 0.2s ease, transform 0.15s ease',
+        fontFamily: tokens.fontSans,
     } as CSSProperties,
 
-    // ── Education Section ─────────────────────────────────────────────────────
+    heroLocation: {
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '6px',
+        fontSize: '13px',
+        color: tokens.inkMuted,
+        fontFamily: tokens.fontMono,
+    } as CSSProperties,
+
+    // ── Tech-stack tag row (hero section) ─────────────────────────────────────
+    techStackRow: {
+        display: 'flex',
+        flexWrap: 'wrap' as const,
+        gap: '8px',
+        marginBottom: '36px',
+    } as CSSProperties,
+
+    techTag: {
+        display: 'inline-flex',
+        alignItems: 'center',
+        padding: '3px 10px',
+        borderRadius: '4px',
+        backgroundColor: tokens.paperSubtle,
+        border: `1px solid ${tokens.rule}`,
+        color: tokens.inkMid,
+        fontSize: '11.5px',
+        fontWeight: 500,
+        fontFamily: tokens.fontMono,
+        letterSpacing: '0.02em',
+        whiteSpace: 'nowrap' as const,
+    } as CSSProperties,
+
+    // ── Section containers ────────────────────────────────────────────────────
     educationSection: {
         ...sectionWrapper,
+        paddingTop: 'clamp(64px, 8vw, 96px)',
     } as CSSProperties,
 
-    // ── Skills Section ────────────────────────────────────────────────────────
     skillsSection: {
         ...sectionWrapper,
+        paddingTop: 0,
+        marginTop: 0,
     } as CSSProperties,
 
+    experiencesSection: {
+        ...sectionWrapper,
+        paddingTop: 0,
+        marginTop: 0,
+    } as CSSProperties,
+
+    faqSection: {
+        ...sectionWrapper,
+        paddingTop: 0,
+        marginTop: 0,
+        paddingBottom: 'clamp(80px, 10vw, 120px)',
+    } as CSSProperties,
+
+    // ── Skills tag-cloud layout ───────────────────────────────────────────────
     skillsGrid: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-        gap: '20px',
+        display: 'flex',
+        flexDirection: 'column' as const,
+        gap: '32px',
         width: '100%',
     } as CSSProperties,
 
+    skillRow: {
+        display: 'grid',
+        gridTemplateColumns: 'minmax(0, 160px) 1fr',
+        gap: '16px 32px',
+        alignItems: 'flex-start',
+    } as CSSProperties,
+
+    skillRowMobile: {
+        display: 'grid',
+        gridTemplateColumns: '1fr',
+        gap: '8px',
+    } as CSSProperties,
+
+    skillLabel: {
+        fontSize: '12px',
+        fontWeight: 700,
+        color: tokens.inkMid,
+        letterSpacing: '0.1em',
+        textTransform: 'uppercase' as const,
+        paddingTop: '4px',
+        fontFamily: tokens.fontMono,
+    } as CSSProperties,
+
+    skillTagRow: {
+        display: 'flex',
+        flexWrap: 'wrap' as const,
+        gap: '7px',
+    } as CSSProperties,
+
+    skillTag: {
+        display: 'inline-flex',
+        alignItems: 'center',
+        padding: '4px 10px',
+        borderRadius: '4px',
+        backgroundColor: tokens.paperSubtle,
+        border: `1px solid ${tokens.ruleDark}`,
+        color: tokens.inkMid,
+        fontSize: '12px',
+        fontWeight: 500,
+        fontFamily: tokens.fontMono,
+        whiteSpace: 'nowrap' as const,
+        transition: 'border-color 0.18s ease, color 0.18s ease',
+    } as CSSProperties,
+
+    // ── Experience grid ───────────────────────────────────────────────────────
+    experiencesInner: {
+        width: '100%',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 420px), 1fr))',
+        gap: '24px',
+    } as CSSProperties,
+
+    // ── FAQ container ─────────────────────────────────────────────────────────
+    faqContainer: {
+        width: '100%',
+        maxWidth: '720px',
+        display: 'flex',
+        flexDirection: 'column' as const,
+        gap: '4px',
+    } as CSSProperties,
+
+    // ── Legacy grid keys (kept to avoid breaking old refs) ───────────────────
     skillsGridMobile: {
         display: 'flex',
         flexDirection: 'column' as const,
-        alignItems: 'center',
         gap: '16px',
         width: '100%',
     } as CSSProperties,
 
-    // ── Legacy skill grids (kept for backward compat with Home.tsx) ───────────
     skillsGridDesktop: {
         display: 'flex',
         flexWrap: 'wrap' as const,
-        justifyContent: 'center',
-        gap: '20px',
+        gap: '16px',
         width: '100%',
     } as CSSProperties,
 
-    // ── Experiences Section ────────────────────────────────────────────────────
-    experiencesSection: {
-        ...sectionWrapper,
-    } as CSSProperties,
-
-    experiencesInner: {
-        width: '100%',
-        maxWidth: '1200px',
-        margin: '0 auto',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
-        gap: '32px',
-    } as CSSProperties,
-
-    // ── FAQs Section ─────────────────────────────────────────────────────────
-    faqSection: {
-        ...sectionWrapper,
-        paddingBottom: '80px',
-    } as CSSProperties,
-
-    faqContainer: {
-        width: '100%',
-        maxWidth: '760px',
-        display: 'flex',
-        flexDirection: 'column' as const,
-        gap: '12px',
-        margin: '0 auto',
-    } as CSSProperties,
-
-    // ─── Legacy keys — kept to avoid breaking existing Home.tsx refs ──────────
     skillsTitle: {
-        fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
+        fontSize: 'clamp(1.4rem, 3vw, 1.8rem)',
         fontWeight: 700,
-        color: Colors.textPrimary,
+        color: tokens.ink,
         margin: '0 0 12px 0',
     } as CSSProperties,
 
     experiencesTitle: {
-        fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
+        fontSize: 'clamp(1.4rem, 3vw, 1.8rem)',
         fontWeight: 700,
-        color: Colors.textPrimary,
+        color: tokens.ink,
         margin: '0 0 12px 0',
     } as CSSProperties,
 
     faqTitle: {
-        fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
+        fontSize: 'clamp(1.4rem, 3vw, 1.8rem)',
         fontWeight: 700,
-        color: Colors.textPrimary,
+        color: tokens.ink,
         margin: '0 0 12px 0',
     } as CSSProperties,
 };

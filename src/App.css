@@ -1,9 +1,9 @@
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   box-sizing: border-box;
-  background-color: #080b14;
-  color: #e8edf5;
-  font-family: 'Inter', sans-serif;
+  background-color: oklch(98.5% 0.005 250);
+  color: oklch(14% 0.015 260);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 *, *::before, *::after {

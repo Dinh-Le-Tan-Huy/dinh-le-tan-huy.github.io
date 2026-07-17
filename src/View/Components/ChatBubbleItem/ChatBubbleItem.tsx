@@ -16,15 +16,15 @@ const ChatBubbleItem = ({ question, answer, isOpen, onToggle }: ChatBubbleItemPr
                 onClick={onToggle}
                 style={{
                     ...styles.questionButton,
-                    borderColor: isOpen ? 'rgba(0,216,255,0.25)' : undefined,
+                    borderColor: isOpen ? 'oklch(52% 0.18 265 / 0.30)' : undefined,
                 }}
                 onMouseEnter={e => {
-                    e.currentTarget.style.backgroundColor = '#1a2540';
-                    e.currentTarget.style.borderColor = 'rgba(0,216,255,0.2)';
+                    e.currentTarget.style.backgroundColor = 'oklch(96.5% 0.008 250)';
+                    e.currentTarget.style.borderColor = 'oklch(52% 0.18 265 / 0.25)';
                 }}
                 onMouseLeave={e => {
-                    e.currentTarget.style.backgroundColor = '#111828';
-                    e.currentTarget.style.borderColor = isOpen ? 'rgba(0,216,255,0.25)' : 'rgba(255,255,255,0.07)';
+                    e.currentTarget.style.backgroundColor = 'oklch(100% 0 0)';
+                    e.currentTarget.style.borderColor = isOpen ? 'oklch(52% 0.18 265 / 0.30)' : 'oklch(90% 0.01 250)';
                 }}
             >
                 <span>{question}</span>

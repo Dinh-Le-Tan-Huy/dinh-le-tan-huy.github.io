@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import CardInfo from "../../Components/CardInfo/CardInfo"
 import CardItem from "../../Components/CardItem/CardItem"
-import { styles, sectionBadge, sectionTitle, sectionDivider } from "./AboutStyle"
+import { styles, sectionBadge, sectionTitle, sectionDivider, tokens } from "./AboutStyle"
 import { Colors } from "../../DesignSystem/Colors"
 import { useAbout } from "../../../ViewModel/useAbout"
 import ChatBubbleItem from "../../Components/ChatBubbleItem/ChatBubbleItem"
@@ -33,8 +33,8 @@ const About = () => {
                         <button
                             style={{
                                 ...styles.contactBtn,
-                                transform: btnHover ? 'scale(1.03) translateY(-2px)' : 'none',
-                                boxShadow: btnHover ? `0 8px 30px ${Colors.cyanGlow}` : `0 4px 20px ${Colors.cyanGlow}`,
+                                transform: btnHover ? 'translateY(-1px)' : 'none',
+                                backgroundColor: btnHover ? tokens.inkMid : tokens.ink,
                             }}
                             onMouseEnter={() => setBtnHover(true)}
                             onMouseLeave={() => setBtnHover(false)}
@@ -47,13 +47,10 @@ const About = () => {
                 {/* Education section */}
                 <div style={styles.sectionWrapper}>
                     <div style={sectionBadge}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" />
-                        </svg>
                         {t('aboutPage.badges.education')}
                     </div>
                     <h2 style={sectionTitle}>{t('aboutPage.titles.academicBackground')}</h2>
-                    <div style={sectionDivider} />
+                    <hr style={sectionDivider} />
                     <div style={{ width: '100%' }}>
                         <CardInfo />
                     </div>
@@ -62,13 +59,10 @@ const About = () => {
                 {/* Skills section */}
                 <div style={styles.sectionWrapper}>
                     <div style={sectionBadge}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
-                        </svg>
                         {t('aboutPage.badges.skills')}
                     </div>
                     <h2 style={sectionTitle}>{t('aboutPage.titles.technicalSkills')}</h2>
-                    <div style={sectionDivider} />
+                    <hr style={sectionDivider} />
 
                     <div style={styles.gridContainer}>
                         {skillsData.map((item: any) => (
@@ -87,13 +81,10 @@ const About = () => {
                 {/* Experience section */}
                 <div style={styles.sectionWrapper}>
                     <div style={sectionBadge}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 6h-2.18c.07-.44.18-.88.18-1.34C18 2.54 15.96.5 13.5.5c-1.3 0-2.41.53-3.25 1.35L9 3.08 7.75 1.85C6.91.53 5.8 0 4.5 0 2.04 0 0 2.04 0 4.5c0 .46.11.9.18 1.34H0v13c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM13.5 2.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5H10l1.22-1.22c.42-.42.99-.66 1.58-.66l.7-.12zM2 4.5C2 3.67 2.67 3 3.5 3c.58 0 1.1.23 1.5.62L6.22 4.9 6.5 5H5l-.08-.01C3.9 4.94 2 4.18 2 4.5z" />
-                        </svg>
                         {t('aboutPage.badges.experience')}
                     </div>
                     <h2 style={sectionTitle}>{t('aboutPage.titles.professionalHistory')}</h2>
-                    <div style={sectionDivider} />
+                    <hr style={sectionDivider} />
 
                     <div style={styles.listContainer}>
                         {projectsData.map((item: any) => {
@@ -105,10 +96,10 @@ const About = () => {
                                     id={trimmedTitle}
                                     style={{
                                         width: '100%',
-                                        borderRadius: '16px',
-                                        transition: 'all 0.5s ease',
-                                        boxShadow: isSelected ? `0 0 25px ${Colors.cyanGlow}` : 'none',
-                                        border: isSelected ? `1px solid ${Colors.cyan}` : '1px solid transparent',
+                                        borderRadius: '10px',
+                                        transition: 'all 0.3s ease',
+                                        border: isSelected ? `1px solid ${tokens.accent}` : '1px solid transparent',
+                                        boxShadow: isSelected ? tokens.shadow : 'none',
                                     }}
                                 >
                                     <CardItem
@@ -127,14 +118,10 @@ const About = () => {
                 {/* Certificates & Specialized Courses, Languages */}
                 <div style={styles.sectionWrapper}>
                     <div style={sectionBadge}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                            <path d="m9 12 2 2 4-4" />
-                        </svg>
                         {t('aboutPage.badges.certificates')}
                     </div>
                     <h2 style={sectionTitle}>{t('aboutPage.titles.coursesAndLanguages')}</h2>
-                    <div style={sectionDivider} />
+                    <hr style={sectionDivider} />
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0', width: '100%' }}>
                         {educationData.map((item: any, idx: number) => (
@@ -143,12 +130,12 @@ const About = () => {
                                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '32px', flexShrink: 0 }}>
                                     {/* Dot */}
                                     <div style={{
-                                        width: '12px',
-                                        height: '12px',
+                                        width: '10px',
+                                        height: '10px',
                                         borderRadius: '50%',
-                                        backgroundColor: Colors.cyan,
-                                        boxShadow: `0 0 10px ${Colors.cyanGlow}`,
-                                        marginTop: '18px',
+                                        backgroundColor: tokens.accent,
+                                        border: `2px solid ${tokens.accentMid}`,
+                                        marginTop: '20px',
                                         flexShrink: 0,
                                         zIndex: 1,
                                     }} />
@@ -157,7 +144,7 @@ const About = () => {
                                         <div style={{
                                             width: '1px',
                                             flex: 1,
-                                            background: `linear-gradient(to bottom, ${Colors.cyanBorder}, transparent)`,
+                                            backgroundColor: tokens.rule,
                                             marginTop: '6px',
                                         }} />
                                     )}
@@ -173,26 +160,28 @@ const About = () => {
                                         flexDirection: 'column',
                                         gap: '6px',
                                         padding: '14px 18px',
-                                        borderRadius: '12px',
-                                        background: Colors.glassSurface,
-                                        border: `1px solid ${Colors.glassBorder}`,
-                                        transition: 'border-color 0.3s ease',
+                                        borderRadius: '8px',
+                                        backgroundColor: tokens.paperCard,
+                                        border: `1px solid ${tokens.rule}`,
+                                        boxShadow: tokens.shadow,
+                                        transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
                                     }}>
                                         {/* Badge */}
                                         <span style={{
                                             display: 'inline-flex',
                                             alignItems: 'center',
                                             gap: '6px',
-                                            padding: '3px 10px',
-                                            backgroundColor: Colors.cyanDim,
-                                            border: `1px solid ${Colors.cyanBorder}`,
-                                            borderRadius: '99px',
+                                            padding: '2px 8px',
+                                            backgroundColor: tokens.accentLight,
+                                            border: `1px solid ${tokens.accentMid}`,
+                                            borderRadius: '4px',
                                             fontSize: '11px',
                                             fontWeight: 700,
-                                            color: Colors.cyan,
+                                            color: tokens.accent,
                                             letterSpacing: '0.06em',
                                             width: 'fit-content',
                                             marginBottom: '4px',
+                                            fontFamily: tokens.fontMono,
                                         }}>
                                             <span>{item.id === "edu_lang_02" ? "🌐" : "📜"}</span>
                                             {item.des}
@@ -202,8 +191,8 @@ const About = () => {
                                             fontSize: 'clamp(14px, 1.8vw, 16px)',
                                             fontWeight: 700,
                                             margin: 0,
-                                            color: Colors.textPrimary,
-                                            fontFamily: "'Inter', sans-serif",
+                                            color: tokens.ink,
+                                            fontFamily: tokens.fontSans,
                                         }}>
                                             {item.title}
                                         </h3>
@@ -211,10 +200,10 @@ const About = () => {
                                         <ul style={{
                                             margin: '6px 0 0 0',
                                             paddingLeft: '20px',
-                                            color: Colors.textSecondary,
+                                            color: tokens.inkMid,
                                             fontSize: '13px',
                                             lineHeight: 1.6,
-                                            fontFamily: "'Inter', sans-serif",
+                                            fontFamily: tokens.fontSans,
                                         }}>
                                             {item.responsibilities.map((resp: any, rIdx: number) => (
                                                 <li key={rIdx} style={{ marginBottom: '4px' }}>
@@ -224,18 +213,18 @@ const About = () => {
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                             style={{
-                                                                color: Colors.cyan,
+                                                                color: tokens.accent,
                                                                 textDecoration: 'none',
-                                                                borderBottom: `1px dashed ${Colors.cyanBorder}`,
+                                                                borderBottom: `1px dashed ${tokens.accentMid}`,
                                                                 transition: 'color 0.2s ease, border-color 0.2s ease',
                                                             }}
                                                             onMouseEnter={e => {
-                                                                (e.currentTarget as HTMLAnchorElement).style.color = Colors.textPrimary;
-                                                                (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = Colors.textPrimary;
+                                                                (e.currentTarget as HTMLAnchorElement).style.color = tokens.ink;
+                                                                (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = tokens.ink;
                                                             }}
                                                             onMouseLeave={e => {
-                                                                (e.currentTarget as HTMLAnchorElement).style.color = Colors.cyan;
-                                                                (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = Colors.cyanBorder;
+                                                                (e.currentTarget as HTMLAnchorElement).style.color = tokens.accent;
+                                                                (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = tokens.accentMid;
                                                             }}
                                                         >
                                                             {resp.text}
@@ -254,13 +243,10 @@ const About = () => {
                 {/* Awards section */}
                 <div style={styles.sectionWrapper}>
                     <div style={sectionBadge}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                        </svg>
                         {t('aboutPage.badges.awards')}
                     </div>
                     <h2 style={sectionTitle}>{t('aboutPage.titles.honorsAndRecognition')}</h2>
-                    <div style={sectionDivider} />
+                    <hr style={sectionDivider} />
 
                     <div style={styles.gridContainer2Col}>
                         {awardsData.map((item: any) => (
@@ -277,13 +263,10 @@ const About = () => {
                 </div>
                 <div id="FAQ" style={styles.sectionWrapper}>
                     <div style={sectionBadge}>
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                        </svg>
                         {t('aboutPage.badges.faq')}
                     </div>
                     <h2 style={sectionTitle}>{t('aboutPage.titles.frequentlyAskedQuestions')}</h2>
-                    <div style={sectionDivider} />
+                    <hr style={sectionDivider} />
 
                     <div style={styles.faqContainer}>
                         {clientFAQs.map((faq: any, index: number) => (

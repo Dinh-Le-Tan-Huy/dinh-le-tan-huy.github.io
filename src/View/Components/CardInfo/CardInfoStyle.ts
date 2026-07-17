@@ -1,8 +1,19 @@
 import { type CSSProperties } from 'react';
-import { Colors } from '../../DesignSystem/Colors';
-import { radius } from '../../DesignSystem/Radius';
-import { spacing } from '../../DesignSystem/Spacing';
-import { typography } from '../../DesignSystem/Typography';
+
+// Refined Slate tokens (light-mode)
+const t = {
+    ink:         'oklch(14% 0.015 260)',
+    inkMid:      'oklch(42% 0.012 255)',
+    inkMuted:    'oklch(66% 0.008 255)',
+    paperCard:   'oklch(100% 0 0)',
+    accent:      'oklch(52% 0.18 265)',
+    accentLight: 'oklch(52% 0.18 265 / 0.08)',
+    accentMid:   'oklch(52% 0.18 265 / 0.20)',
+    rule:        'oklch(90% 0.01 250)',
+    shadow:      '0 2px 12px oklch(0% 0 0 / 0.06)',
+    fontSans:    "'Inter', system-ui, -apple-system, sans-serif",
+    fontMono:    "'ui-monospace', 'Cascadia Code', Consolas, monospace",
+};
 
 export const CardInfoStyle = {
     wrapper: {
@@ -14,7 +25,7 @@ export const CardInfoStyle = {
 
     timelineItem: {
         display: 'flex',
-        gap: spacing.md, // 16px
+        gap: '16px',
         position: 'relative',
     } as CSSProperties,
 
@@ -27,12 +38,13 @@ export const CardInfoStyle = {
     } as CSSProperties,
 
     dot: {
-        width: '12px',
-        height: '12px',
-        borderRadius: radius.circle,
-        backgroundColor: Colors.cyan,
-        boxShadow: `0 0 10px ${Colors.cyanGlow}`,
-        marginTop: '18px',
+        width: '10px',
+        height: '10px',
+        borderRadius: '50%',
+        backgroundColor: t.accent,
+        // No glow — solid accent dot only
+        border: `2px solid ${t.accentMid}`,
+        marginTop: '20px',
         flexShrink: 0,
         zIndex: 1,
     } as CSSProperties,
@@ -40,7 +52,7 @@ export const CardInfoStyle = {
     line: {
         width: '1px',
         flex: 1,
-        background: `linear-gradient(to bottom, ${Colors.cyanBorder}, transparent)`,
+        backgroundColor: t.rule,
         marginTop: '6px',
     } as CSSProperties,
 
@@ -51,43 +63,45 @@ export const CardInfoStyle = {
     card: {
         display: 'flex',
         flexDirection: 'column',
-        gap: '6px',
+        gap: '5px',
         padding: '14px 18px',
-        borderRadius: radius.item, // 12px
-        background: Colors.glassSurface,
-        border: `1px solid ${Colors.glassBorder}`,
-        transition: 'border-color 0.3s ease',
+        borderRadius: '8px',
+        backgroundColor: t.paperCard,
+        border: `1px solid ${t.rule}`,
+        boxShadow: t.shadow,
+        transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
     } as CSSProperties,
 
     yearBadge: {
         display: 'inline-flex',
         alignItems: 'center',
         gap: '6px',
-        padding: '3px 10px',
-        backgroundColor: Colors.cyanDim,
-        border: `1px solid ${Colors.cyanBorder}`,
-        borderRadius: radius.pill, // 9999px / 40px
-        color: Colors.cyan,
+        padding: '2px 8px',
+        backgroundColor: t.accentLight,
+        border: `1px solid ${t.accentMid}`,
+        borderRadius: '4px',
+        color: t.accent,
         letterSpacing: '0.06em',
         width: 'fit-content',
         marginBottom: '4px',
-        ...typography.caption,
-        fontWeight: 700, // override caption default weight
+        fontSize: '11px',
+        fontWeight: 700,
+        fontFamily: t.fontMono,
     } as CSSProperties,
 
     schoolTitle: {
-        fontSize: 'clamp(14px, 1.8vw, 16px)',
+        fontSize: 'clamp(13px, 1.8vw, 15px)',
         fontWeight: 700,
         margin: 0,
-        color: Colors.textPrimary,
-        fontFamily: typography.body1.fontFamily,
+        color: t.ink,
+        fontFamily: t.fontSans,
     } as CSSProperties,
 
     degreeText: {
-        color: Colors.textSecondary,
+        color: t.inkMid,
         margin: 0,
-        fontSize: '13px',
-        fontFamily: typography.body1.fontFamily,
+        fontSize: '12.5px',
+        fontFamily: t.fontSans,
         lineHeight: 1.5,
     } as CSSProperties,
 };
