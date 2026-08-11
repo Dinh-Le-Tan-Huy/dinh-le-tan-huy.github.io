@@ -94,7 +94,7 @@ export function DotGrid({ hovered, open }: { hovered: boolean; open: boolean }) 
             width: pos.w,
             height: pos.h,
             rotate: pos.rotate || 0,
-            backgroundColor: "#ffffff",
+            backgroundColor: "#000000",
             opacity: pos.w === 0 ? 0 : 1
           }}
           initial={false} transition={{ type: "spring", stiffness: 420, damping: 26, delay: i * 0.01 }} />
