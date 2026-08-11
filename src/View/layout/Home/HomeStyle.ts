@@ -178,7 +178,7 @@ export const styles = {
         lineHeight: 1.8,
         color: tokens.inkMid,
         margin: '0 0 40px 0',
-        maxWidth: '640px',
+        maxWidth: '860px',
     } as CSSProperties,
 
     heroCtas: {
@@ -327,7 +327,7 @@ export const styles = {
     // ── FAQ container ─────────────────────────────────────────────────────────
     faqContainer: {
         width: '100%',
-        maxWidth: '720px',
+        maxWidth: '900px',
         display: 'flex',
         flexDirection: 'column' as const,
         gap: '4px',

@@ -105,7 +105,7 @@ export const styles = {
     headerText: {
         fontSize: 'clamp(0.95rem, 1.8vw, 1.05rem)',
         lineHeight: 1.8,
-        maxWidth: '640px',
+        maxWidth: '1080px',
         color: tokens.inkMid,
         margin: '0 0 20px 0',
     } as CSSProperties,
@@ -160,7 +160,7 @@ export const styles = {
 
     faqContainer: {
         width: '100%',
-        maxWidth: '720px',
+        maxWidth: '900px',
         display: 'flex',
         flexDirection: 'column',
         gap: '4px',
