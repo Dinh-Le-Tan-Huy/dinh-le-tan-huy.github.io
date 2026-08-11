@@ -223,7 +223,7 @@ export const Home = () => {
                     ...styles.summaryDescription,
                     marginTop: '12px',
                     marginBottom: 0,
-                    maxWidth: '680px',
+                    maxWidth: '1080px',
                 }}>
                     {t('homePage.titles.desc_experience')}
                 </p>

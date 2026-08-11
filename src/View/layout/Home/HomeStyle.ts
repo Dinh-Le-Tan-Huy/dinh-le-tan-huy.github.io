@@ -327,7 +327,7 @@ export const styles = {
     // ── FAQ container ─────────────────────────────────────────────────────────
     faqContainer: {
         width: '100%',
-        maxWidth: '720px',
+        maxWidth: '900px',
         display: 'flex',
         flexDirection: 'column' as const,
         gap: '4px',
