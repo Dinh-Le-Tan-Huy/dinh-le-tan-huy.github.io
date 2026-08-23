@@ -61,86 +61,90 @@
             {
                 "id": "skills_lang_01",
                 "title": "Ngôn ngữ lập trình",
-                "des": "Các ngôn ngữ cốt lõi",
+                "des": "Các ngôn ngữ lập trình cốt lõi",
                 "responsibilities": [
                     "JavaScript",
                     "TypeScript",
                     "Dart",
                     "Java",
-                    "Kotlin"
+                    "Kotlin",
+                    "HTML5 / CSS3",
+                    "SQL"
                 ]
             },
             {
                 "id": "skills_fw_02",
-                "title": "Frameworks & Thư viện",
-                "des": "Phát triển Web & Mobile hiện đại",
+                "title": "Frontend & Mobile",
+                "des": "Phát triển Web & Mobile đa nền tảng",
                 "responsibilities": [
-                    "React.js & Next.js",
-                    "React Native",
-                    "Flutter",
-                    "Jetpack Compose"
+                    "React.js & Next.js (App Router)",
+                    "React Native (Expo / CLI)",
+                    "Flutter & Dart",
+                    "Jetpack Compose",
+                    "Redux Toolkit & RTK Query",
+                    "Framer Motion & Tailwind CSS",
+                    "react-i18next (Đa ngôn ngữ)"
                 ]
             },
             {
                 "id": "skills_be_03",
                 "title": "Backend & Cơ sở dữ liệu",
-                "des": "Phía máy chủ & Hạ tầng",
+                "des": "Kiến trúc máy chủ, Database & Real-time",
                 "responsibilities": [
-                    "Node.js",
+                    "Node.js & Express",
                     "PostgreSQL & MongoDB",
                     "Prisma ORM",
-                    "Redis (caching & pub/sub)",
-                    "Socket.IO (thời gian thực)"
+                    "Redis (Caching & Adapter)",
+                    "Socket.IO (Thời gian thực độ trễ 0)",
+                    "RESTful APIs & GraphQL"
                 ]
             },
             {
-                "id": "skills_concepts_04",
-                "title": "Kiến trúc & Khái niệm",
-                "des": "Thiết kế phần mềm & Phương pháp luận",
+                "id": "skills_devops_04",
+                "title": "DevOps & Cloud",
+                "des": "CI/CD, Cloud Deployment & Phát hành ứng dụng",
                 "responsibilities": [
-                    "Vòng đời ứng dụng (App Life-cycle)",
-                    "Kiến trúc sạch (Clean Architecture)",
-                    "MVVM (Model-View-ViewModel)",
-                    "Tích hợp RESTful API",
-                    "Quy trình Agile/Scrum"
-                ]
-            },
-            {
-                "id": "skills_tools_05",
-                "title": "Công cụ phát triển",
-                "des": "Công cụ năng suất & Cộng tác",
-                "responsibilities": [
-                    "Figma (Thiết kế UI/UX)",
-                    "Postman & Swagger UI",
                     "Docker & docker-compose",
-                    "GitHub Actions CI/CD",
-                    "Jira & Trello (Quản lý dự án)"
+                    "GitHub Actions & GitLab CI",
+                    "Codemagic CI/CD",
+                    "AWS (S3, EC2)",
+                    "EAS Build (App Store & Google Play)",
+                    "Nginx & Máy chủ Linux VPS"
+                ]
+            },
+            {
+                "id": "skills_concepts_05",
+                "title": "Kiến trúc & Bảo mật",
+                "des": "Thiết kế phần mềm, Xác thực & Tối ưu hiệu năng",
+                "responsibilities": [
+                    "Mô hình MVVM & Clean Architecture",
+                    "JWT, OTP & OAuth (Google Login)",
+                    "Zod Schema Validation",
+                    "Vòng đời ứng dụng & Tối ưu RAM (60FPS)",
+                    "Bảo mật API (Bcrypt, Helmet, Rate-limiting)"
+                ]
+            },
+            {
+                "id": "skills_tools_06",
+                "title": "Công cụ & Quản lý dự án",
+                "des": "Thiết kế UI/UX, Tài liệu hóa & Quy trình Agile",
+                "responsibilities": [
+                    "Figma (Thiết kế & Prototyping UI/UX)",
+                    "Postman & Swagger UI",
+                    "Git & GitHub / GitLab",
+                    "Jira & Trello (Agile/Scrum)",
+                    "Mapbox / MapLibre & ImageKit"
                 ]
             }
         ],
         "projectsData": [
             {
                 "id": "proj_homenest_01",
-                "title": "Công ty HomeNest Software",
-                "time": "2025 - Hiện tại",
-                "des": "Lập trình viên Frontend · Quản trị CMS",
+                "title": "HomeNest Software",
+                "time": "06/2025 - Hiện tại",
+                "des": "Full Stack Developer · Mobile · Web · Backend · DevOps",
                 "responsibilities": [
-                    "Phát triển hai website doanh nghiệp đa ngôn ngữ (EN + VI), mỗi site 20+ trang, sử dụng Next.js 16 App Router và kiến trúc CSS Modules.",
-                    "Tích hợp WordPress Headless CMS qua GraphQL API để quản lý nội dung động (case studies, wiki, lĩnh vực, dịch vụ).",
-                    "Cấu hình WordPress: custom post types, custom fields (ACF), và editorial templates — cho phép team content đăng bài không cần code.",
-                    "Triển khai SEO toàn diện: generateMetadata từng trang, JSON-LD Schema.org (Corporation, Organization, 18-service OfferCatalog, ContactPoint), OpenGraph, Twitter Card.",
-                    "Xây dựng XML sitemap động và robots.js; triển khai cấu trúc sitemap đa tầng (5 sitemaps) cho site tiếng Việt.",
-                    "Tích hợp @splinetool/react-spline cho các phần tử UI 3D tương tác trên site tiếng Việt.",
-                    "Tái cấu trúc routing tiếng Việt (/linh-vuc, dynamic slug-based) để cải thiện hiệu suất SEO.",
-                    "Thiết lập GitHub Actions CI/CD → GitHub Container Registry (ghcr.io) với Docker images gắn SHA tag và SSH auto-deploy lên VPS."
-                ]
-            },
-            {
-                "id": "proj_lovelawn_02",
-                "title": "Love Lawn Service",
-                "time": "2025 - Hiện tại",
-                "des": "Lập trình viên Mobile · Đóng góp Backend · DevOps",
-                "responsibilities": [
+                    "► Love Lawn Service — ERP nông nghiệp (App Store & Google Play) | Nhóm: 8 người | 06/2025 – 01/2026",
                     "Xây dựng nền tảng dịch vụ cắt cỏ theo yêu cầu (React Native + Expo) với 2 vai trò: khách hàng (đặt lịch, theo dõi công việc thời gian thực, thanh toán) và thợ (GPS check-in, tải ảnh, báo cáo sự cố, chấm công).",
                     "Tích hợp cổng thanh toán Helcim qua WebView/JS Bridge, xử lý checkout session, real-time event messaging và lưu trữ giao dịch.",
                     "Triển khai chat 1-1 thời gian thực (Socket.IO) giữa khách hàng, thợ và admin.",
@@ -149,36 +153,34 @@
                     "Đóng góp vào RESTful APIs, tài liệu hóa bằng Swagger UI (Node.js + Prisma): phân công thợ, pipeline thanh toán/hóa đơn (20+ Prisma models).",
                     "Tạo PDF hóa đơn (PDFKit) và gửi email thông báo (nodemailer); bảo mật API với JWT, bcrypt, helmet, rate-limiting và Zod validation.",
                     "Dockerize backend + admin-web; cấu hình docker-compose stack (PostgreSQL 15, Redis 7, Nginx, pgadmin) và GitHub Actions CI/CD để tự động deploy lên VPS.",
-                    "Deploy ứng dụng mobile qua EAS Build lên App Store và Google Play."
-                ]
-            },
-            {
-                "id": "proj_vietplus_03",
-                "title": "VIET PLUS — Ứng dụng Rao vặt Đa danh mục",
-                "time": "2025 - Hiện tại",
-                "des": "Lập trình viên Mobile · Đóng góp Backend · DevOps",
-                "responsibilities": [
+                    "Deploy ứng dụng mobile qua EAS Build lên App Store và Google Play.",
+                    "► VIET PLUS — Ứng dụng Rao vặt Đa danh mục | Nhóm: 6 người | 10/2025 – 05/2026",
                     "Xây dựng ứng dụng super app rao vặt đa danh mục (React Native + Expo) với 10+ module tính năng dành cho cộng đồng người Việt ở nước ngoài.",
                     "Phát triển luồng đăng tin cho 6 danh mục: đồ cũ/mới, xe cộ, nhà ở cho thuê, việc làm, đặt xe, và marketplace (smarket).",
                     "Tích hợp chat 1-1 thời gian thực (Socket.IO + @socket.io/redis-adapter) cho Socket.IO mở rộng ngang hàng qua Redis, liên kết trực tiếp với bài đăng.",
                     "Triển khai giỏ hàng, quản lý đơn hàng và quy trình thanh toán; quản lý state với Redux Toolkit (18 slices) + redux-persist.",
                     "Đóng góp vào RESTful APIs, tài liệu hóa bằng Swagger UI (Node.js + Prisma): CRUD bài đăng, xử lý đơn hàng, hồ sơ người dùng, báo cáo & chặn, chat, module thông báo (21 route modules).",
-                    "Xây dựng statistics service toàn diện (analytics dashboard) cho admin và tích hợp hệ thống dữ liệu theo khu vực.",
-                    "Làm việc trong team thật với Jira tracking, Git PR review và deploy sản phẩm lên VPS production.",
                     "Thiết lập pipeline CI/CD kép: GitHub Actions + GitLab CI để tự động build → Docker Hub → SSH deploy lên VPS.",
-                    "Deploy ứng dụng mobile qua EAS Build lên App Store và Google Play."
+                    "Deploy ứng dụng mobile qua EAS Build lên App Store và Google Play.",
+                    "► Homenest Software & Homenest Vietnam — Website Doanh nghiệp | Nhóm: 4 người | 05/2026 – 07/2026",
+                    "Phát triển hai website doanh nghiệp đa ngôn ngữ (EN + VI), mỗi site 20+ trang, sử dụng Next.js 16 App Router và kiến trúc CSS Modules.",
+                    "Tích hợp WordPress Headless CMS qua GraphQL API để quản lý nội dung động (case studies, wiki, lĩnh vực, dịch vụ).",
+                    "Triển khai SEO toàn diện: generateMetadata từng trang, JSON-LD Schema.org (Corporation, Organization, 18-service OfferCatalog, ContactPoint), OpenGraph, Twitter Card.",
+                    "Tích hợp @splinetool/react-spline cho các phần tử UI 3D tương tác; triển khai Dynamic Routing và 14 quy tắc 301 redirect để bảo toàn SEO trong quá trình migration.",
+                    "Thiết lập GitHub Actions CI/CD → GitHub Container Registry (ghcr.io) với Docker images gắn SHA tag và SSH auto-deploy lên VPS."
                 ]
             },
             {
                 "id": "proj_choixanh_04",
-                "title": "Công ty Choi Xanh Media",
+                "title": "Choi Xanh Media",
                 "time": "Tháng 11/2024 - Tháng 5/2025",
-                "des": "Lập trình viên Mobile",
+                "des": "Lập trình viên Mobile · Full Stack",
                 "responsibilities": [
-                    "Phát triển ứng dụng giao đồ ăn Full-stack, xây dựng giao diện mobile hiệu suất cao (Flutter, Dart) và dịch vụ backend dễ mở rộng (Node.js, MongoDB).",
+                    "► Home Food — Ứng dụng Giao đồ ăn | Nhóm: 3 người | 11/2024 – 05/2025",
+                    "Phát triển ứng dụng giao đồ ăn Full-stack, xây dựng giao diện mobile hiệu suất cao (Flutter, Dart) và dịch vụ backend có thể mở rộng (Java Spring Boot, Firebase), đóng gói hoàn toàn bằng Docker.",
                     "Thiết kế kiến trúc front-end mobile: Áp dụng Service Layer và AutoRoute để điều hướng mượt mà, đồng thời nâng cao UI/UX với Flutter Animations, tối ưu hóa danh sách (ListView.builder) và xử lý media động (ImageKit).",
-                    "Xây dựng backend APIs & luồng tích hợp bảo mật: Phát triển RESTful APIs kết hợp Swagger UI để hiển thị tài liệu, tích hợp xác thực đa phương thức (Social Login & Email OTP) và sử dụng Mapbox API cho các tính năng giao hàng dựa trên vị trí.",
-                    "Tối ưu hóa quy trình triển khai: Tự động hóa luồng CI/CD bằng Codemagic và GitHub Actions để đảm bảo luồng dữ liệu ổn định và release nhanh chóng trong môi trường Agile/Jira."
+                    "Xây dựng backend APIs bảo mật: Phát triển RESTful APIs với Java Spring Boot, tích hợp Firebase Authentication (Social Login & Email OTP) và sử dụng Mapbox API cho các tính năng giao hàng dựa trên vị trí.",
+                    "Tối ưu hóa quy trình triển khai: Tự động hóa luồng CI/CD bằng Codemagic và GitHub Actions để đảm bảo release nhanh chóng trong môi trường Agile/Jira."
                 ]
             }
         ],
@@ -188,6 +190,7 @@
                 "title": "Đào tạo chuyên môn",
                 "des": "Chứng chỉ & Khóa học chuyên sâu",
                 "responsibilities": [
+                    "AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents – Udemy | 2026 (Đang học)",
                     "Khóa học Điện toán đám mây AWS – Udemy | 2026",
                     "Lập trình viên React Native – Trung tâm Tin học KHTN | 2025",
                     {
@@ -205,7 +208,7 @@
                 "title": "Ngoại ngữ",
                 "des": "Năng lực tiếng Anh",
                 "responsibilities": [
-                    "TOEIC 600 "
+                    "TOEIC 700"
                 ]
             }
         ],
@@ -303,42 +306,86 @@
                 "title": "Ngôn ngữ",
                 "des": "Ngôn ngữ Lập trình",
                 "responsibilities": [
-                    "JavaScript & TypeScript",
+                    "JavaScript",
+                    "TypeScript",
                     "Dart",
-                    "Java & Kotlin"
+                    "Java",
+                    "Kotlin",
+                    "SQL",
+                    "HTML5 / CSS3"
                 ]
             },
             {
                 "id": "skills_fw_02",
-                "title": "Frameworks",
-                "des": "Thư viện & UI Frameworks",
+                "title": "Frontend & Mobile",
+                "des": "Framework Web & Mobile",
                 "responsibilities": [
-                    "React.js & Next.js",
-                    "React Native",
+                    "React.js",
+                    "Next.js",
+                    "React Native (Expo / CLI)",
                     "Flutter",
-                    "Jetpack Compose"
+                    "Jetpack Compose",
+                    "Redux Toolkit",
+                    "RTK Query",
+                    "Framer Motion",
+                    "i18next"
                 ]
             },
             {
                 "id": "skills_be_03",
-                "title": "Backend",
-                "des": "Hạ tầng Backend",
+                "title": "Backend & Database",
+                "des": "Hạ tầng Máy chủ & Lưu trữ",
                 "responsibilities": [
                     "Node.js",
-                    "PostgreSQL & MongoDB",
+                    "Express",
+                    "PostgreSQL",
+                    "MongoDB",
                     "Prisma ORM",
-                    "Redis & Socket.IO"
+                    "Redis",
+                    "Socket.IO",
+                    "RESTful APIs",
+                    "GraphQL"
                 ]
             },
             {
-                "id": "skills_04",
-                "title": "Công cụ",
-                "des": "",
+                "id": "skills_devops_04",
+                "title": "DevOps & Cloud",
+                "des": "CI/CD & Hạ tầng Đám mây",
+                "responsibilities": [
+                    "Docker",
+                    "docker-compose",
+                    "GitHub Actions",
+                    "GitLab CI",
+                    "Codemagic",
+                    "AWS (S3)",
+                    "EAS Build",
+                    "Nginx"
+                ]
+            },
+            {
+                "id": "skills_arch_05",
+                "title": "Kiến trúc & Bảo mật",
+                "des": "Thiết kế & Bảo mật",
+                "responsibilities": [
+                    "Mô hình MVVM",
+                    "Clean Architecture",
+                    "JWT / OTP / OAuth",
+                    "Zod Validation",
+                    "Rate Limiting & Helmet",
+                    "App Lifecycle & 60FPS"
+                ]
+            },
+            {
+                "id": "skills_tools_06",
+                "title": "Công cụ & Quản lý",
+                "des": "UI/UX & Quy trình Agile",
                 "responsibilities": [
                     "Figma",
-                    "Postman & Swagger UI",
-                    "Docker & GitHub Actions",
-                    "Jira & Trello"
+                    "Postman",
+                    "Swagger UI",
+                    "Git / GitHub / GitLab",
+                    "Jira & Trello",
+                    "Agile / Scrum"
                 ]
             }
         ]
@@ -349,13 +396,13 @@
                 "id": 1,
                 "school": "Đại học Công nghệ Thông tin – UIT",
                 "degree": "Cử nhân Khoa học Máy tính",
-                "year": "2025",
+                "year": "Dự kiến 2025",
                 "icon": "🎓"
             },
             {
                 "id": 2,
                 "school": "Trường Cao đẳng Lý Tự Trọng – LTTC",
-                "degree": "Cao đẳng Công nghệ Thông tin",
+                "degree": "Cao đẳng Lập trình Máy tính",
                 "year": "2021 – 2024",
                 "icon": "💻"
             },

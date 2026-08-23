@@ -9,7 +9,7 @@ import About from './View/layout/About/About'
 
 function App() {
   return (
-    <div style={{ display: 'grid', gridTemplateRows: 'auto 1fr auto', minHeight: '100vh', backgroundColor: '#080b14' }}>
+    <div style={{ display: 'grid', gridTemplateRows: 'auto 1fr auto', minHeight: '100vh', backgroundColor: 'oklch(98.5% 0.005 250)' }}>
       <Header />
       <main>
         {/* Scroll offset compensates for fixed Header */}

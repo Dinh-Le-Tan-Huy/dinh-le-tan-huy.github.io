@@ -52,54 +52,73 @@
                     "TypeScript",
                     "Dart",
                     "Java",
-                    "Kotlin"
+                    "Kotlin",
+                    "HTML5 / CSS3",
+                    "SQL"
                 ]
             },
             {
                 "id": "skills_fw_02",
-                "title": "Frameworks & Libraries",
-                "des": "Modern Web & Mobile Development",
+                "title": "Frontend & Mobile",
+                "des": "Modern Web & Mobile App Development",
                 "responsibilities": [
-                    "React.js & Next.js",
-                    "React Native",
-                    "Flutter",
-                    "Jetpack Compose"
+                    "React.js & Next.js (App Router)",
+                    "React Native (Expo / CLI)",
+                    "Flutter & Dart",
+                    "Jetpack Compose",
+                    "Redux Toolkit & RTK Query",
+                    "Framer Motion & Tailwind CSS",
+                    "react-i18next (Multi-language)"
                 ]
             },
             {
                 "id": "skills_be_03",
                 "title": "Backend & Database",
-                "des": "Server-side & Infrastructure",
+                "des": "Server Architecture, Database & Real-time",
                 "responsibilities": [
-                    "Node.js",
+                    "Node.js & Express",
                     "PostgreSQL & MongoDB",
                     "Prisma ORM",
-                    "Redis (caching & pub/sub)",
-                    "Socket.IO (real-time)"
+                    "Redis (Caching & Adapter)",
+                    "Socket.IO (Zero-latency Real-time)",
+                    "RESTful APIs & GraphQL"
                 ]
             },
             {
-                "id": "skills_concepts_04",
-                "title": "Architecture & Concepts",
-                "des": "Software Design & Methodologies",
+                "id": "skills_devops_04",
+                "title": "DevOps & Cloud",
+                "des": "CI/CD, Cloud Deployment & App Publishing",
                 "responsibilities": [
-                    "App Life-cycle",
-                    "Clean Architecture",
-                    "MVVM (Model-View-ViewModel)",
-                    "RESTful API Integration",
-                    "Agile/Scrum Workflow"
-                ]
-            },
-            {
-                "id": "skills_tools_05",
-                "title": "Development Tools",
-                "des": "Productivity & Collaboration Tools",
-                "responsibilities": [
-                    "Figma (Design UI/UX)",
-                    "Postman & Swagger UI",
                     "Docker & docker-compose",
-                    "GitHub Actions CI/CD",
-                    "Jira & Trello (Management)"
+                    "GitHub Actions & GitLab CI",
+                    "Codemagic CI/CD",
+                    "AWS (S3, EC2)",
+                    "EAS Build (App Store & Google Play)",
+                    "Nginx & VPS Linux Server"
+                ]
+            },
+            {
+                "id": "skills_concepts_05",
+                "title": "Architecture & Security",
+                "des": "Software Design, Auth & Performance",
+                "responsibilities": [
+                    "MVVM & Clean Architecture",
+                    "JWT, OTP & OAuth (Google Login)",
+                    "Zod Schema Validation",
+                    "App Lifecycle & Memory Optimization (60FPS)",
+                    "API Security (Bcrypt, Helmet, Rate-limiting)"
+                ]
+            },
+            {
+                "id": "skills_tools_06",
+                "title": "Tools & Management",
+                "des": "Design, Documentation & Agile Workflow",
+                "responsibilities": [
+                    "Figma (UI/UX Prototyping)",
+                    "Postman & Swagger UI",
+                    "Git & GitHub / GitLab",
+                    "Jira & Trello (Agile/Scrum)",
+                    "Mapbox / MapLibre & ImageKit"
                 ]
             }
         ],
@@ -107,25 +126,10 @@
             {
                 "id": "proj_homenest_01",
                 "title": "HomeNest Software",
-                "time": "2025 - Present",
-                "des": "Frontend Developer · CMS Admin",
+                "time": "06/2025 - Present",
+                "des": "Full Stack Developer · Mobile · Web · Backend · DevOps",
                 "responsibilities": [
-                    "Developed two multilingual corporate websites (EN + VI), 20+ pages each, using Next.js 16 App Router and CSS Modules component-based architecture.",
-                    "Integrated headless WordPress CMS via GraphQL API for dynamic content management (case studies, wiki, industries, services).",
-                    "Configured WordPress: custom post types, custom fields (ACF), and editorial templates — enabling the content team to publish independently without code.",
-                    "Implemented comprehensive SEO: generateMetadata per page, JSON-LD Schema.org (Corporation, Organization, 18-service OfferCatalog, ContactPoint), OpenGraph, Twitter Card.",
-                    "Built dynamic XML sitemaps and robots.js; implemented multi-level sitemap hierarchy (5 sitemaps) for Vietnamese site.",
-                    "Integrated @splinetool/react-spline for 3D interactive UI elements on the Vietnamese site.",
-                    "Refactored Vietnamese routing (/linh-vuc, dynamic slug-based) for improved SEO performance.",
-                    "Set up GitHub Actions CI/CD → GitHub Container Registry (ghcr.io) with SHA-tagged Docker images and SSH auto-deploy to VPS."
-                ]
-            },
-            {
-                "id": "proj_lovelawn_02",
-                "title": "Love Lawn Service",
-                "time": "2025 - Present",
-                "des": "Mobile Developer · Backend Contributor · DevOps",
-                "responsibilities": [
+                    "► Love Lawn Service — Agriculture ERP (App Store & Google Play) | Team size: 8 | 06/2025 – 01/2026",
                     "Built a dual-role on-demand lawn care platform (React Native + Expo) for customers (booking, real-time job tracking, payment) and field workers (GPS check-in, photo upload, incident reporting, time tracking).",
                     "Integrated Helcim payment gateway via WebView/JS Bridge, handling checkout session, real-time event messaging, and transaction persistence.",
                     "Implemented real-time 1-on-1 chat (Socket.IO) between customer, worker, and admin roles.",
@@ -134,36 +138,34 @@
                     "Contributed to RESTful APIs documented with Swagger UI (Node.js + Prisma): worker assignment, payment/invoice pipeline (20+ Prisma models).",
                     "Generated PDF invoices (PDFKit) and email notifications (nodemailer); secured API with JWT, bcrypt, helmet, rate-limiting, and Zod validation.",
                     "Dockerized backend + admin-web; configured docker-compose stack (PostgreSQL 15, Redis 7, Nginx, pgadmin) and GitHub Actions CI/CD for auto-deploy to VPS.",
-                    "Deployed mobile app via EAS Build to App Store and Google Play."
-                ]
-            },
-            {
-                "id": "proj_vietplus_03",
-                "title": "VIET PLUS — Classifieds Super App",
-                "time": "2025 - Present",
-                "des": "Mobile Developer · Backend Contributor · DevOps",
-                "responsibilities": [
+                    "Deployed mobile app via EAS Build to App Store and Google Play.",
+                    "► VIET PLUS — Multi-category Classifieds Super App | Team size: 6 | 10/2025 – 05/2026",
                     "Built a multi-category classifieds super app (React Native + Expo) with 10+ feature modules targeting Vietnamese expat communities.",
                     "Developed listing flows for 6 categories: new/used items, vehicles, housing rentals, job postings, ride-sharing, and an online marketplace (smarket).",
                     "Integrated real-time 1-on-1 chat (Socket.IO + @socket.io/redis-adapter) for Redis-backed horizontal scaling, linked directly to listings.",
                     "Implemented shopping cart, order management, and payment flow; state management with Redux Toolkit (18 slices) + redux-persist.",
                     "Contributed to RESTful APIs documented with Swagger UI (Node.js + Prisma): listing CRUD, order processing, user profile, report & block, chat, notification modules (21 route modules).",
-                    "Built a comprehensive statistics service (analytics dashboard) for admin and integrated region-based data system.",
-                    "Worked in a real team with Jira tracking, Git PR review, and production VPS deployment.",
                     "Set up dual CI/CD pipeline: GitHub Actions + GitLab CI for auto build → Docker Hub → SSH deploy to VPS.",
-                    "Deployed mobile app via EAS Build to App Store and Google Play."
+                    "Deployed mobile app via EAS Build to App Store and Google Play.",
+                    "► Homenest Software & Homenest Vietnam — Corporate Websites | Team size: 4 | 05/2026 – 07/2026",
+                    "Developed two multilingual corporate websites (EN + VI), 20+ pages each, using Next.js 16 App Router and CSS Modules component-based architecture.",
+                    "Integrated headless WordPress CMS via GraphQL API for dynamic content management (case studies, wiki, industries, services).",
+                    "Implemented comprehensive SEO: generateMetadata per page, JSON-LD Schema.org (Corporation, Organization, 18-service OfferCatalog, ContactPoint), OpenGraph, Twitter Card.",
+                    "Integrated @splinetool/react-spline for 3D interactive UI elements; implemented Dynamic Routing and 14 permanent 301 redirect rules to preserve SEO during migration.",
+                    "Set up GitHub Actions CI/CD → GitHub Container Registry (ghcr.io) with SHA-tagged Docker images and SSH auto-deploy to VPS."
                 ]
             },
             {
                 "id": "proj_choixanh_04",
                 "title": "Choi Xanh Media",
                 "time": "Nov 2024 - May 2025",
-                "des": "Mobile Developer",
+                "des": "Mobile Developer · Full Stack",
                 "responsibilities": [
-                    "Developed a full-stack Food Delivery application, building a high-performance mobile interface (Flutter, Dart) and scalable backend services (Node.js, MongoDB).",
+                    "► Home Food — Food Delivery App | Team size: 3 | 11/2024 – 05/2025",
+                    "Developed a full-stack Food Delivery application, building a high-performance mobile interface (Flutter, Dart) and scalable backend services (Java Spring Boot, Firebase), fully containerized via Docker.",
                     "Architected mobile front-end solutions: Implemented Service Layer architecture and AutoRoute for robust navigation, while enhancing UI/UX with Flutter Animations, optimized lists (ListView.builder), and dynamic media handling (ImageKit).",
-                    "Built secure backend APIs & integrations: Developed RESTful APIs documented with Swagger UI, integrated multi-method authentication (Social Login & Email OTP), and utilized Mapbox API for location-based delivery features.",
-                    "Streamlined deployment workflows: Automated CI/CD pipelines utilizing Codemagic and GitHub Actions to ensure stable data flow and rapid releases within an Agile/Jira environment."
+                    "Built secure backend APIs & integrations: Developed RESTful APIs with Java Spring Boot, integrated Firebase Authentication (Social Login & Email OTP), and utilized Mapbox API for location-based delivery features.",
+                    "Streamlined deployment workflows: Automated CI/CD pipelines utilizing Codemagic and GitHub Actions to ensure stable releases within an Agile/Jira environment."
                 ]
             }
         ],
@@ -173,8 +175,9 @@
                 "title": "Professional Training",
                 "des": "Certificates & Specialized Courses",
                 "responsibilities": [
-                    "AWS Cloud Computing Course \u2013 Udemy | 2026",
-                    "React Native Developer \u2013 CSC / University of Science | 2025",
+                    "AI Engineer Core Track: LLM Engineering, RAG, QLoRA, Agents – Udemy | 2026 (In Progress)",
+                    "AWS Cloud Computing Course – Udemy | 2026",
+                    "React Native Developer – CSC / University of Science | 2025",
                     {
                         "text": "Front-End Development Libraries V8 | 2026",
                         "link": "https://www.freecodecamp.org/certification/tanhuy/front-end-development-libraries"
@@ -190,7 +193,7 @@
                 "title": "Languages",
                 "des": "English Proficiency",
                 "responsibilities": [
-                    "TOEIC 600 "
+                    "TOEIC 700"
                 ]
             }
         ],
@@ -198,7 +201,7 @@
             {
                 "id": "award_01",
                 "title": "Academic Scholarship",
-                "des": "LTTC (Language & Technology Training Center)",
+                "des": "LTTC (Ly Tu Trong College)",
                 "responsibilities": [
                     "Awarded 50% Tuition Scholarship for outstanding academic performance.",
                     "Recognized for maintaining high GPA and active contribution to the learning community."
@@ -301,44 +304,88 @@
             {
                 "id": "skills_lang_01",
                 "title": "Languages",
-                "des": "Programming Languages",
+                "des": "Core Programming Languages",
                 "responsibilities": [
-                    "JavaScript & TypeScript",
+                    "JavaScript",
+                    "TypeScript",
                     "Dart",
-                    "Java & Kotlin"
+                    "Java",
+                    "Kotlin",
+                    "SQL",
+                    "HTML5 / CSS3"
                 ]
             },
             {
                 "id": "skills_fw_02",
-                "title": "Frameworks",
-                "des": "Libraries & UI Frameworks",
+                "title": "Frontend & Mobile",
+                "des": "Modern Web & Mobile Frameworks",
                 "responsibilities": [
-                    "React.js & Next.js",
-                    "React Native",
+                    "React.js",
+                    "Next.js",
+                    "React Native (Expo / CLI)",
                     "Flutter",
-                    "Jetpack Compose"
+                    "Jetpack Compose",
+                    "Redux Toolkit",
+                    "RTK Query",
+                    "Framer Motion",
+                    "i18next"
                 ]
             },
             {
                 "id": "skills_be_03",
-                "title": "Backend",
-                "des": "Backend Infrastructure",
+                "title": "Backend & Database",
+                "des": "Server & Storage Architecture",
                 "responsibilities": [
                     "Node.js",
-                    "PostgreSQL & MongoDB",
+                    "Express",
+                    "PostgreSQL",
+                    "MongoDB",
                     "Prisma ORM",
-                    "Redis & Socket.IO"
+                    "Redis",
+                    "Socket.IO",
+                    "RESTful APIs",
+                    "GraphQL"
                 ]
             },
             {
-                "id": "skills_04",
-                "title": "Tools",
-                "des": "",
+                "id": "skills_devops_04",
+                "title": "DevOps & Cloud",
+                "des": "CI/CD & Cloud Infrastructure",
+                "responsibilities": [
+                    "Docker",
+                    "docker-compose",
+                    "GitHub Actions",
+                    "GitLab CI",
+                    "Codemagic",
+                    "AWS (S3)",
+                    "EAS Build",
+                    "Nginx"
+                ]
+            },
+            {
+                "id": "skills_arch_05",
+                "title": "Architecture & Security",
+                "des": "Patterns, Security & Performance",
+                "responsibilities": [
+                    "MVVM Pattern",
+                    "Clean Architecture",
+                    "JWT / OTP / OAuth",
+                    "Zod Validation",
+                    "Rate Limiting & Helmet",
+                    "App Lifecycle & 60FPS"
+                ]
+            },
+            {
+                "id": "skills_tools_06",
+                "title": "Tools & Management",
+                "des": "UI/UX & Agile Workflow",
                 "responsibilities": [
                     "Figma",
-                    "Postman & Swagger UI",
-                    "Docker & GitHub Actions",
-                    "Jira & Trello"
+                    "Postman",
+                    "Swagger UI",
+                    "Git / GitHub / GitLab",
+                    "Jira & Trello",
+                    "Agile / Scrum"
                 ]
             }
         ]
@@ -349,13 +396,13 @@
                 "id": 1,
                 "school": "University of Information Technology – UIT",
                 "degree": "Bachelor of Science in Computer Science",
-                "year": "2025",
+                "year": "Expected 2025",
                 "icon": "🎓"
             },
             {
                 "id": 2,
                 "school": "Ly Tu Trong College – LTTC",
-                "degree": "Associate of Science in Information Technology",
+                "degree": "Associate of Science in Computer Programming",
                 "year": "2021 – 2024",
                 "icon": "💻"
             },
