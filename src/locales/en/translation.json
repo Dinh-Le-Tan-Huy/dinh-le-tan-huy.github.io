@@ -64,7 +64,7 @@
                 "responsibilities": [
                     "React.js & Next.js (App Router)",
                     "React Native (Expo / CLI)",
-                    "Flutter & Dart",
+                    "Flutter",
                     "Jetpack Compose",
                     "Redux Toolkit & RTK Query",
                     "Framer Motion & Tailwind CSS",
@@ -76,7 +76,7 @@
                 "title": "Backend & Database",
                 "des": "Server Architecture, Database & Real-time",
                 "responsibilities": [
-                    "Node.js & Express",
+                    "Node.js",
                     "PostgreSQL & MongoDB",
                     "Prisma ORM",
                     "Redis (Caching & Adapter)",
@@ -123,36 +123,37 @@
             }
         ],
         "projectsData": [
+            // {
+            //     "id": "proj_ai_agent_02",
+            //     "title": "AI Agent Assistant — LLM Integration",
+            //     "time": "06/2025 - Present",
+            //     "des": "AI · Web · Automation · Gemini API",
+            //     "responsibilities": [
+            //         "Built an AI-powered assistant (web-based) that integrates with LLMs to automate content writing and image generation tasks.",
+            //         "Implemented multi-model Gemini API workflows for text generation, summarization, and AI image creation.",
+            //         "Integrated ImageKit for AI-generated image delivery and asset management.",
+            //         "Developed API-first backend structure with JWT authentication and Zod validation.",
+            //         "Enhanced UX with Framer Motion animations and Tailwind CSS design system."
+            //     ]
+            // },
             {
                 "id": "proj_homenest_01",
                 "title": "HomeNest Software",
                 "time": "06/2025 - Present",
                 "des": "Full Stack · Mobile · Web · Backend · DevOps",
                 "responsibilities": [
-                    "► Love Lawn Service — Agriculture ERP (App Store & Google Play) | Team size: 8 | 06/2025 – 01/2026",
-                    "Built a dual-role on-demand lawn care platform (React Native + Expo) for customers (booking, real-time job tracking, payment) and field workers (GPS check-in, photo upload, incident reporting, time tracking).",
-                    "Integrated Helcim payment gateway via WebView/JS Bridge, handling checkout session, real-time event messaging, and transaction persistence.",
-                    "Implemented real-time 1-on-1 chat (Socket.IO) between customer, worker, and admin roles.",
-                    "Implemented push notifications (expo-notifications + expo-server-sdk) including a scheduled notification system (node-cron).",
-                    "Managed GPS-based worker check-in (expo-location + MapLibre maps) and photo uploads (BEFORE/AFTER/MATERIAL/INCIDENT) to AWS S3.",
-                    "Contributed to RESTful APIs documented with Swagger UI (Node.js + Prisma): worker assignment, payment/invoice pipeline (20+ Prisma models).",
-                    "Generated PDF invoices (PDFKit) and email notifications (nodemailer); secured API with JWT, bcrypt, helmet, rate-limiting, and Zod validation.",
-                    "Dockerized backend + admin-web; configured docker-compose stack (PostgreSQL 15, Redis 7, Nginx, pgadmin) and GitHub Actions CI/CD for auto-deploy to VPS.",
-                    "Deployed mobile app via EAS Build to App Store and Google Play.",
+                    "Operating efficiently within Agile/Scrum frameworks: participating in weekly progress reporting and managing task workflows via Jira and Trello.",
+                    "► Love Lawn Service — Agriculture ERP | Team size: 8 | 06/2025 – 01/2026",
+                    "Developed a dual-role mobile app (React Native + Expo) for customers (booking, real-time job tracking, payment) and field workers (GPS check-in, photo upload, incident/resource reporting, time tracking).",
+                    "Built Node.js + Prisma backend documented with Swagger UI; automated PDF invoice generation (PDFKit) and email notifications (Nodemailer).",
+                    "Implemented key features: Real-time 1-on-1 chat (Socket.IO), Helcim payment gateway (WebView/JS Bridge), Push Notifications (expo-notifications + expo-server-sdk), multi-language support (i18n), and deployed to App Store & Google Play via EAS Build.",
                     "► VIET PLUS — Multi-category Classifieds Super App | Team size: 6 | 10/2025 – 05/2026",
-                    "Built a multi-category classifieds super app (React Native + Expo) with 10+ feature modules targeting Vietnamese expat communities.",
-                    "Developed listing flows for 6 categories: new/used items, vehicles, housing rentals, job postings, ride-sharing, and an online marketplace (smarket).",
-                    "Integrated real-time 1-on-1 chat (Socket.IO + @socket.io/redis-adapter) for Redis-backed horizontal scaling, linked directly to listings.",
-                    "Implemented shopping cart, order management, and payment flow; state management with Redux Toolkit (18 slices) + redux-persist.",
-                    "Contributed to RESTful APIs documented with Swagger UI (Node.js + Prisma): listing CRUD, order processing, user profile, report & block, chat, notification modules (21 route modules).",
-                    "Set up dual CI/CD pipeline: GitHub Actions + GitLab CI for auto build → Docker Hub → SSH deploy to VPS.",
-                    "Deployed mobile app via EAS Build to App Store and Google Play.",
+                    "Built a multi-category classifieds super app (React Native + Expo) featuring 10+ functional modules targeting Vietnamese and Korean expat communities.",
+                    "Implemented key features: Cross-platform real-time 1-on-1 chat (Web-Mobile & Mobile-Mobile), Push Notifications (expo-notifications + expo-server-sdk), payment gateway integration, and multi-language support (i18n).",
+                    "Managed complex app state using Redux Toolkit and deployed the application to App Store & Google Play via EAS Build.",
                     "► Homenest Software & Homenest Vietnam — Corporate Websites | Team size: 4 | 05/2026 – 07/2026",
-                    "Developed two multilingual corporate websites (EN + VI), 20+ pages each, using Next.js 16 App Router and CSS Modules component-based architecture.",
-                    "Integrated headless WordPress CMS via GraphQL API for dynamic content management (case studies, wiki, industries, services).",
-                    "Implemented comprehensive SEO: generateMetadata per page, JSON-LD Schema.org (Corporation, Organization, 18-service OfferCatalog, ContactPoint), OpenGraph, Twitter Card.",
-                    "Integrated @splinetool/react-spline for 3D interactive UI elements; implemented Dynamic Routing and 14 permanent 301 redirect rules to preserve SEO during migration.",
-                    "Set up GitHub Actions CI/CD → GitHub Container Registry (ghcr.io) with SHA-tagged Docker images and SSH auto-deploy to VPS."
+                    "Developed 2 multilingual corporate websites using Next.js 16 App Router, integrated with Headless WordPress CMS via GraphQL API.",
+                    "Implemented comprehensive SEO strategies (Dynamic Metadata, JSON-LD Schema.org, OpenGraph) and integrated interactive 3D UI elements with @splinetool/react-spline."
                 ]
             },
             {
@@ -162,10 +163,7 @@
                 "des": "Mobile Developer · Full Stack",
                 "responsibilities": [
                     "► Home Food — Food Delivery App | Team size: 3 | 11/2024 – 05/2025",
-                    "Developed a full-stack Food Delivery application, building a high-performance mobile interface (Flutter, Dart) and scalable backend services (Java Spring Boot, Firebase), fully containerized via Docker.",
-                    "Architected mobile front-end solutions: Implemented Service Layer architecture and AutoRoute for robust navigation, while enhancing UI/UX with Flutter Animations, optimized lists (ListView.builder), and dynamic media handling (ImageKit).",
-                    "Built secure backend APIs & integrations: Developed RESTful APIs with Java Spring Boot, integrated Firebase Authentication (Social Login & Email OTP), and utilized Mapbox API for location-based delivery features.",
-                    "Streamlined deployment workflows: Automated CI/CD pipelines utilizing Codemagic and GitHub Actions to ensure stable releases within an Agile/Jira environment."
+                    "Engineered a full-stack Food Delivery app using Flutter and Java Spring Boot, features secure Firebase auth, Mapbox location services, Dockerized backend APIs, and automated Codemagic/GitHub Actions CI/CD pipelines."
                 ]
             }
         ],
@@ -262,7 +260,7 @@
             "Web Developer",
             "DevOps Engineer"
         ],
-        "summary": "Building scalable end-to-end solutions using the JS/TS ecosystem — React Native, Next.js, Node.js. Specializing in RESTful APIs, secure integrations, real-time systems, and delivering product-driven applications from database architecture to optimized UI.",
+        "summary": "I offer end-to-end development services spanning Web, cross-platform Mobile apps, and AI / LLM integration. My solutions prioritize exceptional performance, seamless UI/UX, and smart automation—empowering your business to enhance user engagement and boost conversion rates.",
         "askMe": "Ask me anything ↓",
         "location": "Ho Chi Minh City,Da Nang, Vietnam",
         "badges": {
@@ -394,24 +392,21 @@
         "educationData": [
             {
                 "id": 1,
-                "school": "University of Information Technology – UIT",
-                "degree": "Bachelor of Science in Computer Science",
-                "year": "Expected 2025",
-                "icon": "🎓"
+                "school": "Computer Science - Bachelor of Science",
+                "degree": "University of Information Technology – UIT",
+                "year": "Expected 2025"
             },
             {
                 "id": 2,
-                "school": "Ly Tu Trong College – LTTC",
-                "degree": "Associate of Science in Computer Programming",
-                "year": "2021 – 2024",
-                "icon": "💻"
+                "school": "Computer Programming - Associate of Science",
+                "degree": "Ly Tu Trong College – LTTC",
+                "year": "2021 – 2024"
             },
             {
                 "id": 3,
-                "school": "Ly Tu Trong College – LTTC",
-                "degree": "Intermediate Certificate in Cybersecurity",
-                "year": "2018 – 2021",
-                "icon": "🔒"
+                "school": "Cybersecurity - Intermediate Certificate",
+                "degree": "Ly Tu Trong College – LTTC",
+                "year": "2018 – 2021"
             }
         ]
     }
