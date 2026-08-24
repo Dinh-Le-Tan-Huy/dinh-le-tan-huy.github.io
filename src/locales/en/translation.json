@@ -5,7 +5,7 @@
         "emailLabel": "Email",
         "phoneLabel": "Phone",
         "locationLabel": "Location",
-        "location": "Ho Chi Minh City, Vietnam",
+        "location": "Ho Chi Minh City,Da Nang, Vietnam",
         "resume": "Resume",
         "form": {
             "namePlaceholder": "Huy Le",
@@ -127,7 +127,7 @@
                 "id": "proj_homenest_01",
                 "title": "HomeNest Software",
                 "time": "06/2025 - Present",
-                "des": "Full Stack Developer · Mobile · Web · Backend · DevOps",
+                "des": "Full Stack · Mobile · Web · Backend · DevOps",
                 "responsibilities": [
                     "► Love Lawn Service — Agriculture ERP (App Store & Google Play) | Team size: 8 | 06/2025 – 01/2026",
                     "Built a dual-role on-demand lawn care platform (React Native + Expo) for customers (booking, real-time job tracking, payment) and field workers (GPS check-in, photo upload, incident reporting, time tracking).",
@@ -264,7 +264,7 @@
         ],
         "summary": "Building scalable end-to-end solutions using the JS/TS ecosystem — React Native, Next.js, Node.js. Specializing in RESTful APIs, secure integrations, real-time systems, and delivering product-driven applications from database architecture to optimized UI.",
         "askMe": "Ask me anything ↓",
-        "location": "Ho Chi Minh City, Vietnam",
+        "location": "Ho Chi Minh City,Da Nang, Vietnam",
         "badges": {
             "education": "Education",
             "skills": "Skills",
