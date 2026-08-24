@@ -1,22 +1,5 @@
 import { type CSSProperties } from 'react';
-
-// Refined Slate tokens (light-mode)
-const t = {
-    ink:         'oklch(14% 0.015 260)',
-    inkMid:      'oklch(42% 0.012 255)',
-    inkMuted:    'oklch(66% 0.008 255)',
-    paper:       'oklch(98.5% 0.005 250)',
-    paperSubtle: 'oklch(96.5% 0.008 250)',
-    paperCard:   'oklch(100% 0 0)',
-    accent:      'oklch(52% 0.18 265)',
-    accentLight: 'oklch(52% 0.18 265 / 0.08)',
-    accentMid:   'oklch(52% 0.18 265 / 0.20)',
-    rule:        'oklch(90% 0.01 250)',
-    ruleDark:    'oklch(84% 0.012 250)',
-    shadow:      '0 2px 12px oklch(0% 0 0 / 0.06)',
-    fontSans:    "'Inter', system-ui, -apple-system, sans-serif",
-    fontMono:    "'ui-monospace', 'Cascadia Code', Consolas, monospace",
-};
+import { t } from '../../DesignSystem/token';
 
 export const styles = {
     container: {

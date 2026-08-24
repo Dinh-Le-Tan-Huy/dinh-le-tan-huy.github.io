@@ -71,7 +71,7 @@ const Contact = () => {
         <div style={{
             ...ContactStyle.container,
             flexDirection: isMobile ? "column" : "row",
-            marginTop: isMobile ? "80px" : "140px",
+            marginTop: isMobile ? "80px" : "100px",
             marginBottom: isMobile ? "80px" : "140px",
             minHeight: isMobile ? "auto" : "600px",
             borderRadius: isMobile ? "16px" : "24px",

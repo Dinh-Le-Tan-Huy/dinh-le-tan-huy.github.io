@@ -14,27 +14,27 @@ import { type CSSProperties } from 'react';
 
 export const tokens = {
     // Paper scale (light mode)
-    paper:       'oklch(98.5% 0.005 250)',   // near-white, barely-cool tint
+    paper: 'oklch(98.5% 0.005 250)',   // near-white, barely-cool tint
     paperSubtle: 'oklch(96.5% 0.008 250)',   // slightly recessed surface
-    paperCard:   'oklch(100% 0 0)',          // pure white card surface
+    paperCard: 'oklch(100% 0 0)',          // pure white card surface
 
     // Ink scale
-    ink:         'oklch(14% 0.015 260)',     // near-black primary text
-    inkMid:      'oklch(42% 0.012 255)',     // secondary text
-    inkMuted:    'oklch(66% 0.008 255)',     // muted / meta text
+    ink: 'oklch(14% 0.015 260)',     // near-black primary text
+    inkMid: 'oklch(42% 0.012 255)',     // secondary text
+    inkMuted: 'oklch(66% 0.008 255)',     // muted / meta text
 
     // Accent — single restrained indigo
-    accent:      'oklch(52% 0.18 265)',      // indigo
+    accent: 'oklch(52% 0.18 265)',      // indigo
     accentLight: 'oklch(52% 0.18 265 / 0.08)',  // tinted bg
-    accentMid:   'oklch(52% 0.18 265 / 0.20)',  // border
+    accentMid: 'oklch(52% 0.18 265 / 0.20)',  // border
 
     // Rule & border
-    rule:        'oklch(90% 0.01 250)',      // hairline separator
-    ruleDark:    'oklch(84% 0.012 250)',     // slightly heavier border
+    rule: 'oklch(90% 0.01 250)',      // hairline separator
+    ruleDark: 'oklch(84% 0.012 250)',     // slightly heavier border
 
     // Shadow
-    shadow:      '0 2px 12px oklch(0% 0 0 / 0.06)',
-    shadowMd:    '0 4px 24px oklch(0% 0 0 / 0.08)',
+    shadow: '0 2px 12px oklch(0% 0 0 / 0.06)',
+    shadowMd: '0 4px 24px oklch(0% 0 0 / 0.08)',
 
     // Typography
     fontSans: "'Inter', system-ui, -apple-system, sans-serif",
@@ -268,7 +268,7 @@ export const styles = {
     skillsGrid: {
         display: 'flex',
         flexDirection: 'column' as const,
-        gap: '32px',
+        gap: '12px',
         width: '100%',
     } as CSSProperties,
 
