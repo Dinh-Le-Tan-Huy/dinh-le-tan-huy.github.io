@@ -123,19 +123,6 @@
             }
         ],
         "projectsData": [
-            // {
-            //     "id": "proj_ai_agent_02",
-            //     "title": "AI Agent Assistant — LLM Integration",
-            //     "time": "06/2025 - Present",
-            //     "des": "AI · Web · Automation · Gemini API",
-            //     "responsibilities": [
-            //         "Built an AI-powered assistant (web-based) that integrates with LLMs to automate content writing and image generation tasks.",
-            //         "Implemented multi-model Gemini API workflows for text generation, summarization, and AI image creation.",
-            //         "Integrated ImageKit for AI-generated image delivery and asset management.",
-            //         "Developed API-first backend structure with JWT authentication and Zod validation.",
-            //         "Enhanced UX with Framer Motion animations and Tailwind CSS design system."
-            //     ]
-            // },
             {
                 "id": "proj_homenest_01",
                 "title": "HomeNest Software",
