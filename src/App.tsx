@@ -6,6 +6,7 @@ import { Home } from './View/layout/Home/Home'
 import ScrollToHash from './View/Components/ScrollToHash/ScrollToHash'
 import Footer from './View/Components/Footer/Footer'
 import About from './View/layout/About/About'
+import Sale from './View/layout/Sale/Sale'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/sale" element={<Sale />} />
         </Routes>
       </main>
       <Footer />

@@ -225,7 +225,8 @@
         "home": "Home",
         "about": "About",
         "faq": "FAQ",
-        "contact": "Contact"
+        "contact": "Contact",
+        "sale": "Sales"
     },
     "lang": {
         "label": "Language",
@@ -553,6 +554,144 @@
             "description": "Discuss your needs, budget, and properties of interest.",
             "phone": "093 222 4895",
             "display": "📞 Zalo/Phone: 093 222 4895"
-        }
+        },
+        "greeting": "Specialist in, ",
+        "nameIntro": "Premium Real Estate",
+        "introText": "Real estate advisory in former District 2 and Thu Duc City with a transparent approach — focused on location, asset value, legal status, and cash flow.",
+        "contactMe": "Explore Featured Projects ↓",
+        "badges": {
+            "faq": "Frequently Asked Questions",
+            "expertise": "Areas of Expertise",
+            "projects": "Featured Projects",
+            "insights": "Investment Insights"
+        },
+        "titles": {
+            "faq": "Common Questions Answered",
+            "expertise": "Advisory Expertise",
+            "projects": "Key Projects",
+            "insights": "Investment Perspective"
+        },
+        "expertiseData": [
+            {
+                "id": "expertise_01",
+                "title": "Real Estate Advisory",
+                "des": "Focused on apartments and projects in former District 2 and Thu Duc City.",
+                "highlights": [
+                    "Product advisory tailored to owner-occupier or investment needs.",
+                    "Analysis of location, price benchmarks, and unit characteristics.",
+                    "Side-by-side comparison of options before client decision-making."
+                ]
+            },
+            {
+                "id": "expertise_02",
+                "title": "Investment & Cash Flow Advisory",
+                "des": "Analysis of capital structure, cash flow, and asset monetization potential.",
+                "highlights": [
+                    "Analysis of purchase price, rental rates, and cash flow generation.",
+                    "Evaluation of capital allocation and financial leverage options.",
+                    "Comparison across owner-occupier, rental, and long-term asset-building goals."
+                ]
+            },
+            {
+                "id": "expertise_03",
+                "title": "Legal & Asset Value",
+                "des": "Helping clients identify key factors to check before a transaction.",
+                "highlights": [
+                    "Verify the signing entity and project legal standing.",
+                    "Review construction progress, handover conditions, and ownership rights.",
+                    "Evaluate asset value based on location and market benchmarks."
+                ]
+            },
+            {
+                "id": "expertise_04",
+                "title": "Market Analysis & Comparison",
+                "des": "Placing products on a common baseline for easy evaluation.",
+                "highlights": [
+                    "Compare price per m² across different projects.",
+                    "Analyze pros and cons between new launches and resale units.",
+                    "Track infrastructure changes and market trends in the East district."
+                ]
+            }
+        ],
+        "projectsData": [
+            {
+                "id": "project_01",
+                "title": "The Privé",
+                "category": "Premium Apartment",
+                "subtitle": "Riverside living in the East district",
+                "description": "A project targeting buyers seeking premium living with strong locational and scenic advantages.",
+                "highlights": [
+                    "Riverside setting with distinctive views and natural surroundings.",
+                    "Convenient connectivity to key areas of Ho Chi Minh City.",
+                    "Premium apartment segment with diverse unit options.",
+                    "Investment angle: price analysis, payment schedule, and monetization potential."
+                ]
+            },
+            {
+                "id": "project_02",
+                "title": "The Global City",
+                "category": "Mixed-use Township",
+                "subtitle": "A new multi-functional urban district in the East",
+                "description": "An integrated urban model combining residential, commercial, services, and entertainment.",
+                "highlights": [
+                    "Integrated urban planning with multiple functional zones.",
+                    "Located on a key development corridor of the East district.",
+                    "Retail and service spaces are a standout feature of the development.",
+                    "Investment angle: tracking infrastructure development pace and urban completion."
+                ]
+            },
+            {
+                "id": "project_03",
+                "title": "Palm City",
+                "category": "Urban Township",
+                "subtitle": "Green riverside living",
+                "description": "An established community with existing residents and amenities, well-suited for owner-occupiers.",
+                "highlights": [
+                    "Urban community with riverside landscape integration.",
+                    "Established residential enclave with formed amenity network.",
+                    "Benefits from surrounding service and amenity infrastructure.",
+                    "Investment angle: analysis of owner-occupier demand, rental yield, and long-term asset building."
+                ]
+            },
+            {
+                "id": "project_04",
+                "title": "Other Premium Apartments",
+                "category": "Diverse Selection",
+                "subtitle": "Options matched to needs and budget",
+                "description": "A curated selection of apartment options in former District 2 and Thu Duc City for various objectives.",
+                "highlights": [
+                    "Diverse locations, price segments, and unit sizes.",
+                    "Options for owner-occupation, rental, or investment.",
+                    "Direct comparison on price, location, legal status, and amenities.",
+                    "Advisory tailored to each client's budget and financial goals."
+                ]
+            }
+        ],
+        "faqData": [
+            {
+                "id": "faq_01",
+                "question": "What types of properties do you currently advise on?",
+                "category": "GENERAL",
+                "answer": "I advise on a wide range of properties in the former District 2 and Thu Duc City, focusing on apartments, premium units, and properties with strong investment potential."
+            },
+            {
+                "id": "faq_02",
+                "question": "What should I look at first when buying real estate as an investment?",
+                "category": "INVESTMENT",
+                "answer": "I typically evaluate 4 factors: purchase price, location, cash flow potential, and liquidity. A good property isn't just about a low price — it needs genuine demand from future buyers or tenants."
+            },
+            {
+                "id": "faq_03",
+                "question": "Why do units in the same project have different prices?",
+                "category": "PRICE",
+                "answer": "Differences come from size, floor, orientation, view, unit position, and transaction timing. When comparing, I use price per m² to bring everything to the same baseline."
+            },
+            {
+                "id": "faq_04",
+                "question": "What legal aspects should I check when buying an apartment?",
+                "category": "LEGAL",
+                "answer": "I prioritize verifying the signing entity, the project's legal standing, construction progress, handover conditions, and ownership rights. A good price means little if the legal status is unclear."
+            }
+        ]
     }
 }
