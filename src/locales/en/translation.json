@@ -396,5 +396,163 @@
                 "year": "2018 – 2021"
             }
         ]
+    },
+    "salePage": {
+        "statusBadge": "Available for Investment Consulting & Property Listings",
+        "greeting1": "Hi, I'm ",
+        "greeting2": ",",
+        "greeting3": "a specialist in ",
+        "typewriter": [
+            "Premium Real Estate Brokerage",
+            "Investment & Legal Advisory",
+            "Asset Management & Leasing",
+            "Real Estate Project Development"
+        ],
+        "summary": "I provide comprehensive real estate solutions including buy/sell advisory, profitable investment strategies, asset management, and market analysis. My services deliver real value, legal security, and optimized cash flow—helping clients seize golden opportunities and grow their wealth sustainably.",
+        "askMe": "Contact for Consultation ↓",
+        "location": "Ho Chi Minh City, Vietnam",
+        "clientFAQs": [
+            {
+                "id": "faq-001",
+                "category": "GENERAL",
+                "question": "What types of properties do you currently advise on?",
+                "answer": "I advise on a wide range of properties in the former District 2 and Thu Duc City, focusing on apartments, premium units, and properties with strong investment potential."
+            },
+            {
+                "id": "faq-002",
+                "category": "INVESTMENT",
+                "question": "What should I look at first when buying real estate as an investment?",
+                "answer": "I typically evaluate 4 factors: purchase price, location, cash flow potential, and liquidity. A good property isn't just about a low price—it needs a clear reason why others will want to buy or rent it in the future."
+            },
+            {
+                "id": "faq-003",
+                "category": "PRICE",
+                "question": "Why do units in the same project have different prices?",
+                "answer": "Differences mainly come from size, floor, orientation, view, unit position, and transaction timing. When comparing, I bring clients to the same baseline using price per m² to reveal the real value."
+            },
+            {
+                "id": "faq-004",
+                "category": "COMPARISON",
+                "question": "How can I tell which project is a better fit?",
+                "answer": "Don't just compare prices. I usually lay out projects side by side on a scorecard covering location, legal status, price/m², design, amenities, management, rental potential, and liquidity."
+            },
+            {
+                "id": "faq-005",
+                "category": "LEGAL",
+                "question": "What legal aspects should I check when buying an apartment?",
+                "answer": "I prioritize verifying the signing entity, the project's legal standing, construction progress, handover conditions, and ownership rights. A good price means nothing if the legal status is unclear."
+            },
+            {
+                "id": "faq-006",
+                "category": "FINANCE",
+                "question": "Should I use bank leverage to buy real estate?",
+                "answer": "You can, but the loan must align with your actual cash flow. I look at your equity, loan amount, repayment schedule, and monthly capacity before considering the property value."
+            },
+            {
+                "id": "faq-007",
+                "category": "INVESTMENT",
+                "question": "How should I calculate returns when buying an apartment to rent out?",
+                "answer": "I work from the purchase price, actual rental rate, occupancy rate, and operating costs to estimate a reference cash flow, then assess the asset's appreciation potential."
+            },
+            {
+                "id": "faq-008",
+                "category": "MARKET",
+                "question": "Should I buy real estate when the market is slow?",
+                "answer": "A slow market doesn't mean every product is cheap. I focus on finding properties with fair pricing, clear legal status, and genuine demand—rather than trying to time the market bottom."
+            },
+            {
+                "id": "faq-009",
+                "category": "PRODUCT",
+                "question": "What apartment size range is typically a good fit?",
+                "answer": "The 50–110 m² segment offers a wide range of 1 to 3-bedroom options. I usually clarify intended use and budget first, then narrow down the size and project accordingly."
+            },
+            {
+                "id": "faq-010",
+                "category": "INVESTMENT",
+                "question": "Should I prioritize rental income or capital appreciation?",
+                "answer": "If rental income is the priority, focus on rental demand and actual rates. If appreciation is the goal, location, infrastructure, and supply dynamics matter more."
+            },
+            {
+                "id": "faq-011",
+                "category": "COMPARISON",
+                "question": "Should I buy a new project or a handed-over unit?",
+                "answer": "New projects suit buyers who prefer installment payment plans; handed-over units allow you to inspect quality and operations directly. I usually compare both within the same budget."
+            },
+            {
+                "id": "faq-012",
+                "category": "INVESTMENT",
+                "question": "How should high-net-worth individuals allocate capital into real estate?",
+                "answer": "I don't view real estate purely as a place to park money. What matters is defining what role the asset plays: preserving value, generating cash flow, personal use, or long-term growth."
+            },
+            {
+                "id": "faq-013",
+                "category": "CONSULTING",
+                "question": "I don't know which project to choose—can you guide me from the start?",
+                "answer": "Absolutely. Just share your budget, purpose of purchase, available equity, financing needs, and preferred area. I'll filter the options first, then present only the ones worth considering."
+            },
+            {
+                "id": "faq-014",
+                "category": "CONSULTING",
+                "question": "I want a specific property analyzed—what do I need to do?",
+                "answer": "Just send me the project name or unit you're interested in. I can analyze the price, legal status, cash flow, exploitation potential, and liquidity from both a usage and investment perspective."
+            },
+            {
+                "id": "faq-015",
+                "category": "CONSULTING",
+                "question": "I want to view multiple projects before deciding—is that possible?",
+                "answer": "I can arrange a shortlist of projects using the same evaluation criteria so you can visit and compare them directly, rather than deciding based solely on online information."
+            }
+        ],
+        "faqCategories": [
+            {
+                "id": "ALL",
+                "label": "All"
+            },
+            {
+                "id": "INVESTMENT_FINANCE",
+                "label": "Investment & Finance",
+                "includes": [
+                    "INVESTMENT",
+                    "FINANCE"
+                ]
+            },
+            {
+                "id": "PRICE_COMPARISON",
+                "label": "Price & Comparison",
+                "includes": [
+                    "PRICE",
+                    "COMPARISON"
+                ]
+            },
+            {
+                "id": "LEGAL_MARKET",
+                "label": "Legal & Market",
+                "includes": [
+                    "LEGAL",
+                    "MARKET"
+                ]
+            },
+            {
+                "id": "PRODUCT",
+                "label": "Product",
+                "includes": [
+                    "PRODUCT"
+                ]
+            },
+            {
+                "id": "CONSULTING",
+                "label": "Consulting",
+                "includes": [
+                    "GENERAL",
+                    "CONSULTING"
+                ]
+            }
+        ],
+        "faqContact": {
+            "label": "Direct Consultation",
+            "description": "Discuss your needs, budget, and properties of interest.",
+            "phone": "093 222 4895",
+            "display": "📞 Zalo/Phone: 093 222 4895"
+        }
     }
 }

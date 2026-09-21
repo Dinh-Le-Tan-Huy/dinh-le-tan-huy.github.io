@@ -1,8 +1,3 @@
-/* Hallmark · redesign · macrostructure: Long Document / Workbench
- * theme: custom "Refined Slate" · genre: modern-minimal · tone: utilitarian · technical-austere
- * contrast: pass · mobile: verified 375px+ · italic headers: none
- */
-
 import { Typewriter } from 'react-simple-typewriter'
 import ChatBubbleItem from '../../Components/ChatBubbleItem/ChatBubbleItem'
 import { styles, sectionBadge, sectionTitle, sectionDivider, tokens } from './HomeStyle'
@@ -12,10 +7,13 @@ import CardInfo from '../../Components/CardInfo/CardInfo'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-// ── Micro-animation CSS (injected once) ──────────────────────────────────────
 const ANIMATION_CSS = `
 @keyframes hm-fade-up {
   from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes hm-hero-switch {
+  from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 .hm-fade-up   { animation: hm-fade-up 0.55s cubic-bezier(0.22,1,0.36,1) both; }
@@ -23,6 +21,7 @@ const ANIMATION_CSS = `
 .hm-delay-2   { animation-delay: 0.16s; }
 .hm-delay-3   { animation-delay: 0.24s; }
 .hm-delay-4   { animation-delay: 0.32s; }
+.hm-hero-content { animation: hm-hero-switch 0.35s cubic-bezier(0.22,1,0.36,1) both; }
 
 .hm-skill-tag:hover {
   border-color: ${tokens.accentMid} !important;
@@ -38,11 +37,27 @@ const ANIMATION_CSS = `
   box-shadow: 0 4px 20px oklch(0% 0 0 / 0.09) !important;
   transform: translateY(-2px);
 }
+.hm-mode-pill {
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.hm-mode-pill:hover {
+  border-color: ${tokens.accentMid} !important;
+}
 `
 
 const TECH_STACK = [
     'React Native', 'Next.js', 'Node.js', 'TypeScript',
-    'PostgreSQL', 'Redis', 'Docker', 'GitHub Actions',
+    'PostgreSQL', 'Redis', 'Docker', 'GitHub Actions', 'AI/ LLM'
+]
+
+const REAL_ESTATE_TAGS = [
+    "Real Estate Buying & Selling",
+    "Profitable Investment",
+    "Secure Legal Status",
+    "Rental Management",
+    "Market Analysis",
+    "Property Consignment"
 ]
 
 export const Home = () => {
@@ -51,9 +66,11 @@ export const Home = () => {
     const projectsData = t('aboutPage.projectsData', { returnObjects: true }) as any[]
     const skillsData = t('homePage.skillsData', { returnObjects: true }) as any[]
     const typewriterWords = t('homePage.typewriter', { returnObjects: true }) as string[]
+    const saleTypewriterWords = t('salePage.typewriter', { returnObjects: true }) as string[]
 
     const [opentIndex, setOpentIndex] = useState<number | null>(null)
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const [heroMode, setHeroMode] = useState<'it' | 'sale'>('sale')
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -80,80 +97,155 @@ export const Home = () => {
 
     return (
         <div style={styles.mainContainer}>
-
             {/* ════════════════════ HERO ════════════════════ */}
             <div style={styles.summaryContainer}>
 
-                {/* Available badge */}
-                <div className="hm-fade-up" style={styles.greetingTag}>
-                    <span style={styles.greetingDot} />
-                    {t('homePage.statusBadge')}
-                </div>
-
-                {/* h1 — name + typewriter role */}
-                <h1 className="hm-fade-up hm-delay-1" style={styles.greetingTitle}>
-                    {t('homePage.greeting1')}
-                    <span style={{ color: tokens.accent }}>Huy</span>
-                    {t('homePage.greeting2')}<br />
-                    {t('homePage.greeting3')}
-                    <span style={styles.highlightText}>
-                        <Typewriter
-                            words={typewriterWords}
-                            loop={0}
-                            cursor
-                            cursorStyle="_"
-                            typeSpeed={70}
-                            deleteSpeed={40}
-                            delaySpeed={1800}
-                        />
-                    </span>
-                </h1>
-
-                {/* Tech-stack tagline — mono, restrained */}
-                <div className="hm-fade-up hm-delay-2" style={styles.heroTagline}>
-                    <span>Full-stack Mobile &amp; Web</span>
-                    <span style={styles.heroTaglineSeparator}>·</span>
-                    <span>JS / TS ecosystem</span>
-                    <span style={styles.heroTaglineSeparator}>·</span>
-                    <span>React Native · Next.js · Node.js</span>
-                    <span style={styles.heroTaglineSeparator}>·</span>
-                    <span>DB / CI-CD</span>
-                </div>
-
-                {/* Summary */}
-                <p className="hm-fade-up hm-delay-2" style={styles.summaryDescription}>
-                    {t('homePage.summary')}
-                </p>
-
-                {/* Tech tag row */}
-                <div className="hm-fade-up hm-delay-3" style={styles.techStackRow}>
-                    {TECH_STACK.map((tag) => (
-                        <span key={tag} style={styles.techTag}>{tag}</span>
-                    ))}
-                </div>
-
-                {/* CTA row */}
-                <div className="hm-fade-up hm-delay-4" style={styles.heroCtas}>
-                    <a
-                        href="#FAQ"
-                        className="hm-btn-primary"
-                        style={styles.heroBtnPrimary}
-                        onClick={(e) => {
-                            e.preventDefault()
-                            document.getElementById('FAQ')?.scrollIntoView({ behavior: 'smooth' })
+                {/* Mode toggle pills */}
+                <div className="hm-fade-up" style={{
+                    display: 'flex',
+                    gap: '8px',
+                    marginBottom: '32px',
+                    padding: '4px',
+                    backgroundColor: tokens.paperSubtle,
+                    borderRadius: '8px',
+                    border: `1px solid ${tokens.rule}`,
+                    width: '100%',        // Giúp container giãn rộng hết mức có thể (hoặc tùy chỉnh max-width nếu cần)
+                    minWidth: '320px',    // Giữ chiều rộng tối thiểu như bạn muốn
+                }}>
+                    <button
+                        id="hero-toggle-it"
+                        className="hm-mode-pill"
+                        onClick={() => setHeroMode('it')}
+                        style={{
+                            flex: 1,          // Giúp nút tự động giãn đều 50% chiều rộng
+                            textAlign: 'center',
+                            padding: '6px 16px',
+                            borderRadius: '5px',
+                            fontSize: '11.5px',
+                            fontWeight: 600,
+                            letterSpacing: '0.06em',
+                            fontFamily: tokens.fontMono,
+                            border: heroMode === 'it' ? `1px solid ${tokens.accentMid}` : '1px solid transparent',
+                            backgroundColor: heroMode === 'it' ? tokens.paperCard : 'transparent',
+                            color: heroMode === 'it' ? tokens.accent : tokens.inkMuted,
+                            boxShadow: heroMode === 'it' ? tokens.shadow : 'none',
                         }}
                     >
-                        {t('homePage.askMe')}
-                    </a>
+                        IT / Dev
+                    </button>
+                    <button
+                        id="hero-toggle-sale"
+                        className="hm-mode-pill"
+                        onClick={() => setHeroMode('sale')}
+                        style={{
+                            flex: 1,          // Giúp nút tự động giãn đều 50% chiều rộng
+                            textAlign: 'center',
+                            padding: '6px 16px',
+                            borderRadius: '5px',
+                            fontSize: '11.5px',
+                            fontWeight: 600,
+                            letterSpacing: '0.06em',
+                            fontFamily: tokens.fontMono,
+                            border: heroMode === 'sale' ? `1px solid ${tokens.accentMid}` : '1px solid transparent',
+                            backgroundColor: heroMode === 'sale' ? tokens.paperCard : 'transparent',
+                            color: heroMode === 'sale' ? tokens.accent : tokens.inkMuted,
+                            boxShadow: heroMode === 'sale' ? tokens.shadow : 'none',
+                        }}
+                    >
+                        Real Estate
+                    </button>
+                </div>
 
-                    <span style={styles.heroLocation}>
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"
-                                stroke="currentColor" strokeWidth="1.5" />
-                            <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="1.5" />
-                        </svg>
-                        {t('homePage.location')}
-                    </span>
+                {/* Hero content — re-mounts on mode switch to trigger animation */}
+                <div key={heroMode} className="hm-hero-content" style={{ width: '100%' }}>
+
+                    {/* Available badge */}
+                    <div className="hm-fade-up" style={styles.greetingTag}>
+                        <span style={styles.greetingDot} />
+                        {heroMode === 'it' ? t('homePage.statusBadge') : t('salePage.statusBadge')}
+                    </div>
+
+                    {/* h1 — name + typewriter role */}
+                    <h1 className="hm-fade-up hm-delay-1" style={styles.greetingTitle}>
+                        {heroMode === 'it' ? t('homePage.greeting1') : t('salePage.greeting1')}
+                        <span style={{ color: tokens.accent }}>Huy</span>
+                        {heroMode === 'it' ? t('homePage.greeting2') : t('salePage.greeting2')}<br />
+                        {heroMode === 'it' ? t('homePage.greeting3') : t('salePage.greeting3')}
+                        <span style={styles.highlightText}>
+                            <Typewriter
+                                key={heroMode}
+                                words={heroMode === 'it' ? typewriterWords : saleTypewriterWords}
+                                loop={0}
+                                cursor
+                                cursorStyle="_"
+                                typeSpeed={70}
+                                deleteSpeed={40}
+                                delaySpeed={1800}
+                            />
+                        </span>
+                    </h1>
+
+                    {/* Tagline */}
+                    <div className="hm-fade-up hm-delay-2" style={styles.heroTagline}>
+                        {heroMode === 'it' ? (
+                            <>
+                                <span>Full-stack Mobile &amp; Web</span>
+                                <span style={styles.heroTaglineSeparator}>·</span>
+                                <span>JS / TS ecosystem</span>
+                                <span style={styles.heroTaglineSeparator}>·</span>
+                                <span>React Native · Next.js · Node.js</span>
+                                <span style={styles.heroTaglineSeparator}>·</span>
+                                <span>DB / CI-CD</span>
+                            </>
+                        ) : (
+                            <>
+                                <span>Luxury Real Estate</span>
+                                <span style={styles.heroTaglineSeparator}>·</span>
+                                <span>Investment &amp; Legal Advisory</span>
+                                <span style={styles.heroTaglineSeparator}>·</span>
+                                <span>Property Management</span>
+                                <span style={styles.heroTaglineSeparator}>·</span>
+                                <span>Market Analysis</span>
+                            </>
+                        )}
+                    </div>
+
+                    {/* Summary */}
+                    <p className="hm-fade-up hm-delay-2" style={styles.summaryDescription}>
+                        {heroMode === 'it' ? t('homePage.summary') : t('salePage.summary')}
+                    </p>
+
+                    {/* Tag row */}
+                    <div className="hm-fade-up hm-delay-3" style={styles.techStackRow}>
+                        {(heroMode === 'it' ? TECH_STACK : REAL_ESTATE_TAGS).map((tag) => (
+                            <span key={tag} style={styles.techTag}>{tag}</span>
+                        ))}
+                    </div>
+
+                    {/* CTA row */}
+                    <div className="hm-fade-up hm-delay-4" style={styles.heroCtas}>
+                        <a
+                            href="#FAQ"
+                            className="hm-btn-primary"
+                            style={styles.heroBtnPrimary}
+                            onClick={(e) => {
+                                e.preventDefault()
+                                document.getElementById('FAQ')?.scrollIntoView({ behavior: 'smooth' })
+                            }}
+                        >
+                            {heroMode === 'it' ? t('homePage.askMe') : t('salePage.askMe')}
+                        </a>
+
+                        <span style={styles.heroLocation}>
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"
+                                    stroke="currentColor" strokeWidth="1.5" />
+                                <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="1.5" />
+                            </svg>
+                            {heroMode === 'it' ? t('homePage.location') : t('salePage.location')}
+                        </span>
+                    </div>
+
                 </div>
             </div>
 
