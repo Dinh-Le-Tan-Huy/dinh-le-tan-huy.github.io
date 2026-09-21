@@ -25,7 +25,8 @@
         "home": "Trang chủ",
         "about": "Giới thiệu",
         "faq": "Câu hỏi",
-        "contact": "Liên hệ"
+        "contact": "Liên hệ",
+        "sale": "Bán hàng"
     },
     "lang": {
         "label": "Ngôn ngữ",
@@ -401,161 +402,143 @@
         ]
     },
     "salePage": {
-        "statusBadge": "Sẵn sàng tư vấn đầu tư & ký gửi",
-        "greeting1": "Xin chào, tôi là ",
-        "greeting2": ",",
-        "greeting3": "chuyên gia ",
-        "typewriter": [
-            "Môi giới Bất động sản Cao cấp",
-            "Tư vấn Đầu tư & Pháp lý",
-            "Quản lý Tài sản & Cho thuê",
-            "Phát triển Dự án BĐS"
-        ],
-        "summary": "Tôi cung cấp các giải pháp toàn diện về Bất động sản bao gồm tư vấn mua bán, đầu tư sinh lời, quản lý tài sản và phân tích thị trường. Các giải pháp của tôi mang lại giá trị thực, an toàn pháp lý và tối ưu hóa dòng tiền—giúp khách hàng nắm bắt cơ hội vàng và gia tăng tài sản bền vững.",
-        "askMe": "Liên hệ tư vấn ngay ↓",
-        "location": "Thành phố Hồ Chí Minh, Việt Nam",
-        "clientFAQs": [
+        "greeting": "Chuyên trang tư vấn, ",
+        "nameIntro": "Bất động sản cao cấp",
+        "introText": "Tư vấn bất động sản tại Quận 2 cũ và TP. Thủ Đức với góc nhìn minh bạch, tập trung vào vị trí, giá trị tài sản, pháp lý và dòng tiền.",
+        "contactMe": "Khám phá dự án nổi bật ↓",
+        "badges": {
+            "faq": "Câu hỏi thường gặp",
+            "expertise": "Lĩnh vực tư vấn",
+            "projects": "Dự án tư vấn",
+            "insights": "Góc nhìn đầu tư"
+        },
+        "titles": {
+            "faq": "Giải đáp thắc mắc thường gặp",
+            "expertise": "Chuyên môn tư vấn",
+            "projects": "Dự án trọng điểm",
+            "insights": "Góc nhìn đầu tư"
+        },
+        "expertiseData": [
             {
-                "id": "faq-001",
-                "category": "GENERAL",
+                "id": "expertise_01",
+                "title": "Tư vấn Bất động sản",
+                "des": "Tập trung vào căn hộ và các dự án tại Quận 2 cũ và TP. Thủ Đức.",
+                "highlights": [
+                    "Tư vấn sản phẩm theo nhu cầu ở thực hoặc đầu tư.",
+                    "Phân tích vị trí, mặt bằng giá và đặc điểm từng sản phẩm.",
+                    "So sánh các lựa chọn trước khi khách hàng đưa ra quyết định."
+                ]
+            },
+            {
+                "id": "expertise_02",
+                "title": "Tư vấn Đầu tư & Dòng tiền",
+                "des": "Phân tích bài toán vốn, dòng tiền và khả năng khai thác tài sản.",
+                "highlights": [
+                    "Phân tích giá mua, giá thuê và khả năng tạo dòng tiền.",
+                    "Đánh giá phương án sử dụng vốn và đòn bẩy tài chính.",
+                    "So sánh giữa mục tiêu ở, cho thuê và tích sản dài hạn."
+                ]
+            },
+            {
+                "id": "expertise_03",
+                "title": "Pháp lý & Giá trị Tài sản",
+                "des": "Hỗ trợ khách hàng nhận diện các yếu tố cần kiểm tra trước giao dịch.",
+                "highlights": [
+                    "Kiểm tra chủ thể ký hợp đồng và tình trạng pháp lý dự án.",
+                    "Lưu ý về tiến độ, điều kiện bàn giao và quyền sở hữu.",
+                    "Đánh giá giá trị sản phẩm dựa trên vị trí và mặt bằng thị trường."
+                ]
+            },
+            {
+                "id": "expertise_04",
+                "title": "Phân tích Thị trường & So sánh",
+                "des": "Đặt các sản phẩm trên cùng một mặt bằng để dễ dàng đánh giá.",
+                "highlights": [
+                    "So sánh giá bán theo m² giữa các dự án.",
+                    "Phân tích ưu nhược điểm giữa dự án mới và căn hộ chuyển nhượng.",
+                    "Theo dõi những thay đổi về hạ tầng và thị trường khu Đông."
+                ]
+            }
+        ],
+        "projectsData": [
+            {
+                "id": "project_01",
+                "title": "The Privé",
+                "category": "Căn hộ cao cấp",
+                "subtitle": "Không gian sống ven sông tại khu Đông",
+                "description": "Dự án hướng đến nhóm khách hàng tìm kiếm không gian sống cao cấp với lợi thế về vị trí và cảnh quan.",
+                "highlights": [
+                    "Không gian ven sông với tầm nhìn và cảnh quan đặc trưng.",
+                    "Kết nối thuận tiện đến các khu vực trọng điểm của TP.HCM.",
+                    "Phân khúc căn hộ cao cấp, đa dạng lựa chọn theo nhu cầu.",
+                    "Góc nhìn đầu tư: phân tích giá, tiến độ thanh toán và khả năng khai thác."
+                ]
+            },
+            {
+                "id": "project_02",
+                "title": "The Global City",
+                "category": "Đại đô thị",
+                "subtitle": "Đô thị mới đa chức năng tại phía Đông",
+                "description": "Mô hình đô thị tích hợp không gian sống, thương mại, dịch vụ và giải trí.",
+                "highlights": [
+                    "Quy hoạch đô thị tích hợp với nhiều chức năng.",
+                    "Vị trí trên trục phát triển quan trọng của khu Đông.",
+                    "Không gian thương mại và dịch vụ là một phần nổi bật của đô thị.",
+                    "Góc nhìn đầu tư: theo dõi tiến độ phát triển hạ tầng và mức độ hoàn thiện đô thị."
+                ]
+            },
+            {
+                "id": "project_03",
+                "title": "Palm City",
+                "category": "Khu đô thị",
+                "subtitle": "Không gian sống xanh ven sông",
+                "description": "Khu đô thị có hệ sinh thái cư dân và tiện ích hiện hữu, phù hợp với nhu cầu ở thực.",
+                "highlights": [
+                    "Không gian đô thị gắn với cảnh quan ven sông.",
+                    "Khu dân cư và hệ thống tiện ích đã hình thành.",
+                    "Hưởng lợi từ hệ thống dịch vụ và tiện ích xung quanh.",
+                    "Góc nhìn đầu tư: phân tích nhu cầu ở thực, cho thuê và khả năng tích sản dài hạn."
+                ]
+            },
+            {
+                "id": "project_04",
+                "title": "Các căn hộ cao cấp khác",
+                "category": "Đa dạng sản phẩm",
+                "subtitle": "Lựa chọn theo nhu cầu và ngân sách",
+                "description": "Tổng hợp các lựa chọn căn hộ tại Quận 2 cũ và TP. Thủ Đức cho nhiều mục tiêu khác nhau.",
+                "highlights": [
+                    "Đa dạng vị trí, phân khúc và diện tích.",
+                    "Lựa chọn cho nhu cầu ở thực, cho thuê hoặc đầu tư.",
+                    "So sánh trực tiếp về giá, vị trí, pháp lý và tiện ích.",
+                    "Tư vấn theo ngân sách và mục tiêu tài chính của từng khách hàng."
+                ]
+            }
+        ],
+        "faqData": [
+            {
+                "id": "faq_01",
                 "question": "Anh đang tư vấn những bất động sản nào?",
+                "category": "GENERAL",
                 "answer": "Tôi tư vấn đa dạng sản phẩm tại Quận 2 cũ và TP. Thủ Đức, tập trung vào căn hộ, căn hộ cao cấp và các sản phẩm có tiềm năng đầu tư."
             },
             {
-                "id": "faq-002",
-                "category": "INVESTMENT",
+                "id": "faq_02",
                 "question": "Nếu mua bất động sản để đầu tư, tôi nên nhìn vào điều gì trước?",
-                "answer": "Tôi thường nhìn vào 4 yếu tố: giá mua, vị trí, khả năng tạo dòng tiền và thanh khoản. Một sản phẩm tốt không chỉ nằm ở mức giá thấp mà phải có lý do để người khác tiếp tục muốn mua hoặc thuê lại."
+                "category": "INVESTMENT",
+                "answer": "Tôi thường nhìn vào 4 yếu tố: giá mua, vị trí, khả năng tạo dòng tiền và thanh khoản. Một sản phẩm đáng cân nhắc không chỉ nằm ở mức giá thấp mà còn phải có nhu cầu thực từ người mua hoặc người thuê."
             },
             {
-                "id": "faq-003",
-                "category": "PRICE",
+                "id": "faq_03",
                 "question": "Tại sao cùng một dự án nhưng giá các căn lại khác nhau?",
-                "answer": "Khác nhau chủ yếu ở diện tích, tầng, hướng, view, vị trí căn và thời điểm giao dịch. Khi so sánh, tôi ưu tiên đưa khách hàng về cùng một mặt bằng giá/m² để nhìn ra giá trị thực."
+                "category": "PRICE",
+                "answer": "Giá có thể khác nhau theo diện tích, tầng, hướng, view, vị trí căn và thời điểm giao dịch. Khi so sánh, tôi ưu tiên đưa các căn về cùng mặt bằng giá/m² để đánh giá dễ hơn."
             },
             {
-                "id": "faq-004",
-                "category": "COMPARISON",
-                "question": "Làm sao để biết dự án nào phù hợp hơn?",
-                "answer": "Đừng chỉ so giá. Tôi thường đặt các dự án lên cùng một bảng gồm vị trí, pháp lý, giá/m², thiết kế, tiện ích, vận hành, khả năng cho thuê và thanh khoản."
-            },
-            {
-                "id": "faq-005",
-                "category": "LEGAL",
+                "id": "faq_04",
                 "question": "Mua căn hộ cần kiểm tra pháp lý những gì?",
-                "answer": "Tôi ưu tiên kiểm tra chủ thể ký hợp đồng, tình trạng pháp lý dự án, tiến độ, điều kiện bàn giao và quyền sở hữu. Giá tốt nhưng pháp lý không rõ thì chưa phải một thương vụ tốt."
-            },
-            {
-                "id": "faq-006",
-                "category": "FINANCE",
-                "question": "Có nên dùng đòn bẩy ngân hàng để mua bất động sản?",
-                "answer": "Có thể, nhưng khoản vay phải phù hợp với dòng tiền thực tế. Tôi sẽ nhìn vào vốn tự có, số tiền vay, lịch thanh toán và khả năng trả hàng tháng trước khi tính đến giá trị căn hộ."
-            },
-            {
-                "id": "faq-007",
-                "category": "INVESTMENT",
-                "question": "Mua căn hộ cho thuê thì nên tính như thế nào?",
-                "answer": "Tôi sẽ tính từ giá mua, giá thuê thực tế, tỷ lệ lấp đầy và các chi phí vận hành để ra dòng tiền tham khảo, sau đó mới đánh giá khả năng tăng giá tài sản."
-            },
-            {
-                "id": "faq-008",
-                "category": "MARKET",
-                "question": "Thị trường chậm thì có nên mua bất động sản không?",
-                "answer": "Thị trường chậm không có nghĩa mọi sản phẩm đều rẻ. Tôi ưu tiên tìm sản phẩm có giá hợp lý, pháp lý rõ và nhu cầu thực thay vì cố đoán đáy thị trường."
-            },
-            {
-                "id": "faq-009",
-                "category": "PRODUCT",
-                "question": "Căn hộ diện tích khoảng bao nhiêu là phù hợp?",
-                "answer": "Phân khúc khoảng 50–110 m² có nhiều lựa chọn từ 1 đến 3 phòng ngủ. Tôi thường xác định mục đích sử dụng và ngân sách trước, sau đó mới chọn diện tích và dự án."
-            },
-            {
-                "id": "faq-010",
-                "category": "INVESTMENT",
-                "question": "Nên ưu tiên dòng tiền cho thuê hay tăng giá tài sản?",
-                "answer": "Nếu ưu tiên dòng tiền, hãy nhìn vào nhu cầu thuê và giá thuê thực tế. Nếu ưu tiên tăng giá, vị trí, hạ tầng và nguồn cung sẽ quan trọng hơn."
-            },
-            {
-                "id": "faq-011",
-                "category": "COMPARISON",
-                "question": "Nên mua dự án mới hay căn hộ đã bàn giao?",
-                "answer": "Dự án mới phù hợp với người muốn mua theo tiến độ; căn đã bàn giao cho phép kiểm tra trực tiếp chất lượng và vận hành. Tôi thường đặt cả hai lên cùng một ngân sách để so sánh."
-            },
-            {
-                "id": "faq-012",
-                "category": "INVESTMENT",
-                "question": "Người có tài sản lớn nên phân bổ vốn vào bất động sản như thế nào?",
-                "answer": "Tôi không nhìn bất động sản chỉ như một nơi để giữ tiền. Quan trọng là xác định tài sản đó phục vụ mục tiêu nào: giữ giá trị, tạo dòng tiền, sử dụng hay tăng trưởng dài hạn."
-            },
-            {
-                "id": "faq-013",
-                "category": "CONSULTING",
-                "question": "Tôi chưa biết chọn dự án nào, anh có thể tư vấn từ đầu không?",
-                "answer": "Có. Chỉ cần cho tôi biết ngân sách, mục đích mua, vốn tự có, nhu cầu vay và khu vực mong muốn. Tôi sẽ lọc sản phẩm trước rồi mới đưa ra những phương án đáng để xem."
-            },
-            {
-                "id": "faq-014",
-                "category": "CONSULTING",
-                "question": "Tôi muốn được phân tích một sản phẩm cụ thể thì sao?",
-                "answer": "Anh/chị chỉ cần gửi tên dự án hoặc căn đang quan tâm. Tôi có thể phân tích giá, pháp lý, dòng tiền, khả năng khai thác và thanh khoản dưới góc độ sử dụng hoặc đầu tư."
-            },
-            {
-                "id": "faq-015",
-                "category": "CONSULTING",
-                "question": "Tôi muốn xem nhiều dự án trước khi quyết định thì sao?",
-                "answer": "Tôi có thể sắp xếp danh sách dự án theo cùng tiêu chí để anh/chị xem thực tế và so sánh trực tiếp thay vì quyết định chỉ dựa trên thông tin online."
+                "category": "LEGAL",
+                "answer": "Tôi ưu tiên kiểm tra chủ thể ký hợp đồng, tình trạng pháp lý dự án, tiến độ, điều kiện bàn giao và quyền sở hữu. Giá tốt nhưng pháp lý chưa rõ thì cần xem xét kỹ trước khi giao dịch."
             }
-        ],
-        "faqCategories": [
-            {
-                "id": "ALL",
-                "label": "Tất cả"
-            },
-            {
-                "id": "INVESTMENT_FINANCE",
-                "label": "Đầu tư & Tài chính",
-                "includes": [
-                    "INVESTMENT",
-                    "FINANCE"
-                ]
-            },
-            {
-                "id": "PRICE_COMPARISON",
-                "label": "Giá & So sánh",
-                "includes": [
-                    "PRICE",
-                    "COMPARISON"
-                ]
-            },
-            {
-                "id": "LEGAL_MARKET",
-                "label": "Pháp lý & Thị trường",
-                "includes": [
-                    "LEGAL",
-                    "MARKET"
-                ]
-            },
-            {
-                "id": "PRODUCT",
-                "label": "Sản phẩm",
-                "includes": [
-                    "PRODUCT"
-                ]
-            },
-            {
-                "id": "CONSULTING",
-                "label": "Tư vấn",
-                "includes": [
-                    "GENERAL",
-                    "CONSULTING"
-                ]
-            }
-        ],
-        "faqContact": {
-            "label": "Tư vấn trực tiếp",
-            "description": "Trao đổi nhu cầu, ngân sách và sản phẩm đang quan tâm.",
-            "phone": "093 222 4895",
-            "display": "Zalo/Phone: 093 222 4895"
-        }
+        ]
     }
 }
