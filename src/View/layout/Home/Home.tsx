@@ -51,14 +51,15 @@ const TECH_STACK = [
     'PostgreSQL', 'Redis', 'Docker', 'GitHub Actions', 'AI/ LLM'
 ]
 
-const REAL_ESTATE_TAGS = [
-    "Real Estate Buying & Selling",
-    "Profitable Investment",
-    "Secure Legal Status",
-    "Rental Management",
-    "Market Analysis",
-    "Property Consignment"
-]
+// [DISABLED: Real Estate mode]
+// const REAL_ESTATE_TAGS = [
+//     "Real Estate Buying & Selling",
+//     "Profitable Investment",
+//     "Secure Legal Status",
+//     "Rental Management",
+//     "Market Analysis",
+//     "Property Consignment"
+// ]
 
 export const Home = () => {
     const { t } = useTranslation()
