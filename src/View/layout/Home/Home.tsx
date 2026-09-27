@@ -66,11 +66,11 @@ export const Home = () => {
     const projectsData = t('aboutPage.projectsData', { returnObjects: true }) as any[]
     const skillsData = t('homePage.skillsData', { returnObjects: true }) as any[]
     const typewriterWords = t('homePage.typewriter', { returnObjects: true }) as string[]
-    const saleTypewriterWords = t('salePage.typewriter', { returnObjects: true }) as string[]
+    // const saleTypewriterWords = t('salePage.typewriter', { returnObjects: true }) as string[] // [DISABLED: Real Estate mode]
 
     const [opentIndex, setOpentIndex] = useState<number | null>(null)
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-    const [heroMode, setHeroMode] = useState<'it' | 'sale'>('sale')
+    const heroMode = 'it' as const // [DISABLED: Real Estate mode — was useState<'it' | 'sale'>('sale')]
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -100,7 +100,7 @@ export const Home = () => {
             {/* ════════════════════ HERO ════════════════════ */}
             <div style={styles.summaryContainer}>
 
-                {/* Mode toggle pills */}
+                {/* [DISABLED: Real Estate mode toggle — uncomment to re-enable]
                 <div className="hm-fade-up" style={{
                     display: 'flex',
                     gap: '8px',
@@ -109,52 +109,13 @@ export const Home = () => {
                     backgroundColor: tokens.paperSubtle,
                     borderRadius: '8px',
                     border: `1px solid ${tokens.rule}`,
-                    width: '100%',        // Giúp container giãn rộng hết mức có thể (hoặc tùy chỉnh max-width nếu cần)
-                    minWidth: '320px',    // Giữ chiều rộng tối thiểu như bạn muốn
+                    width: '100%',
+                    minWidth: '320px',
                 }}>
-                    <button
-                        id="hero-toggle-it"
-                        className="hm-mode-pill"
-                        onClick={() => setHeroMode('it')}
-                        style={{
-                            flex: 1,          // Giúp nút tự động giãn đều 50% chiều rộng
-                            textAlign: 'center',
-                            padding: '6px 16px',
-                            borderRadius: '5px',
-                            fontSize: '11.5px',
-                            fontWeight: 600,
-                            letterSpacing: '0.06em',
-                            fontFamily: tokens.fontMono,
-                            border: heroMode === 'it' ? `1px solid ${tokens.accentMid}` : '1px solid transparent',
-                            backgroundColor: heroMode === 'it' ? tokens.paperCard : 'transparent',
-                            color: heroMode === 'it' ? tokens.accent : tokens.inkMuted,
-                            boxShadow: heroMode === 'it' ? tokens.shadow : 'none',
-                        }}
-                    >
-                        IT / Dev
-                    </button>
-                    <button
-                        id="hero-toggle-sale"
-                        className="hm-mode-pill"
-                        onClick={() => setHeroMode('sale')}
-                        style={{
-                            flex: 1,          // Giúp nút tự động giãn đều 50% chiều rộng
-                            textAlign: 'center',
-                            padding: '6px 16px',
-                            borderRadius: '5px',
-                            fontSize: '11.5px',
-                            fontWeight: 600,
-                            letterSpacing: '0.06em',
-                            fontFamily: tokens.fontMono,
-                            border: heroMode === 'sale' ? `1px solid ${tokens.accentMid}` : '1px solid transparent',
-                            backgroundColor: heroMode === 'sale' ? tokens.paperCard : 'transparent',
-                            color: heroMode === 'sale' ? tokens.accent : tokens.inkMuted,
-                            boxShadow: heroMode === 'sale' ? tokens.shadow : 'none',
-                        }}
-                    >
-                        Real Estate
-                    </button>
+                    <button id="hero-toggle-it" className="hm-mode-pill" onClick={() => setHeroMode('it')} ...>IT / Dev</button>
+                    <button id="hero-toggle-sale" className="hm-mode-pill" onClick={() => setHeroMode('sale')} ...>Real Estate</button>
                 </div>
+                */}
 
                 {/* Hero content — re-mounts on mode switch to trigger animation */}
                 <div key={heroMode} className="hm-hero-content" style={{ width: '100%' }}>
@@ -162,19 +123,19 @@ export const Home = () => {
                     {/* Available badge */}
                     <div className="hm-fade-up" style={styles.greetingTag}>
                         <span style={styles.greetingDot} />
-                        {heroMode === 'it' ? t('homePage.statusBadge') : t('salePage.statusBadge')}
+                        {t('homePage.statusBadge')} {/* [DISABLED: was heroMode === 'it' ? ... : t('salePage.statusBadge')] */}
                     </div>
 
                     {/* h1 — name + typewriter role */}
                     <h1 className="hm-fade-up hm-delay-1" style={styles.greetingTitle}>
-                        {heroMode === 'it' ? t('homePage.greeting1') : t('salePage.greeting1')}
+                        {t('homePage.greeting1')} {/* [DISABLED: was heroMode === 'it' ? ... : t('salePage.greeting1')] */}
                         <span style={{ color: tokens.accent }}>Huy</span>
-                        {heroMode === 'it' ? t('homePage.greeting2') : t('salePage.greeting2')}<br />
-                        {heroMode === 'it' ? t('homePage.greeting3') : t('salePage.greeting3')}
+                        {t('homePage.greeting2')}<br /> {/* [DISABLED: was heroMode === 'it' ? ... : t('salePage.greeting2')] */}
+                        {t('homePage.greeting3')} {/* [DISABLED: was heroMode === 'it' ? ... : t('salePage.greeting3')] */}
                         <span style={styles.highlightText}>
                             <Typewriter
                                 key={heroMode}
-                                words={heroMode === 'it' ? typewriterWords : saleTypewriterWords}
+                                words={typewriterWords /* [DISABLED: was heroMode === 'it' ? typewriterWords : saleTypewriterWords] */}
                                 loop={0}
                                 cursor
                                 cursorStyle="_"
@@ -187,37 +148,27 @@ export const Home = () => {
 
                     {/* Tagline */}
                     <div className="hm-fade-up hm-delay-2" style={styles.heroTagline}>
-                        {heroMode === 'it' ? (
-                            <>
-                                <span>Full-stack Mobile &amp; Web</span>
-                                <span style={styles.heroTaglineSeparator}>·</span>
-                                <span>JS / TS ecosystem</span>
-                                <span style={styles.heroTaglineSeparator}>·</span>
-                                <span>React Native · Next.js · Node.js</span>
-                                <span style={styles.heroTaglineSeparator}>·</span>
-                                <span>DB / CI-CD</span>
-                            </>
-                        ) : (
-                            <>
-                                <span>Luxury Real Estate</span>
-                                <span style={styles.heroTaglineSeparator}>·</span>
-                                <span>Investment &amp; Legal Advisory</span>
-                                <span style={styles.heroTaglineSeparator}>·</span>
-                                <span>Property Management</span>
-                                <span style={styles.heroTaglineSeparator}>·</span>
-                                <span>Market Analysis</span>
-                            </>
-                        )}
+                        {/* [DISABLED: Real Estate tagline branch removed] */}
+                        <>
+                            <span>Full-stack Mobile &amp; Web</span>
+                            <span style={styles.heroTaglineSeparator}>·</span>
+                            <span>JS / TS ecosystem</span>
+                            <span style={styles.heroTaglineSeparator}>·</span>
+                            <span>React Native · Next.js · Node.js</span>
+                            <span style={styles.heroTaglineSeparator}>·</span>
+                            <span>DB / CI-CD</span>
+                        </>
                     </div>
 
                     {/* Summary */}
                     <p className="hm-fade-up hm-delay-2" style={styles.summaryDescription}>
-                        {heroMode === 'it' ? t('homePage.summary') : t('salePage.summary')}
+                        {t('homePage.summary')} {/* [DISABLED: was heroMode === 'it' ? ... : t('salePage.summary')] */}
                     </p>
 
                     {/* Tag row */}
                     <div className="hm-fade-up hm-delay-3" style={styles.techStackRow}>
-                        {(heroMode === 'it' ? TECH_STACK : REAL_ESTATE_TAGS).map((tag) => (
+                        {/* [DISABLED: was heroMode === 'it' ? TECH_STACK : REAL_ESTATE_TAGS] */}
+                        {TECH_STACK.map((tag) => (
                             <span key={tag} style={styles.techTag}>{tag}</span>
                         ))}
                     </div>
@@ -233,7 +184,7 @@ export const Home = () => {
                                 document.getElementById('FAQ')?.scrollIntoView({ behavior: 'smooth' })
                             }}
                         >
-                            {heroMode === 'it' ? t('homePage.askMe') : t('salePage.askMe')}
+                            {t('homePage.askMe')} {/* [DISABLED: was heroMode === 'it' ? ... : t('salePage.askMe')] */}
                         </a>
 
                         <span style={styles.heroLocation}>
@@ -242,7 +193,7 @@ export const Home = () => {
                                     stroke="currentColor" strokeWidth="1.5" />
                                 <circle cx="12" cy="10" r="3" stroke="currentColor" strokeWidth="1.5" />
                             </svg>
-                            {heroMode === 'it' ? t('homePage.location') : t('salePage.location')}
+                            {t('homePage.location')} {/* [DISABLED: was heroMode === 'it' ? ... : t('salePage.location')] */}
                         </span>
                     </div>
 
