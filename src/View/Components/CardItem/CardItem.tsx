@@ -1,4 +1,4 @@
-import { type CSSProperties } from 'react';
+import { type CSSProperties, useState, useEffect, useCallback } from 'react';
 import { styles } from './CardItemStyle';
 
 interface CardItemProps {
@@ -10,9 +10,177 @@ interface CardItemProps {
     containerStyle?: CSSProperties;
     onActionClick?: () => void;
     centerContent?: boolean;
+    image?: string;
+    imageUrl?: string;
+    imageAlt?: string;
+    imageStyle?: CSSProperties;
+    imageContainerStyle?: CSSProperties;
 }
 
-const CardItem = ({ title, des, time, responsibilities, variant = 'default', containerStyle, onActionClick, centerContent }: CardItemProps) => {
+// ── Lightbox overlay component ──────────────────────────────────────────────
+const Lightbox = ({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) => {
+    useEffect(() => {
+        const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+        document.addEventListener('keydown', onKey);
+        // Prevent background scroll
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.removeEventListener('keydown', onKey);
+            document.body.style.overflow = '';
+        };
+    }, [onClose]);
+
+    return (
+        <div
+            onClick={onClose}
+            style={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9999,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: 'rgba(0, 0, 0, 0.82)',
+                backdropFilter: 'blur(6px)',
+                WebkitBackdropFilter: 'blur(6px)',
+                animation: 'carditem-lb-in 0.18s ease',
+                cursor: 'zoom-out',
+            }}
+        >
+            {/* Close button */}
+            <button
+                onClick={onClose}
+                aria-label="Close"
+                style={{
+                    position: 'absolute',
+                    top: '20px',
+                    right: '24px',
+                    background: 'rgba(255,255,255,0.12)',
+                    border: '1px solid rgba(255,255,255,0.2)',
+                    borderRadius: '50%',
+                    width: '40px',
+                    height: '40px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    color: '#fff',
+                    fontSize: '20px',
+                    lineHeight: 1,
+                    transition: 'background 0.15s ease',
+                    zIndex: 10000,
+                }}
+                onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.22)')}
+                onMouseLeave={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.12)')}
+            >
+                ✕
+            </button>
+
+            {/* Image — stop propagation so clicking image doesn't close */}
+            <img
+                src={src}
+                alt={alt}
+                onClick={e => e.stopPropagation()}
+                style={{
+                    maxWidth: '90vw',
+                    maxHeight: '88vh',
+                    width: 'auto',
+                    height: 'auto',
+                    borderRadius: '12px',
+                    boxShadow: '0 32px 80px rgba(0,0,0,0.6)',
+                    animation: 'carditem-img-in 0.22s cubic-bezier(0.34,1.56,0.64,1)',
+                    cursor: 'default',
+                    objectFit: 'contain',
+                    userSelect: 'none',
+                }}
+            />
+
+            <style>{`
+                @keyframes carditem-lb-in {
+                    from { opacity: 0; }
+                    to   { opacity: 1; }
+                }
+                @keyframes carditem-img-in {
+                    from { transform: scale(0.82); opacity: 0; }
+                    to   { transform: scale(1);    opacity: 1; }
+                }
+            `}</style>
+        </div>
+    );
+};
+
+// ── Clickable image thumbnail ────────────────────────────────────────────────
+const ZoomableImage = ({
+    src,
+    alt,
+    imgStyle,
+    wrapperStyle,
+}: {
+    src: string;
+    alt: string;
+    imgStyle?: CSSProperties;
+    wrapperStyle?: CSSProperties;
+}) => {
+    const [open, setOpen] = useState(false);
+    const close = useCallback(() => setOpen(false), []);
+
+    return (
+        <>
+            <div
+                style={{ ...wrapperStyle, cursor: 'zoom-in', position: 'relative' }}
+                onClick={() => setOpen(true)}
+                title="Click để phóng to"
+            >
+                <img
+                    src={src}
+                    alt={alt}
+                    style={imgStyle}
+                    loading="lazy"
+                />
+                {/* Zoom hint icon */}
+                <span style={{
+                    position: 'absolute',
+                    bottom: '8px',
+                    right: '8px',
+                    background: 'rgba(0,0,0,0.45)',
+                    borderRadius: '6px',
+                    padding: '3px 5px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    pointerEvents: 'none',
+                    opacity: 0.9,
+                }}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        <line x1="11" y1="8" x2="11" y2="14" />
+                        <line x1="8" y1="11" x2="14" y2="11" />
+                    </svg>
+                </span>
+            </div>
+
+            {open && <Lightbox src={src} alt={alt} onClose={close} />}
+        </>
+    );
+};
+
+// ── Main CardItem component ──────────────────────────────────────────────────
+const CardItem = ({
+    title,
+    des,
+    time,
+    responsibilities,
+    variant = 'default',
+    containerStyle,
+    onActionClick,
+    centerContent,
+    image,
+    imageUrl,
+    imageAlt,
+    imageStyle,
+    imageContainerStyle,
+}: CardItemProps) => {
+    const displayImage = image || imageUrl;
 
     // --- GIAO DIỆN MỚI (DẠNG THẺ NOTE) ---
     if (variant === 'note') {
@@ -33,6 +201,14 @@ const CardItem = ({ title, des, time, responsibilities, variant = 'default', con
                     <p style={styles.noteTitle}>{title}</p>
                     {des && <p style={styles.noteDescription}>{des}</p>}
                     {time && <p style={styles.noteTime}>{time}</p>}
+                    {displayImage && (
+                        <ZoomableImage
+                            src={displayImage}
+                            alt={imageAlt || title}
+                            wrapperStyle={{ ...styles.noteImageWrapper, ...imageContainerStyle }}
+                            imgStyle={{ ...styles.noteImage, ...imageStyle }}
+                        />
+                    )}
                 </div>
 
                 {responsibilities && responsibilities.length > 0 && (
@@ -63,6 +239,15 @@ const CardItem = ({ title, des, time, responsibilities, variant = 'default', con
                 <p style={styles.title}>{title}</p>
                 <p style={styles.description}>{des}</p>
                 {time && <p style={styles.time}>{time}</p>}
+
+                {displayImage && (
+                    <ZoomableImage
+                        src={displayImage}
+                        alt={imageAlt || title}
+                        wrapperStyle={{ ...styles.imageWrapper, ...imageContainerStyle }}
+                        imgStyle={{ ...styles.image, ...imageStyle }}
+                    />
+                )}
 
                 {onActionClick && (
                     <button
