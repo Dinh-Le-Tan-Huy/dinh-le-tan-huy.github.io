@@ -187,4 +187,44 @@ export const styles = {
         lineHeight: 1.55,
         fontFamily: t.fontSans,
     } as CSSProperties,
+
+    imageWrapper: {
+        marginTop: '12px',
+        width: '100%',
+        borderRadius: '8px',
+        overflow: 'hidden',
+        border: `1px solid ${t.rule}`,
+        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)',
+        backgroundColor: t.paper,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    } as CSSProperties,
+
+    image: {
+        width: '100%',
+        height: 'auto',
+        maxHeight: '200px',
+        objectFit: 'cover',
+        display: 'block',
+        borderRadius: '7px',
+    } as CSSProperties,
+
+    noteImageWrapper: {
+        marginTop: '10px',
+        width: '100%',
+        borderRadius: '6px',
+        overflow: 'hidden',
+        border: `1px solid ${t.rule}`,
+        backgroundColor: t.paper,
+    } as CSSProperties,
+
+    noteImage: {
+        width: '100%',
+        height: 'auto',
+        maxHeight: '140px',
+        objectFit: 'cover',
+        display: 'block',
+        borderRadius: '5px',
+    } as CSSProperties,
 };

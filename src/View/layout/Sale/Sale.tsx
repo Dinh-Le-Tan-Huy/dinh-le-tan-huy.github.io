@@ -349,6 +349,7 @@ const Sale = () => {
                                         title={item.title}
                                         des={item.subtitle}
                                         responsibilities={item.highlights}
+                                        image={item.image}
                                         containerStyle={{}}
                                     />
                                 </div>
