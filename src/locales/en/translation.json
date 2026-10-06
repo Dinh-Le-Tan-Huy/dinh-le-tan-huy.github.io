@@ -126,21 +126,21 @@
             {
                 "id": "proj_homenest_01",
                 "title": "HomeNest Software",
-                "time": "06/2025 - Present",
+                "time": "06/2025 - 09/2026",
                 "des": "Full Stack · Mobile · Web · Backend · DevOps",
                 "responsibilities": [
-                    "Operating efficiently within Agile/Scrum frameworks: participating in weekly progress reporting and managing task workflows via Jira and Trello.",
-                    "► Love Lawn Service — Agriculture ERP | Team size: 8 | 06/2025 – 01/2026",
-                    "Developed a dual-role mobile app (React Native + Expo) for customers (booking, real-time job tracking, payment) and field workers (GPS check-in, photo upload, incident/resource reporting, time tracking).",
-                    "Built Node.js + Prisma backend documented with Swagger UI; automated PDF invoice generation (PDFKit) and email notifications (Nodemailer).",
-                    "Implemented key features: Real-time 1-on-1 chat (Socket.IO), Helcim payment gateway (WebView/JS Bridge), Push Notifications (expo-notifications + expo-server-sdk), multi-language support (i18n), and deployed to App Store & Google Play via EAS Build.",
-                    "► VIET PLUS — Multi-category Classifieds Super App | Team size: 6 | 10/2025 – 05/2026",
-                    "Built a multi-category classifieds super app (React Native + Expo) featuring 10+ functional modules targeting Vietnamese and Korean expat communities.",
-                    "Implemented key features: Cross-platform real-time 1-on-1 chat (Web-Mobile & Mobile-Mobile), Push Notifications (expo-notifications + expo-server-sdk), payment gateway integration, and multi-language support (i18n).",
-                    "Managed complex app state using Redux Toolkit and deployed the application to App Store & Google Play via EAS Build.",
-                    "► Homenest Software & Homenest Vietnam — Corporate Websites | Team size: 4 | 05/2026 – 07/2026",
-                    "Developed 2 multilingual corporate websites using Next.js 16 App Router, integrated with Headless WordPress CMS via GraphQL API.",
-                    "Implemented comprehensive SEO strategies (Dynamic Metadata, JSON-LD Schema.org, OpenGraph) and integrated interactive 3D UI elements with @splinetool/react-spline."
+                    "Mobile App Ecosystem:",
+                    "Developed production-grade mobile applications (Customer App, Field Worker App, Super App) using React Native & Expo.",
+                    "Integrated advanced complex features: Real-time chat (Socket.IO), GPS check-in & location tracking, Push Notifications, digital payment gateways (Helcim), and multi-language support (i18n).",
+                    "Managed complex application state with Redux Toolkit and automated deployment pipelines to App Store & Google Play via EAS Build.",
+                    "Backend & System Integration:",
+                    "Built robust RESTful APIs using Node.js and Prisma ORM, professionally documented with Swagger UI.",
+                    "Automated core business workflows: PDF invoice generation, automated transactional email alerts, and database management.",
+                    "Web Solutions & Modern UI:",
+                    "Engineered high-performance multilingual corporate websites using Next.js (App Router) integrated with Headless WordPress CMS via GraphQL API.",
+                    "Optimized comprehensive SEO (Dynamic Metadata, JSON-LD Schema.org, OpenGraph) and elevated user engagement with interactive 3D UI elements (@splinetool/react-spline).",
+                    "Process & Collaboration:",
+                    "Operated efficiently within Agile/Scrum frameworks in cross-functional teams (4–8 members), maintaining seamless task tracking and workflows via Jira and Trello."
                 ]
             },
             {
@@ -227,18 +227,18 @@
                 "time": "06/2025 - Present",
                 "des": "Full Stack · Mobile · Web · Backend · DevOps",
                 "responsibilities": [
-                    "Operating efficiently within Agile/Scrum frameworks: participating in weekly progress reporting and managing task workflows via Jira and Trello.",
-                    "► Love Lawn Service — Agriculture ERP | Team size: 8 | 06/2025 – 01/2026",
-                    "Developed a dual-role mobile app (React Native + Expo) for customers (booking, real-time job tracking, payment) and field workers (GPS check-in, photo upload, incident/resource reporting, time tracking).",
-                    "Built Node.js + Prisma backend documented with Swagger UI; automated PDF invoice generation (PDFKit) and email notifications (Nodemailer).",
-                    "Implemented key features: Real-time 1-on-1 chat (Socket.IO), Helcim payment gateway (WebView/JS Bridge), Push Notifications (expo-notifications + expo-server-sdk), multi-language support (i18n), and deployed to App Store & Google Play via EAS Build.",
-                    "► VIET PLUS — Multi-category Classifieds Super App | Team size: 6 | 10/2025 – 05/2026",
-                    "Built a multi-category classifieds super app (React Native + Expo) featuring 10+ functional modules targeting Vietnamese and Korean expat communities.",
-                    "Implemented key features: Cross-platform real-time 1-on-1 chat (Web-Mobile & Mobile-Mobile), Push Notifications (expo-notifications + expo-server-sdk), payment gateway integration, and multi-language support (i18n).",
-                    "Managed complex app state using Redux Toolkit and deployed the application to App Store & Google Play via EAS Build.",
-                    "► Homenest Software & Homenest Vietnam — Corporate Websites | Team size: 4 | 05/2026 – 07/2026",
-                    "Developed 2 multilingual corporate websites using Next.js 16 App Router, integrated with Headless WordPress CMS via GraphQL API.",
-                    "Implemented comprehensive SEO strategies (Dynamic Metadata, JSON-LD Schema.org, OpenGraph) and integrated interactive 3D UI elements with @splinetool/react-spline."
+                    "Mobile App Ecosystem:",
+                    "Developed production-grade mobile applications (Customer App, Field Worker App, Super App) using React Native & Expo.",
+                    "Integrated advanced complex features: Real-time chat (Socket.IO), GPS check-in & location tracking, Push Notifications, digital payment gateways (Helcim), and multi-language support (i18n).",
+                    "Managed complex application state with Redux Toolkit and automated deployment pipelines to App Store & Google Play via EAS Build.",
+                    "Backend & System Integration:",
+                    "Built robust RESTful APIs using Node.js and Prisma ORM, professionally documented with Swagger UI.",
+                    "Automated core business workflows: PDF invoice generation, automated transactional email alerts, and database management.",
+                    "Web Solutions & Modern UI:",
+                    "Engineered high-performance multilingual corporate websites using Next.js (App Router) integrated with Headless WordPress CMS via GraphQL API.",
+                    "Optimized comprehensive SEO (Dynamic Metadata, JSON-LD Schema.org, OpenGraph) and elevated user engagement with interactive 3D UI elements (@splinetool/react-spline).",
+                    "Process & Collaboration:",
+                    "Operated efficiently within Agile/Scrum frameworks in cross-functional teams (4–8 members), maintaining seamless task tracking and workflows via Jira and Trello."
                 ]
             },
             {
