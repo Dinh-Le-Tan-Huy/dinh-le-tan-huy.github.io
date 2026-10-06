@@ -142,21 +142,21 @@
             {
                 "id": "proj_homenest_01",
                 "title": "HomeNest Software",
-                "time": "06/2025 - Hiện tại",
+                "time": "06/2025 - 09/2026",
                 "des": "Full Stack · Mobile · Web · Backend · DevOps",
                 "responsibilities": [
-                    "Làm việc hiệu quả trong môi trường Agile/Scrum: chủ động báo cáo tiến độ định kỳ (đầu/cuối tuần) và quản lý công việc qua Jira, Trello.",
-                    "► Love Lawn Service — ERP Nông nghiệp | Nhóm: 8 | 06/2025 – 01/2026",
-                    "Phát triển ứng dụng di động (React Native + Expo) với 2 luồng người dùng: Khách hàng (đặt lịch, theo dõi real-time, thanh toán) và Nhân viên (check-in GPS, tải ảnh, báo cáo sự cố/tài nguyên, chấm công).",
-                    "Xây dựng hệ thống Backend (Node.js + Prisma) tài liệu hóa với Swagger UI; tự động hóa xuất hóa đơn PDF (PDFKit) và gửi email (Nodemailer).",
-                    "Triển khai tính năng nổi bật: Chat 1-1 thời gian thực (Socket.IO), cổng thanh toán Helcim (WebView/JS Bridge), Push Notifications (expo-notifications + expo-server-sdk), hỗ trợ đa ngôn ngữ (i18n) và phát hành ứng dụng lên App Store & Google Play qua EAS Build.",
-                    "► VIET PLUS — Super App Rao Vặt Đa Danh Mục | Nhóm: 6 | 10/2025 – 05/2026",
-                    "Xây dựng Super App rao vặt đa danh mục (React Native + Expo) tích hợp 10+ module tính năng phục vụ cộng đồng người Việt và Hàn ở nước ngoài.",
-                    "Triển khai tính năng nổi bật: Chat 1-1 real-time đồng bộ đa nền tảng (Web-Mobile & Mobile-Mobile), hệ thống Push Notifications (expo-notifications + expo-server-sdk), tích hợp cổng thanh toán và hỗ trợ đa ngôn ngữ (i18n).",
-                    "Quản lý State phức tạp (Redux Toolkit) và đóng gói phát hành ứng dụng lên App Store & Google Play thông qua EAS Build.",
-                    "► Homenest Software & Homenest Vietnam — Website Doanh Nghiệp | Nhóm: 4 | 05/2026 – 07/2026",
-                    "Phát triển 2 website doanh nghiệp đa ngôn ngữ (Next.js 16 App Router) tích hợp Headless WordPress CMS qua GraphQL API.",
-                    "Tối ưu SEO toàn diện (Dynamic Metadata, JSON-LD Schema.org, OpenGraph) và tích hợp mô hình 3D tương tác với @splinetool/react-spline."
+                    "Mobile App Ecosystem:",
+                    "Phát triển các ứng dụng di động phục vụ vận hành thực tế (Customer App, Field Worker App, Super App) với React Native & Expo.",
+                    "Tích hợp sâu các tính năng phức tạp: Thời gian thực (Socket.IO chat), định vị GPS check-in, Push Notifications, thanh toán điện tử (Helcim) và đa ngôn ngữ (i18n).",
+                    "Quản lý state nâng cao bằng Redux Toolkit và tự động hóa quy trình phát hành lên App Store & Google Play qua EAS Build.",
+                    "Backend & System Integration:",
+                    "Xây dựng hệ thống RESTful APIs ổn định bằng Node.js và Prisma ORM, tài liệu hóa API chuyên nghiệp với Swagger UI.",
+                    "Tự động hóa các tác vụ cốt lõi: Tạo hóa đơn PDF, gửi email thông báo hệ thống, và quản lý cơ sở dữ liệu.",
+                    "Web Solutions & Modern UI:",
+                    "Phát triển các website doanh nghiệp đa ngôn ngữ hiệu năng cao sử dụng Next.js (App Router) kết hợp Headless WordPress CMS qua GraphQL API.",
+                    "Tối ưu hóa SEO toàn diện (Dynamic Metadata, JSON-LD Schema.org, OpenGraph) và nâng cao trải nghiệm người dùng với UI 3D tương tác (@splinetool/react-spline).",
+                    "Process & Collaboration:",
+                    "Vận hành hiệu quả theo mô hình Agile/Scrum, phối hợp nhóm chặt chẽ (đội mô hình từ 4–8 thành viên), quản lý task và luồng công việc mượt mà qua Jira và Trello."
                 ]
             },
             {
