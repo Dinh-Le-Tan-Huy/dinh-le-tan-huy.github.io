@@ -32,8 +32,8 @@ const SECTION_TITLES: Record<string, { vi: string; en: string }> = {
 };
 
 const SUGGESTIONS = {
-    vi: ["Vị trí", "Giá bán", "Tiến độ", "Pháp lý", "Tiện ích", "Thanh toán", "Căn 2PN", "Chủ đầu tư"],
-    en: ["Location", "Price", "Progress", "Legal", "Amenities", "Payment", "2BR Unit", "Developer"],
+    vi: ["Vị trí", "Giá bán", "Tiến độ", "Pháp lý", "Tiện ích", "Tiêu chuẩn bàn giao", "Thanh toán", "Căn 2PN", "Chủ đầu tư"],
+    en: ["Location", "Price", "Progress", "Legal", "Amenities", "Handover standards", "Payment", "2BR Unit", "Developer"],
 };
 
 interface SearchItem {
