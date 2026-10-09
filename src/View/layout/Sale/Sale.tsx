@@ -15,6 +15,7 @@ const SECTION_TITLES: Record<string, { vi: string; en: string }> = {
     connectivity: { vi: "Kết nối giao thông & Hạ tầng", en: "Connectivity & Infrastructure" },
     scale: { vi: "Quy mô & Mật độ xây dựng", en: "Project Scale" },
     products: { vi: "Loại hình sản phẩm", en: "Product Types" },
+    delivery_standard: { vi: "Tiêu chuẩn bàn giao", en: "Delivery Standards" },
     compound: { vi: "Mô hình Compound & An ninh", en: "Compound Model & Security" },
     area: { vi: "Diện tích căn hộ", en: "Apartment Sizes & Layouts" },
     tower: { vi: "Cơ cấu 12 tòa tháp", en: "12 Towers Breakdown" },
