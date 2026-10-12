@@ -1,0 +1,606 @@
+{
+    "project": {
+        "id": "the-prive",
+        "name": "The Privé",
+        "slogan": "Defining luxury living",
+        "category": "Căn hộ cao cấp",
+        "description": "The Privé được định vị là khu căn hộ cao cấp với không gian sống riêng tư, compound khép kín và lợi thế cảnh quan ba mặt giáp sông.",
+        "developer": {
+            "name": "Đất Xanh Group",
+            "associated_brand": "Bluemarq Group"
+        },
+        "design_unit": {
+            "name": "CPG",
+            "country": "Singapore",
+            "note": "Tư vấn thiết kế kiến trúc và kỹ thuật đa ngành."
+        },
+        "construction_unit": {
+            "name": "Công ty Cổ phần Tập đoàn Xây dựng Hòa Bình",
+            "short_name": "HBC"
+        },
+        "location": {
+            "address": "Đường Song Hành, phường An Phú, TP. Hồ Chí Minh",
+            "area": "Nam Rạch Chiếc",
+            "river_frontage": "Ba mặt giáp sông",
+            "nearby_connections": [
+                {
+                    "destination": "Khu đô thị mới Thủ Thiêm",
+                    "estimated_travel_time": "Khoảng 5 phút",
+                    "status": "Ước tính; phụ thuộc tuyến đường và tình hình giao thông"
+                },
+                {
+                    "destination": "Thảo Điền",
+                    "estimated_travel_time": "Khoảng 10–15 phút",
+                    "status": "Ước tính; phụ thuộc tuyến đường và tình hình giao thông"
+                },
+                {
+                    "destination": "Bình Thạnh",
+                    "estimated_travel_time": "Khoảng 20–30 phút",
+                    "status": "Ước tính; phụ thuộc tuyến đường và tình hình giao thông"
+                }
+            ],
+            "nearby_infrastructure": [
+                {
+                    "name": "Nút giao An Phú",
+                    "description": "Dự án nút giao thông trọng điểm tại khu Đông TP. Hồ Chí Minh, tăng cường kết nối đại lộ Mai Chí Thọ với cao tốc TP.HCM – Long Thành – Dầu Giây và các tuyến đường khu vực.",
+                    "progress": {
+                        "completion_rate": "Khoảng 75%",
+                        "expected_completion": "Quý III/2027",
+                        "last_updated": "2026-09",
+                        "completed_and_in_use": [
+                            "Cầu Bà Dạt",
+                            "Cầu Giồng Ông Tố",
+                            "Hầm chui HC1-01",
+                            "Nhánh cầu N4"
+                        ],
+                        "under_construction": [
+                            {
+                                "name": "Cầu N2",
+                                "status": "Phần kết cấu chính của cầu đã được nối liền và đã hoàn tất đổ bê tông bản mặt cầu. Hiện tiếp tục thi công đường dẫn và các hạng mục hoàn thiện."
+                            },
+                            {
+                                "name": "Nhánh N1.1",
+                                "status": "Đang tập trung thi công, kết nối đại lộ Mai Chí Thọ với cao tốc TP.HCM – Long Thành – Dầu Giây."
+                            },
+                            {
+                                "name": "Nhánh N1.2 và đường Lương Định Của",
+                                "status": "Tiến độ chịu ảnh hưởng bởi công tác giải phóng mặt bằng."
+                            }
+                        ]
+                    },
+                    "status": "Đang thi công, một số hạng mục đã đưa vào sử dụng. Theo thông tin cập nhật tháng 9/2026, khối lượng thực hiện khoảng 75%, dự kiến hoàn thành toàn dự án vào quý III/2027.",
+                    "relevance_to_project": "Nút giao An Phú là một trong những yếu tố hạ tầng hỗ trợ khả năng kết nối giao thông của khu vực The Privé và Nam Rạch Chiếc.",
+                    "source": {
+                        "name": "Trung tâm Báo chí TP.HCM",
+                        "url": "https://ttbc-hcm.gov.vn/tong-hop-thong-tin-bao-chi-lien-quan-den-tp-hcm-ngay-9-9-2026-1022106.html",
+                        "updated_at": "2026-09-09"
+                    }
+                },
+                {
+                    "name": "Cao tốc TP.HCM – Long Thành – Dầu Giây",
+                    "description": "Tuyến cao tốc chiến lược kết nối TP.HCM với Đồng Nai và khu vực phía Đông, đóng vai trò quan trọng trong kết nối giao thông đến sân bay quốc tế Long Thành.",
+                    "status": "Tuyến cao tốc hiện hữu đang khai thác; đoạn TP.HCM – Long Thành đang được mở rộng, các hạng mục tiếp tục thi công.",
+                    "progress": {
+                        "completion_rate": "Khoảng 73% đối với dự án mở rộng theo báo cáo ngày 07/10/2026",
+                        "expected_completion": "Phần đường và cầu cạn dự kiến hoàn thành trong tháng 11/2026; cầu Long Thành dự kiến hoàn thành tháng 02/2027",
+                        "last_updated": "2026-10-07",
+                        "under_construction": [
+                            "Mở rộng đoạn cao tốc TP.HCM – Long Thành",
+                            "Thi công, hoàn thiện các hạng mục cầu cạn và đường",
+                            "Thi công cầu Long Thành"
+                        ]
+                    },
+                    "relevance_to_project": "Hỗ trợ kết nối từ khu vực The Privé và Nam Rạch Chiếc đến Đồng Nai và sân bay quốc tế Long Thành. Thời gian di chuyển thực tế phụ thuộc tình trạng giao thông và tiến độ thi công.",
+                    "source": {
+                        "name": "Báo Thanh Niên",
+                        "url": "https://thanhnien.vn/tien-do-moi-nhat-du-an-mo-rong-cao-toc-tphcm-long-thanh-185261006185449787.htm",
+                        "updated_at": "2026-10-07"
+                    }
+                },
+                {
+                    "name": "Cảng hàng không quốc tế Long Thành",
+                    "description": "Dự án sân bay quốc tế trọng điểm tại Đồng Nai, được định hướng trở thành đầu mối hàng không lớn của khu vực phía Nam, bổ trợ cho mạng lưới giao thông và logistics vùng TP.HCM.",
+                    "status": "Đang hoàn thiện các hạng mục, thử nghiệm hệ thống và chuẩn bị điều kiện khai thác thương mại. Chưa mô tả là sân bay đã khai thác thương mại tại thời điểm cập nhật.",
+                    "progress": {
+                        "last_updated": "2026-10-04",
+                        "expected_completion": "Dự kiến bắt đầu khai thác thương mại từ ngày 24/12/2026 theo thông tin công bố ngày 04/10/2026",
+                        "under_construction": [
+                            "Hoàn thiện nhà ga hành khách và các hạng mục thuộc dự án thành phần 3",
+                            "Hoàn thiện, kiểm tra hệ thống kỹ thuật và thiết bị hàng không",
+                            "Vận hành thử và chuẩn bị các điều kiện khai thác"
+                        ]
+                    },
+                    "relevance_to_project": "Tăng cường tiềm năng kết nối hàng không quốc tế của khu vực phía Nam. Khả năng tiếp cận từ The Privé còn phụ thuộc tiến độ các tuyến giao thông kết nối và điều kiện vận hành thực tế.",
+                    "source": {
+                        "name": "Báo Nhân Dân",
+                        "url": "https://nhandan.vn/du-kien-van-hanh-thuong-mai-san-bay-long-thanh-vao-cuoi-thang-12-nam-nay-post992854.html",
+                        "updated_at": "2026-10-04"
+                    }
+                },
+                {
+                    "name": "Khu liên hợp Thể dục Thể thao Quốc gia Rạch Chiếc",
+                    "description": "Dự án tổ hợp thể dục thể thao quy mô lớn tại TP.HCM, định hướng phát triển các công trình thi đấu, luyện tập và tiện ích phục vụ sự kiện thể thao.",
+                    "status": "Đã tổ chức động thổ ngày 15/01/2026; dự án đang trong giai đoạn triển khai, chuẩn bị mặt bằng và tổ chức thi công. Không đồng nhất lễ động thổ với việc hoàn thành công trình.",
+                    "progress": {
+                        "last_updated": "2026-10-12",
+                        "expected_completion": "Thời gian thực hiện theo kế hoạch khoảng 8 năm kể từ khi ký hợp đồng BT; thành phố và nhà đầu tư từng đặt mục tiêu phấn đấu rút ngắn còn khoảng 5 năm",
+                        "under_construction": [
+                            "Triển khai công tác mặt bằng và các điều kiện phục vụ thi công",
+                            "Tổ chức triển khai dự án theo các giai đoạn được phê duyệt"
+                        ]
+                    },
+                    "relevance_to_project": "Là yếu tố có thể góp phần thúc đẩy hoạt động thể thao, dịch vụ và phát triển đô thị khu Đông TP.HCM. Không cam kết trước mức tăng giá bất động sản hoặc thời điểm hoàn thành khi chưa có thông tin chính thức mới.",
+                    "source": {
+                        "name": "Bộ Văn hóa, Thể thao và Du lịch",
+                        "url": "https://bvhttdl.gov.vn/Pages/chi-tiet.aspx?url=%2Fsun-group-duoc-chon-lam-nha-dau-tu-thuc-hien-du-an-khu-lien-hop-the-duc-the-thao-quoc-gia-rach-chiec-tai-tp-hcm-20260115142300217.htm",
+                        "updated_at": "2026-01-15"
+                    }
+                },
+                {
+                    "name": "Tuyến metro Thủ Thiêm – Long Thành",
+                    "description": "Tuyến đường sắt đô thị được định hướng kết nối khu vực Thủ Thiêm với sân bay quốc tế Long Thành, góp phần phát triển mạng lưới giao thông công cộng liên vùng.",
+                    "status": "Đang trong giai đoạn hoàn thiện thủ tục và chuẩn bị triển khai theo thông tin công bố năm 2026; chưa vận hành thương mại.",
+                    "progress": {
+                        "last_updated": "2026-05-28",
+                        "expected_completion": "Mục tiêu được công bố là phấn đấu khởi công trong năm 2026 và hoàn thành năm 2030; đây là mục tiêu kế hoạch, không phải ngày hoàn thành được bảo đảm",
+                        "under_construction": [
+                            "Hoàn thiện thủ tục đầu tư và phương án triển khai",
+                            "Chuẩn bị các điều kiện để triển khai dự án theo kế hoạch"
+                        ]
+                    },
+                    "relevance_to_project": "Nếu được triển khai theo định hướng, tuyến metro có thể tăng khả năng kết nối công cộng giữa khu vực Thủ Thiêm và sân bay Long Thành. Chưa quảng bá như tuyến metro đã hoạt động hoặc đã có thời gian di chuyển chính thức.",
+                    "source": {
+                        "name": "Cổng thông tin điện tử tỉnh Đồng Nai",
+                        "url": "https://dongnai.gov.vn/vi/news/du-an-de-an-phat-trien-ktxh/chuan-bi-lam-2-tuyen-metro-ket-noi-san-bay-long-thanh-61999.html",
+                        "updated_at": "2026-05-28"
+                    }
+                }
+            ]
+        },
+        "project_scale": {
+            "land_area_hectares": 6.7,
+            "tower_count": 12,
+            "floors": {
+                "min": 33,
+                "max": 35
+            },
+            "total_units": 3175,
+            "parking": {
+                "basement_area_hectares_approx": 4.2,
+                "car_capacity_approx": 950,
+                "motorbike_capacity_approx": 7000,
+                "note": "Số liệu quy mô và sức chứa theo tài liệu đầu vào; cần đối chiếu hồ sơ bán hàng mới nhất."
+            }
+        },
+        "product_types": [
+            {
+                "id": "garden-unit",
+                "name": "Garden Unit",
+                "description": "Căn hộ thuộc dòng Garden Unit."
+            },
+            {
+                "id": "typical-unit",
+                "name": "Typical Unit",
+                "description": "Căn hộ tiêu chuẩn."
+            },
+            {
+                "id": "garden-duplex",
+                "name": "Garden Duplex",
+                "description": "Căn hộ duplex thuộc dòng Garden."
+            },
+            {
+                "id": "sky-duplex",
+                "name": "Sky Duplex",
+                "description": "Căn hộ duplex thuộc dòng Sky."
+            },
+            {
+                "id": "penthouse",
+                "name": "Penthouse",
+                "description": "Sản phẩm penthouse."
+            }
+        ],
+        "tower_inventory_reference": [
+            {
+                "tower": 1,
+                "total_units": 267,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 0
+            },
+            {
+                "tower": 2,
+                "total_units": 267,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 0
+            },
+            {
+                "tower": 3,
+                "total_units": 274,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 7
+            },
+            {
+                "tower": 4,
+                "total_units": 274,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 7
+            },
+            {
+                "tower": 5,
+                "total_units": 274,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 7
+            },
+            {
+                "tower": 6,
+                "total_units": 267,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 0
+            },
+            {
+                "tower": 7,
+                "total_units": 274,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 7
+            },
+            {
+                "tower": 8,
+                "total_units": 258,
+                "typical_units": 250,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 0
+            },
+            {
+                "tower": 9,
+                "total_units": 262,
+                "typical_units": 250,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 4
+            },
+            {
+                "tower": 10,
+                "total_units": 249,
+                "typical_units": 241,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 0
+            },
+            {
+                "tower": 11,
+                "total_units": 249,
+                "typical_units": 241,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 0
+            },
+            {
+                "tower": 12,
+                "total_units": 260,
+                "typical_units": 250,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 2
+            }
+        ],
+        "apartment_layouts": [
+            {
+                "bedrooms": 1,
+                "area_unit": "m²",
+                "area_type": "tim_tuong",
+                "areas": [
+                    49.8,
+                    54.8
+                ]
+            },
+            {
+                "bedrooms": 2,
+                "area_unit": "m²",
+                "area_type": "tim_tuong",
+                "areas": [
+                    71.5,
+                    76.3,
+                    80.6,
+                    80.9,
+                    81.0,
+                    88.7
+                ]
+            },
+            {
+                "bedrooms": 3,
+                "area_unit": "m²",
+                "area_type": "tim_tuong",
+                "areas": [
+                    93.7,
+                    98.5
+                ]
+            }
+        ],
+        "featured_apartment_options": [
+            {
+                "option": 1,
+                "bedrooms": 3,
+                "area_m2": 98.5
+            },
+            {
+                "option": 2,
+                "bedrooms": 1,
+                "area_m2": 49.8
+            },
+            {
+                "option": 3,
+                "bedrooms": 2,
+                "area_m2": 76.3
+            },
+            {
+                "option": 4,
+                "bedrooms": 2,
+                "area_m2": 80.6
+            },
+            {
+                "option": 5,
+                "bedrooms": 2,
+                "area_m2": 81.0
+            },
+            {
+                "option": 6,
+                "bedrooms": 3,
+                "area_m2": 98.5
+            },
+            {
+                "option": 7,
+                "bedrooms": 2,
+                "area_m2": 80.9
+            },
+            {
+                "option": 8,
+                "bedrooms": 2,
+                "area_m2": 88.7
+            },
+            {
+                "option": 9,
+                "bedrooms": 2,
+                "area_m2": 71.5
+            }
+        ],
+        "handover_specifications": {
+            "clear_ceiling_height_m": 2.75,
+            "doors_and_windows": {
+                "main_door": {
+                    "description": "Cửa gỗ chống cháy, khóa thông minh đa chức năng",
+                    "lock_features": [
+                        "Vân tay",
+                        "Mã số",
+                        "Thẻ từ",
+                        "Chìa khóa cơ"
+                    ],
+                    "brands_mentioned": [
+                        "Häfele",
+                        "Yale",
+                        "Adel"
+                    ],
+                    "brand_confirmation": "Cần xác nhận thương hiệu áp dụng cho từng hạng mục/căn hộ theo phụ lục bàn giao."
+                },
+                "windows": {
+                    "description": "Khung nhôm kính hộp hai lớp Low-E, hỗ trợ cách nhiệt và giảm tiếng ồn",
+                    "noise_reduction_claim": "Không công bố tỷ lệ giảm tiếng ồn 70% nếu chưa có thông số thử nghiệm/chứng nhận chính thức."
+                }
+            },
+            "air_conditioning": "Hệ thống máy lạnh âm trần",
+            "kitchen": {
+                "brand": "Brandt",
+                "country": "Pháp",
+                "features": [
+                    "Khu vực bếp có đảo bếp theo thiết kế căn hộ"
+                ],
+                "confirmation": "Cần đối chiếu danh mục thiết bị bàn giao chính thức."
+            },
+            "bathroom": {
+                "brand": "Duravit",
+                "country": "Đức",
+                "confirmation": "Cần đối chiếu danh mục thiết bị bàn giao chính thức."
+            },
+            "elevators": {
+                "brand": "Schindler",
+                "confirmation": "Cần đối chiếu hồ sơ kỹ thuật chính thức."
+            },
+            "flooring": {
+                "common_areas": "Gạch porcelain kích thước 80 × 80 cm theo tài liệu đầu vào",
+                "living_room": "Gạch porcelain",
+                "bedrooms": "Sàn gỗ",
+                "laundry_loggia": "Gạch vân gỗ"
+            }
+        },
+        "amenities": {
+            "privacy": "Khu compound khép kín; tiện ích nội khu dành cho cư dân theo quy định vận hành",
+            "highlights": [
+                {
+                    "name": "Hồ bơi điện phân muối",
+                    "description": "Hệ thống 3 hồ bơi, tổng diện tích được giới thiệu hơn 3.000 m²",
+                    "verification": "Xác minh diện tích và cấu hình trong tài liệu chính thức."
+                },
+                {
+                    "name": "Không gian ăn uống",
+                    "description": "Các không gian/phòng ăn theo nhiều phong cách"
+                },
+                {
+                    "name": "Gym và yoga",
+                    "description": "Không gian luyện tập thể thao trong khuôn viên"
+                },
+                {
+                    "name": "Cảnh quan ven sông",
+                    "description": "Không gian cảnh quan gắn với lợi thế ba mặt giáp sông"
+                }
+            ],
+            "key_differentiators": [
+                "Không gian compound riêng tư",
+                "Ba mặt giáp sông",
+                "Vị trí tại khu vực Nam Rạch Chiếc, An Phú",
+                "Kết nối với các trục giao thông khu Đông",
+                "Hệ thống tiện ích nội khu",
+                "Tiêu chuẩn bàn giao được giới thiệu ở phân khúc cao cấp",
+                "Thông tin pháp lý cần được kiểm tra theo từng hồ sơ và thời điểm giao dịch"
+            ]
+        },
+        "legal": {
+            "construction_permit": {
+                "reported_date": "2024-09",
+                "status": "Theo thông tin đầu vào; cần đối chiếu bản giấy phép."
+            },
+            "foreign_buyers": {
+                "reported_ownership_term": "50 năm theo hình thức và điều kiện áp dụng",
+                "note": "Không dùng như cam kết áp dụng cho mọi khách hàng nước ngoài; cần kiểm tra điều kiện pháp luật và hồ sơ dự án tại thời điểm giao dịch."
+            },
+            "area_tolerance": {
+                "reported": "Sai lệch diện tích bàn giao dưới 2%",
+                "note": "Cần xác minh điều khoản đo đạc và xử lý chênh lệch trong hợp đồng mua bán."
+            },
+            "sale_eligibility": {
+                "status": "Cần cập nhật",
+                "note": "Mốc dự kiến tháng 6/2025 trong tài liệu đầu vào đã qua; phải thay bằng thông báo pháp lý hiện hành trước khi hiển thị."
+            }
+        },
+        "construction_progress": {
+            "reported_status": "Theo tài liệu đầu vào, dự án đã xây dựng đến tầng 30 và chuẩn bị cất nóc",
+            "as_of": "Chưa xác minh tại thời điểm cập nhật dữ liệu",
+            "display_rule": "Không hiển thị như tiến độ hiện tại cho đến khi được cập nhật bằng nguồn mới."
+        },
+        "sales_information": {
+            "price": {
+                "status": "Chưa có giá bán chính thức trong dữ liệu chuẩn này",
+                "display_text": "Liên hệ chuyên viên để nhận bảng giá và danh sách căn cập nhật.",
+                "do_not_assume": [
+                    "120 triệu đồng/m²",
+                    "Giá đã bao gồm VAT",
+                    "Giá áp dụng cho mọi căn"
+                ]
+            },
+            "payment_policy": {
+                "status": "Cần cập nhật theo đợt mở bán và mã căn",
+                "reported_claims": [
+                    "Thanh toán 10% nhận nhà",
+                    "Ngân hàng hỗ trợ lãi suất trong 2 năm"
+                ],
+                "display_rule": "Chỉ công bố khi có văn bản chính sách đang hiệu lực, nêu rõ điều kiện, thời hạn và đối tượng áp dụng."
+            },
+            "banking": {
+                "reported_banks": [
+                    "MB Bank",
+                    "LPBank",
+                    "VietinBank",
+                    "Vietcombank",
+                    "TPBank",
+                    "MSB/MBV"
+                ],
+                "status": "Danh sách tham khảo từ dữ liệu đầu vào; xác nhận ngân hàng và gói vay còn hiệu lực trước khi tư vấn."
+            },
+            "rental_commitment": {
+                "reported_policy": "Không có chính sách cam kết thuê lại từ chủ đầu tư theo tài liệu đầu vào",
+                "status": "Cần kiểm tra chính sách hiện hành"
+            },
+            "investment_horizon": [
+                {
+                    "period": "Ngắn hạn",
+                    "topic": "Hạ tầng cao tốc TP.HCM – Long Thành",
+                    "caveat": "Không cam kết mức tăng giá."
+                },
+                {
+                    "period": "Trung hạn",
+                    "topic": "Các định hướng/quy hoạch kết nối metro và sân bay",
+                    "caveat": "Tiến độ phụ thuộc phê duyệt và triển khai thực tế; không cam kết mức tăng giá."
+                },
+                {
+                    "period": "Dài hạn",
+                    "topic": "Định hướng phát triển hạ tầng vùng",
+                    "caveat": "Chỉ là yếu tố tham khảo, không phải dự báo lợi nhuận."
+                }
+            ]
+        }
+    },
+    "sales_scripts": {
+        "intro_call": {
+            "title": "Mở đầu cuộc gọi",
+            "text": "Em chào anh/chị [Tên], em là Huy bên Bluemarq Group. Em liên hệ để giới thiệu một dự án căn hộ cao cấp tại khu vực An Phú, gần The Global City, nổi bật với không gian riêng tư và lợi thế ba mặt giáp sông. Hiện em có một số lựa chọn căn hộ để anh/chị tham khảo. Không biết thời gian này anh/chị có đang cân nhắc đầu tư bất động sản không ạ?"
+        },
+        "follow_up_call": {
+            "title": "Gọi lại khách hàng",
+            "text": "Em Huy đây ạ, lúc nãy em có gọi trao đổi với chị. Em muốn gửi chị thông tin một số căn hộ tại The Privé để mình tham khảo. Giá bán và chính sách sẽ tùy mã căn, đợt bán và điều kiện áp dụng; nếu chị quan tâm, em gửi bảng giá cùng phương án thanh toán mới nhất để chị cân nhắc nhé."
+        },
+        "interest_rate_objection": {
+            "title": "Khi khách lo ngại lãi suất tăng",
+            "text": "Dạ, em hiểu lãi suất là yếu tố mình cần cân nhắc kỹ khi đầu tư. Thay vì quyết định ngay, em có thể gửi chị phương án dòng tiền, vốn tự có và khoản vay dự kiến theo chính sách ngân hàng hiện hành. Mình sẽ so sánh các kịch bản để xem mức tài chính nào phù hợp, và chỉ cân nhắc khi dòng tiền của chị đáp ứng được ạ."
+        },
+        "investment_discovery": {
+            "title": "Tìm hiểu nhu cầu đầu tư",
+            "text": "Để em chọn đúng sản phẩm, anh/chị ưu tiên giữ tài sản dài hạn, kỳ vọng cho thuê hay tìm kiếm tiềm năng tăng giá theo hạ tầng ạ? Anh/chị dự kiến vốn tự có khoảng bao nhiêu và có muốn sử dụng đòn bẩy ngân hàng không?"
+        }
+    },
+    "website_display": {
+        "sections": [
+            {
+                "id": "overview",
+                "title": "Tổng quan dự án",
+                "source": "project"
+            },
+            {
+                "id": "location",
+                "title": "Vị trí & kết nối",
+                "source": "project.location"
+            },
+            {
+                "id": "scale",
+                "title": "Quy mô & loại hình sản phẩm",
+                "source": "project.project_scale"
+            },
+            {
+                "id": "layouts",
+                "title": "Mặt bằng căn hộ",
+                "source": "project.apartment_layouts"
+            },
+            {
+                "id": "handover",
+                "title": "Tiêu chuẩn bàn giao",
+                "source": "project.handover_specifications"
+            },
+            {
+                "id": "amenities",
+                "title": "Tiện ích",
+                "source": "project.amenities"
+            },
+            {
+                "id": "legal",
+                "title": "Pháp lý & tiến độ",
+                "source": "project.legal"
+            },
+            {
+                "id": "sales-policy",
+                "title": "Giá bán & chính sách",
+                "source": "project.sales_information"
+            }
+        ],
+        "contact": {
+            "consultant_name": "Huy",
+            "company": "Bluemarq Group",
+            "phone": "0932224895",
+            "cta_text": "Nhận bảng giá và chính sách mới nhất"
+        },
+        "chatbot_rules": [
+            "Trả lời bằng tiếng Việt, ngắn gọn, chuyên nghiệp và dựa trên dữ liệu dự án.",
+            "Không tự tạo giá bán, mã căn còn hàng, chiết khấu, tiến độ hoặc chính sách vay.",
+            "Với dữ liệu có trạng thái cần xác minh, phải nói rõ thông tin cần được kiểm tra lại.",
+            "Không cam kết lợi nhuận, mức tăng giá hoặc khả năng cho thuê.",
+            "Khi khách hỏi giá, tồn căn hoặc ưu đãi hiện hành, hướng dẫn liên hệ chuyên viên để nhận dữ liệu mới nhất.",
+            "Không mô tả tuyến metro hoặc công trình quy hoạch là đã vận hành nếu chưa có xác nhận.",
+            "Không khẳng định pháp lý hoàn thiện chỉ dựa trên mô tả tổng hợp; hướng khách kiểm tra hồ sơ chính thức."
+        ]
+    },
+    "data_quality_notes": [
+        "Tiến độ tầng 30/chuẩn bị cất nóc chưa có ngày xác minh; cần cập nhật trước khi hiển thị là tiến độ hiện tại.",
+        "Mốc thông báo đủ điều kiện bán nhà dự kiến tháng 6/2025 đã qua và cần thay bằng tình trạng pháp lý mới nhất.",
+        "Giá 120 triệu đồng/m², VAT, thanh toán 10% nhận nhà và hỗ trợ lãi suất 2 năm chưa được xác nhận trong dữ liệu chuẩn.",
+        "Tên chủ đầu tư/đơn vị phát triển, danh sách ngân hàng, thương hiệu bàn giao và thông số giảm tiếng ồn cần đối chiếu tài liệu chính thức.",
+        "Dữ liệu số lượng căn theo tháp được giữ theo nội dung đầu vào; cần đối chiếu tổng số liệu với bảng hàng chính thức."
+    ]
+}

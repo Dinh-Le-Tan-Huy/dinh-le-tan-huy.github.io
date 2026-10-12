@@ -197,7 +197,6 @@ export const Home = () => {
                             {t('homePage.location')} {/* [DISABLED: was heroMode === 'it' ? ... : t('salePage.location')] */}
                         </span>
                     </div>
-
                 </div>
             </div>
 

@@ -8,9 +8,6 @@
 
 import { type CSSProperties } from 'react';
 
-// ─── Token Block ─────────────────────────────────────────────────────────────
-// All colour and type values flow through named tokens.
-// Override here to retheme the entire page.
 
 export const tokens = {
     // Paper scale (light mode)
@@ -108,7 +105,6 @@ export const styles = {
         maxWidth: '960px',
         margin: '0 auto',
         padding: 'clamp(72px, 10vw, 120px) clamp(20px, 5vw, 40px) clamp(64px, 8vw, 100px)',
-        borderBottom: `1px solid ${tokens.rule}`,
         marginBottom: 0,
         display: 'flex',
         flexDirection: 'column',
@@ -129,7 +125,7 @@ export const styles = {
         fontWeight: 600,
         letterSpacing: '0.08em',
         textTransform: 'uppercase' as const,
-        marginBottom: '32px',
+        marginBottom: '4px',
         fontFamily: tokens.fontMono,
     } as CSSProperties,
 
@@ -138,7 +134,6 @@ export const styles = {
         height: '6px',
         borderRadius: '50%',
         backgroundColor: tokens.accent,
-        // No glow — solid colour only
         flexShrink: 0,
         marginLeft: '6px',
     } as CSSProperties,
@@ -155,10 +150,8 @@ export const styles = {
         minWidth: 0,
     } as CSSProperties,
 
-    // Typewriter line — accent colour, no glow
     highlightText: {
         color: tokens.accent,
-        // No textShadow — clean, no glow
     } as CSSProperties,
 
     // Hero role tagline (static line below h1)
