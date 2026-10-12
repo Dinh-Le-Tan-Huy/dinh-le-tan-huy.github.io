@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import CardInfo from "../../Components/CardInfo/CardInfo"
 import CardItem from "../../Components/CardItem/CardItem"
 import { styles, sectionBadge, sectionTitle, sectionDivider, tokens } from "./AboutStyle"
@@ -7,7 +6,7 @@ import ChatBubbleItem from "../../Components/ChatBubbleItem/ChatBubbleItem"
 import { useTranslation } from "react-i18next"
 
 const About = () => {
-    const { highlightedId, btnHover, setBtnHover, opentIndex, setOpentIndex } = useAbout();
+    const { highlightedId, opentIndex, setOpentIndex } = useAbout();
     const { t } = useTranslation()
 
     const skillsData = t('aboutPage.skillsData', { returnObjects: true }) as any[];

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import CardItem from "../../Components/CardItem/CardItem"
 import { styles, sectionBadge, sectionTitle, sectionDivider, tokens } from "./SaleStyle"
 import { useAbout } from "../../../ViewModel/useAbout"
@@ -44,7 +44,6 @@ interface SearchItem {
 }
 
 const Sale = () => {
-    const navigate = useNavigate();
     const { highlightedId, btnHover, setBtnHover, } = useAbout();
     const { t, i18n } = useTranslation();
 
