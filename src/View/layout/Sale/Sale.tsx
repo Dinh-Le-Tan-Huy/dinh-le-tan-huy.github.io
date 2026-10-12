@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import CardItem from "../../Components/CardItem/CardItem"
 import { styles, sectionBadge, sectionTitle, sectionDivider, tokens } from "./SaleStyle"
 import { useAbout } from "../../../ViewModel/useAbout"
@@ -44,6 +44,7 @@ interface SearchItem {
 }
 
 const Sale = () => {
+    const navigate = useNavigate();
     const { highlightedId, btnHover, setBtnHover, } = useAbout();
     const { t, i18n } = useTranslation();
 
@@ -110,13 +111,10 @@ const Sale = () => {
                     <p style={styles.headerText}>
                         {t('salePage.introText')}
                     </p>
-                    <Link to="/contact" style={{ textDecoration: 'none' }}>
+                    {/* <Link to="/contact" style={styles.contactLink}> */}
+                    <Link to="/SaleDetail" style={styles.contactLink}>
                         <button
-                            style={{
-                                ...styles.contactBtn,
-                                transform: btnHover ? 'translateY(-1px)' : 'none',
-                                backgroundColor: btnHover ? tokens.inkMid : tokens.ink,
-                            }}
+                            style={btnHover ? { ...styles.contactBtn, ...styles.contactBtnHover } : styles.contactBtn}
                             onMouseEnter={() => setBtnHover(true)}
                             onMouseLeave={() => setBtnHover(false)}
                         >
@@ -125,50 +123,21 @@ const Sale = () => {
                     </Link>
 
                     {/* Quick Search Widget */}
-                    <div style={{
-                        width: '100%',
-                        marginTop: '24px',
-                        padding: '24px',
-                        borderRadius: '12px',
-                        backgroundColor: tokens.paperCard,
-                        border: `1px solid ${tokens.rule}`,
-                        boxShadow: tokens.shadow,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '16px',
-                        boxSizing: 'border-box',
-                    }}>
+                    <div style={styles.searchWidget}>
                         <div>
-                            <h3 style={{
-                                margin: 0,
-                                fontSize: 'clamp(16px, 2.2vw, 19px)',
-                                fontWeight: 700,
-                                color: tokens.ink,
-                            }}>
+                            <h3 style={styles.searchTitle}>
                                 {isVi ? 'Hỏi đáp & Tra cứu nhanh' : 'Project Q&A & Smart Search'}
                             </h3>
                         </div>
 
                         {/* Search Input Container */}
-                        <div style={{ position: 'relative', width: '100%' }}>
+                        <div style={styles.searchInputWrap}>
                             <input
                                 type="text"
                                 value={query}
                                 onChange={(e) => setQuery(e.target.value)}
                                 placeholder={isVi ? 'Nhập câu hỏi hoặc từ khóa (vị trí, giá bán, pháp lý, tiện ích...)' : 'Ask a question or enter keywords (location, price, legal, amenities...)'}
-                                style={{
-                                    width: '100%',
-                                    padding: '12px 42px 12px 16px',
-                                    borderRadius: '8px',
-                                    border: `1px solid ${tokens.rule}`,
-                                    backgroundColor: tokens.paper,
-                                    color: tokens.ink,
-                                    fontSize: '14px',
-                                    fontFamily: tokens.fontSans,
-                                    outline: 'none',
-                                    boxSizing: 'border-box',
-                                    transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
-                                }}
+                                style={styles.searchInput}
                                 onFocus={(e) => {
                                     e.target.style.borderColor = tokens.accent;
                                     e.target.style.boxShadow = `0 0 0 3px ${tokens.accentLight}`;
@@ -182,19 +151,7 @@ const Sale = () => {
                                 <button
                                     type="button"
                                     onClick={() => setQuery('')}
-                                    style={{
-                                        position: 'absolute',
-                                        right: '12px',
-                                        top: '50%',
-                                        transform: 'translateY(-50%)',
-                                        background: 'transparent',
-                                        border: 'none',
-                                        cursor: 'pointer',
-                                        color: tokens.inkMuted,
-                                        fontSize: '16px',
-                                        padding: '4px',
-                                        lineHeight: 1,
-                                    }}
+                                    style={styles.searchClearBtn}
                                     title={isVi ? 'Xóa tìm kiếm' : 'Clear search'}
                                 >
                                     ✕
@@ -203,8 +160,8 @@ const Sale = () => {
                         </div>
 
                         {/* Suggestion Chips */}
-                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', alignItems: 'center' }}>
-                            <span style={{ fontSize: '12px', color: tokens.inkMuted, fontWeight: 500 }}>
+                        <div style={styles.suggestionRow}>
+                            <span style={styles.suggestionLabel}>
                                 {isVi ? 'Gợi ý từ khóa:' : 'Suggestions:'}
                             </span>
                             {(isVi ? SUGGESTIONS.vi : SUGGESTIONS.en).map((tag) => (
@@ -212,17 +169,11 @@ const Sale = () => {
                                     key={tag}
                                     type="button"
                                     onClick={() => setQuery(tag)}
-                                    style={{
-                                        border: `1px solid ${tokens.rule}`,
-                                        backgroundColor: query.toLowerCase() === tag.toLowerCase() ? tokens.accent : tokens.paperSubtle,
-                                        color: query.toLowerCase() === tag.toLowerCase() ? tokens.paper : tokens.inkMid,
-                                        fontSize: '12px',
-                                        padding: '4px 10px',
-                                        borderRadius: '16px',
-                                        cursor: 'pointer',
-                                        transition: 'all 0.15s ease',
-                                        fontFamily: tokens.fontSans,
-                                    }}
+                                    style={
+                                        query.toLowerCase() === tag.toLowerCase()
+                                            ? { ...styles.suggestionChip, ...styles.suggestionChipActive }
+                                            : styles.suggestionChip
+                                    }
                                 >
                                     {tag}
                                 </button>
@@ -231,64 +182,29 @@ const Sale = () => {
 
                         {/* Search Results */}
                         {query.trim() !== '' && (
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '4px' }}>
-                                <div style={{ fontSize: '13px', color: tokens.inkMid, fontWeight: 600 }}>
+                            <div style={styles.searchResultsList}>
+                                <div style={styles.searchResultsCount}>
                                     {isVi
                                         ? `Tìm thấy ${results.length} thông tin liên quan:`
                                         : `Found ${results.length} related result(s):`}
                                 </div>
 
                                 {results.length === 0 ? (
-                                    <div style={{
-                                        padding: '16px',
-                                        borderRadius: '8px',
-                                        backgroundColor: tokens.paperSubtle,
-                                        color: tokens.inkMid,
-                                        fontSize: '13.5px',
-                                        lineHeight: 1.6,
-                                    }}>
+                                    <div style={styles.searchResultEmpty}>
                                         {isVi
                                             ? 'Không tìm thấy thông tin phù hợp với từ khóa này. Bạn có thể thử từ khóa khác hoặc liên hệ trực tiếp để được giải đáp chi tiết.'
                                             : 'No matching information found. Try another keyword or reach out directly for full guidance.'}
                                     </div>
                                 ) : (
-                                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                    <div style={styles.searchResultItems}>
                                         {results.map((item) => (
-                                            <div
-                                                key={item.id}
-                                                style={{
-                                                    padding: '14px 16px',
-                                                    borderRadius: '8px',
-                                                    border: `1px solid ${tokens.rule}`,
-                                                    backgroundColor: tokens.paper,
-                                                    boxShadow: tokens.shadow,
-                                                }}
-                                            >
-                                                <div style={{
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    gap: '8px',
-                                                    marginBottom: '6px',
-                                                }}>
-                                                    <span style={{
-                                                        fontSize: '11px',
-                                                        fontWeight: 700,
-                                                        color: tokens.accent,
-                                                        backgroundColor: tokens.accentLight,
-                                                        padding: '2px 8px',
-                                                        borderRadius: '4px',
-                                                        fontFamily: tokens.fontMono,
-                                                    }}>
+                                            <div key={item.id} style={styles.searchResultItem}>
+                                                <div style={styles.searchResultItemHeader}>
+                                                    <span style={styles.searchResultTag}>
                                                         {item.title}
                                                     </span>
                                                 </div>
-                                                <p style={{
-                                                    margin: 0,
-                                                    fontSize: '13.5px',
-                                                    lineHeight: 1.6,
-                                                    color: tokens.ink,
-                                                    whiteSpace: 'pre-line',
-                                                }}>
+                                                <p style={styles.searchResultContent}>
                                                     {item.content}
                                                 </p>
                                             </div>
@@ -338,17 +254,16 @@ const Sale = () => {
                                 <div
                                     key={item.id}
                                     id={trimmedTitle}
-                                    style={{
-                                        width: '100%',
-                                        borderRadius: '10px',
-                                        transition: 'all 0.3s ease',
-                                        border: isSelected ? `1px solid ${tokens.accent}` : '1px solid transparent',
-                                        boxShadow: isSelected ? tokens.shadow : 'none',
-                                    }}
+                                    style={
+                                        isSelected
+                                            ? { ...styles.projectCardBase, ...styles.projectCardSelected }
+                                            : styles.projectCardBase
+                                    }
                                 >
                                     <CardItem
                                         title={item.title}
                                         des={item.subtitle}
+                                        // onActionClick={() => { navigate(`/project/${item.id}`) }}
                                         responsibilities={item.highlights}
                                         image={item.image}
                                         containerStyle={{}}
@@ -367,87 +282,32 @@ const Sale = () => {
                     <h2 style={sectionTitle}>{t('salePage.titles.faq')}</h2>
                     <hr style={sectionDivider} />
 
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0', width: '100%' }}>
+                    <div style={styles.faqList}>
                         {faqData.map((item: any, idx: number) => (
-                            <div key={item.id} style={{ display: 'flex', gap: '16px', position: 'relative' }}>
+                            <div key={item.id} style={styles.faqRow}>
                                 {/* Timeline column */}
-                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '32px', flexShrink: 0 }}>
+                                <div style={styles.faqTimeline}>
                                     {/* Dot */}
-                                    <div style={{
-                                        width: '10px',
-                                        height: '10px',
-                                        borderRadius: '50%',
-                                        backgroundColor: tokens.accent,
-                                        border: `2px solid ${tokens.accentMid}`,
-                                        marginTop: '20px',
-                                        flexShrink: 0,
-                                        zIndex: 1,
-                                    }} />
+                                    <div style={styles.faqDot} />
                                     {/* Line */}
                                     {idx < faqData.length - 1 && (
-                                        <div style={{
-                                            width: '1px',
-                                            flex: 1,
-                                            backgroundColor: tokens.rule,
-                                            marginTop: '6px',
-                                        }} />
+                                        <div style={styles.faqLine} />
                                     )}
                                 </div>
 
                                 {/* Content */}
-                                <div style={{
-                                    flex: 1,
-                                    paddingBottom: idx < faqData.length - 1 ? '32px' : '0',
-                                }}>
-                                    <div style={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        gap: '6px',
-                                        padding: '14px 18px',
-                                        borderRadius: '8px',
-                                        backgroundColor: tokens.paperCard,
-                                        border: `1px solid ${tokens.rule}`,
-                                        boxShadow: tokens.shadow,
-                                        transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
-                                    }}>
+                                <div style={idx < faqData.length - 1 ? styles.faqContentColSpaced : styles.faqContentCol}>
+                                    <div style={styles.faqCard}>
                                         {/* Badge */}
-                                        <span style={{
-                                            display: 'inline-flex',
-                                            alignItems: 'center',
-                                            gap: '6px',
-                                            padding: '2px 8px',
-                                            backgroundColor: tokens.accentLight,
-                                            border: `1px solid ${tokens.accentMid}`,
-                                            borderRadius: '4px',
-                                            fontSize: '11px',
-                                            fontWeight: 700,
-                                            color: tokens.accent,
-                                            letterSpacing: '0.06em',
-                                            width: 'fit-content',
-                                            marginBottom: '4px',
-                                            fontFamily: tokens.fontMono,
-                                        }}>
-                                            <span>{item.category === 'LEGAL' ? '📋' : item.category === 'INVESTMENT' ? '💰' : item.category === 'PRICE' ? '📊' : '❓'}</span>
+                                        <span style={styles.faqCategoryBadge}>
                                             {item.category}
                                         </span>
 
-                                        <h3 style={{
-                                            fontSize: 'clamp(14px, 1.8vw, 16px)',
-                                            fontWeight: 700,
-                                            margin: 0,
-                                            color: tokens.ink,
-                                            fontFamily: tokens.fontSans,
-                                        }}>
+                                        <h3 style={styles.faqQuestion}>
                                             {item.question}
                                         </h3>
 
-                                        <p style={{
-                                            margin: '6px 0 0 0',
-                                            color: tokens.inkMid,
-                                            fontSize: '13px',
-                                            lineHeight: 1.6,
-                                            fontFamily: tokens.fontSans,
-                                        }}>
+                                        <p style={styles.faqAnswer}>
                                             {item.answer}
                                         </p>
                                     </div>

@@ -35,7 +35,6 @@ const EducationTimeline = () => {
                         <div style={CardInfoStyle.card}>
                             {/* Year badge */}
                             <span style={CardInfoStyle.yearBadge}>
-                                <span>{item.icon}</span>
                                 {item.year}
                             </span>
 

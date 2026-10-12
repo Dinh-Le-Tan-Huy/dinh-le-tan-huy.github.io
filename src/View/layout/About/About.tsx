@@ -21,7 +21,7 @@ const About = () => {
             <div style={styles.contentContainer}>
 
                 {/* Hero Header */}
-                <div style={styles.headerContainer}>
+                {/* <div style={styles.headerContainer}>
                     <h1 style={styles.headerTitle}>
                         {t('aboutPage.greeting')}<span style={styles.headerSpan}>{t('aboutPage.nameIntro')}</span>
                     </h1>
@@ -41,7 +41,7 @@ const About = () => {
                             {t('aboutPage.contactMe')}
                         </button>
                     </Link>
-                </div>
+                </div> */}
 
                 {/* Education section */}
                 <div style={styles.sectionWrapper}>

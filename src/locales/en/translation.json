@@ -35,12 +35,12 @@
             "faq": "FAQ"
         },
         "titles": {
-            "academicBackground": "Academic Background",
-            "technicalSkills": "Technical Skills",
-            "professionalHistory": "Professional History",
-            "coursesAndLanguages": "Courses & Languages",
-            "honorsAndRecognition": "Honors & Recognition",
-            "frequentlyAskedQuestions": "Frequently Asked Questions"
+            "academicBackground": "",
+            "technicalSkills": "",
+            "professionalHistory": "",
+            "coursesAndLanguages": "",
+            "honorsAndRecognition": "",
+            "frequentlyAskedQuestions": ""
         },
         "skillsData": [
             {
@@ -126,7 +126,7 @@
             {
                 "id": "proj_homenest_01",
                 "title": "HomeNest Software",
-                "time": "06/2025 - 09/2026",
+                "time": "06/2025 - 08/2026",
                 "des": "Full Stack · Mobile · Web · Backend · DevOps",
                 "responsibilities": [
                     "Mobile App Ecosystem:",
@@ -224,7 +224,7 @@
             {
                 "id": "proj_homenest_01",
                 "title": "HomeNest Software",
-                "time": "06/2025 - Present",
+                "time": "06/2025 - 08/2026",
                 "des": "Full Stack · Mobile · Web · Backend · DevOps",
                 "responsibilities": [
                     "Mobile App Ecosystem:",
@@ -290,11 +290,11 @@
             "faqs": "FAQs"
         },
         "titles": {
-            "academicBackground": "Academic Background",
-            "technicalSkills": "Technical Skills",
-            "experience": "Experience",
+            "academicBackground": "",
+            "technicalSkills": "",
+            "experience": "",
             "desc_experience": "As a Full Stack and Mobile Developer, I specialize in providing professional website design services and cross-platform mobile app development. I am committed to delivering high-performance technology solutions with stunning UI/UX designs, helping your business optimize user experience and increase conversion rates.",
-            "frequentlyAsked": "Frequently Asked"
+            "frequentlyAsked": ""
         },
         "hrFAQs": [
             {
@@ -594,9 +594,9 @@
             "display": "Zalo/Phone: 093 222 4895"
         },
         "greeting": "Specialist in ",
-        "nameIntro": "Premium Real Estate",
+        "nameIntro": "premium Real Estate",
         "introText": "Real estate advisory in former District 2 and Thu Duc City with a transparent approach — focused on location, asset value, legal status, and cash flow.",
-        "contactMe": "Explore Featured Projects ↓",
+        "contactMe": "Contact Me",
         "badges": {
             "faq": "Frequently Asked Questions",
             "expertise": "Areas of Expertise",
@@ -604,16 +604,16 @@
             "insights": "Investment Insights"
         },
         "titles": {
-            "faq": "Common Questions Answered",
-            "expertise": "Advisory Expertise",
-            "projects": "Key Projects",
+            "faq": "",
+            "expertise": "",
+            "projects": "",
             "insights": "Investment Perspective"
         },
         "expertiseData": [
             {
                 "id": "expertise_01",
                 "title": "Real Estate Advisory",
-                "des": "Focused on apartments and projects in former District 2 and Thu Duc City.",
+                "des": "Focused on apartments and projects in former Ho Chi Minh and Thu Duc City.",
                 "highlights": [
                     "Product advisory tailored to owner-occupier or investment needs.",
                     "Analysis of location, price benchmarks, and unit characteristics.",
@@ -672,6 +672,7 @@
                 "category": "Mixed-use Township",
                 "subtitle": "A new multi-functional urban district in the East",
                 "description": "An integrated urban model combining residential, commercial, services, and entertainment.",
+                "image": "https://ik.imagekit.io/gw4av6kyj/New%20Folder/The-Global-City.png",
                 "highlights": [
                     "Integrated urban planning with multiple functional zones.",
                     "Located on a key development corridor of the East district.",
@@ -685,6 +686,7 @@
                 "category": "Urban Township",
                 "subtitle": "Green riverside living",
                 "description": "An established community with existing residents and amenities, well-suited for owner-occupiers.",
+                "image": "https://ik.imagekit.io/gw4av6kyj/New%20Folder/the-palm-city.jpg",
                 "highlights": [
                     "Urban community with riverside landscape integration.",
                     "Established residential enclave with formed amenity network.",

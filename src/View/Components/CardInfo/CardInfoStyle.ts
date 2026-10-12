@@ -63,6 +63,8 @@ export const CardInfoStyle = {
     card: {
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'flex-start',
+        textAlign: 'left',
         gap: '5px',
         padding: '14px 18px',
         borderRadius: '8px',

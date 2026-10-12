@@ -52,7 +52,7 @@
         },
         "titles": {
             "academicBackground": "Nền tảng Học vấn",
-            "technicalSkills": "Kỹ năng Kỹ thuật",
+            "technicalSkills": "",
             "professionalHistory": "Kinh nghiệm Làm việc",
             "coursesAndLanguages": "Khóa học & Ngoại ngữ",
             "honorsAndRecognition": "Danh hiệu & Giải thưởng",
@@ -142,7 +142,7 @@
             {
                 "id": "proj_homenest_01",
                 "title": "HomeNest Software",
-                "time": "06/2025 - 09/2026",
+                "time": "06/2025 - 08/2026",
                 "des": "Full Stack · Mobile · Web · Backend · DevOps",
                 "responsibilities": [
                     "Mobile App Ecosystem:",
@@ -258,11 +258,10 @@
             "faqs": "Câu hỏi"
         },
         "titles": {
-            "academicBackground": "Nền tảng Học vấn",
-            "technicalSkills": "Kỹ năng Kỹ thuật",
-            "experience": "Kinh nghiệm",
+            "academicBackground": "",
+            "technicalSkills": "",
             "desc_experience": "Là một Lập trình viên Full Stack và Mobile, tôi chuyên cung cấp dịch vụ thiết kế website chuyên nghiệp và phát triển ứng dụng di động đa nền tảng. Tôi cam kết mang đến các giải pháp công nghệ với hiệu năng cao, giao diện UI/UX đẹp mắt, giúp doanh nghiệp của bạn tối ưu hóa trải nghiệm người dùng và gia tăng tỷ lệ chuyển đổi.",
-            "frequentlyAsked": "Câu hỏi Thường gặp"
+            "frequentlyAsked": ""
         },
         "hrFAQs": [
             {
@@ -382,30 +381,27 @@
                 "id": 1,
                 "school": "Đại học Công nghệ Thông tin – UIT",
                 "degree": "Cử nhân Khoa học Máy tính",
-                "year": "Dự kiến 2025",
-                "icon": "🎓"
+                "year": "Dự kiến 2025"
             },
             {
                 "id": 2,
                 "school": "Trường Cao đẳng Lý Tự Trọng – LTTC",
                 "degree": "Cao đẳng Lập trình Máy tính",
-                "year": "2021 – 2024",
-                "icon": "💻"
+                "year": "2021 – 2024"
             },
             {
                 "id": 3,
                 "school": "Trường Cao đẳng Lý Tự Trọng – LTTC",
                 "degree": "Trung cấp An ninh mạng",
-                "year": "2018 – 2021",
-                "icon": "🔒"
+                "year": "2018 – 2021"
             }
         ]
     },
     "salePage": {
-        "greeting": "Chuyên viên tư vấn, ",
-        "nameIntro": "Bất động sản cao cấp",
+        "greeting": "Chuyên viên tư vấn ",
+        "nameIntro": "bất động sản cao cấp",
         "introText": "Tư vấn bất động sản tại Quận 2 cũ và TP. Thủ Đức với góc nhìn minh bạch, tập trung vào vị trí, giá trị tài sản, pháp lý và dòng tiền.",
-        "contactMe": "Khám phá dự án nổi bật ↓",
+        "contactMe": "Liên hệ với tôi",
         "badges": {
             "faq": "Câu hỏi thường gặp",
             "expertise": "Lĩnh vực tư vấn",
@@ -413,16 +409,16 @@
             "insights": "Góc nhìn đầu tư"
         },
         "titles": {
-            "faq": "Giải đáp thắc mắc thường gặp",
-            "expertise": "Chuyên môn tư vấn",
-            "projects": "Dự án trọng điểm",
+            "faq": "",
+            "expertise": "",
+            "projects": "",
             "insights": "Góc nhìn đầu tư"
         },
         "expertiseData": [
             {
                 "id": "expertise_01",
                 "title": "Tư vấn Bất động sản",
-                "des": "Tập trung vào căn hộ và các dự án tại Quận 2 cũ và TP. Thủ Đức.",
+                "des": "Tập trung vào căn hộ và các dự án tại Tp.HCM và TP. Thủ Đức.",
                 "highlights": [
                     "Tư vấn sản phẩm theo nhu cầu ở thực hoặc đầu tư.",
                     "Phân tích vị trí, mặt bằng giá và đặc điểm từng sản phẩm.",
@@ -481,6 +477,7 @@
                 "category": "Đại đô thị",
                 "subtitle": "Đô thị mới đa chức năng tại phía Đông",
                 "description": "Mô hình đô thị tích hợp không gian sống, thương mại, dịch vụ và giải trí.",
+                "image": "https://ik.imagekit.io/gw4av6kyj/New%20Folder/The-Global-City.png",
                 "highlights": [
                     "Quy hoạch đô thị tích hợp với nhiều chức năng.",
                     "Vị trí trên trục phát triển quan trọng của khu Đông.",
@@ -494,6 +491,7 @@
                 "category": "Khu đô thị",
                 "subtitle": "Không gian sống xanh ven sông",
                 "description": "Khu đô thị có hệ sinh thái cư dân và tiện ích hiện hữu, phù hợp với nhu cầu ở thực.",
+                "image": "https://ik.imagekit.io/gw4av6kyj/New%20Folder/the-palm-city.jpg",
                 "highlights": [
                     "Không gian đô thị gắn với cảnh quan ven sông.",
                     "Khu dân cư và hệ thống tiện ích đã hình thành.",

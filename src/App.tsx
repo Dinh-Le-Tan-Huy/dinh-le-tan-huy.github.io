@@ -7,6 +7,7 @@ import ScrollToHash from './View/Components/ScrollToHash/ScrollToHash'
 import Footer from './View/Components/Footer/Footer'
 import About from './View/layout/About/About'
 import Sale from './View/layout/Sale/Sale'
+import { SaleDetail } from './View/layout/SaleDetail/SaleDetail.tsx'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/sale" element={<Sale />} />
+          <Route path="/SaleDetail" element={<SaleDetail />} />
         </Routes>
       </main>
       <Footer />

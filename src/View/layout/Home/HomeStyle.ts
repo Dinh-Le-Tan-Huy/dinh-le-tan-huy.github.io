@@ -47,17 +47,22 @@ export const sectionWrapper: CSSProperties = {
     maxWidth: '960px',
     margin: '0 auto',
     padding: 'clamp(72px, 10vw, 112px) clamp(20px, 5vw, 40px)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    textAlign: 'left',
 };
 
 // ─── Section label (replaces pill badge — lean left-accent style) ─────────────
 export const sectionBadge: CSSProperties = {
-    display: 'inline-flex',
+    display: 'flex',
+    width: 'fit-content',
     alignItems: 'center',
     gap: '10px',
     paddingLeft: '12px',
     borderLeft: `3px solid ${tokens.accent}`,
     color: tokens.accent,
-    fontSize: '11px',
+    fontSize: '16px',
     fontWeight: 700,
     letterSpacing: '0.14em',
     textTransform: 'uppercase',

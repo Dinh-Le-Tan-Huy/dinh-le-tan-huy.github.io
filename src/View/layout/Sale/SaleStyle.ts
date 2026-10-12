@@ -24,11 +24,11 @@ export const sectionBadge: CSSProperties = {
     paddingLeft: '12px',
     borderLeft: `3px solid ${tokens.accent}`,
     color: tokens.accent,
-    fontSize: '11px',
+    fontSize: '18px',
     fontWeight: 700,
     letterSpacing: '0.14em',
     textTransform: 'uppercase',
-    marginBottom: '16px',
+    marginBottom: '4px',
     width: 'fit-content',
     fontFamily: tokens.fontMono,
 }
@@ -110,6 +110,10 @@ export const styles = {
         margin: '0 0 20px 0',
     } as CSSProperties,
 
+    contactLink: {
+        textDecoration: 'none',
+    } as CSSProperties,
+
     contactBtn: {
         display: 'inline-flex',
         alignItems: 'center',
@@ -127,6 +131,11 @@ export const styles = {
         textDecoration: 'none',
         letterSpacing: '0.01em',
         fontFamily: tokens.fontSans,
+    } as CSSProperties,
+
+    contactBtnHover: {
+        transform: 'translateY(-1px)',
+        backgroundColor: tokens.inkMid,
     } as CSSProperties,
 
     sectionWrapper: {
@@ -164,5 +173,259 @@ export const styles = {
         display: 'flex',
         flexDirection: 'column',
         gap: '4px',
+    } as CSSProperties,
+
+    // ── Search widget ──────────────────────────────────────────────────────────
+    searchWidget: {
+        width: '100%',
+        marginTop: '24px',
+        padding: '24px',
+        borderRadius: '12px',
+        backgroundColor: tokens.paperCard,
+        border: `1px solid ${tokens.rule}`,
+        boxShadow: tokens.shadow,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '16px',
+        boxSizing: 'border-box',
+    } as CSSProperties,
+
+    searchTitle: {
+        margin: 0,
+        fontSize: 'clamp(16px, 2.2vw, 19px)',
+        fontWeight: 700,
+        color: tokens.ink,
+    } as CSSProperties,
+
+    searchInputWrap: {
+        position: 'relative',
+        width: '100%',
+    } as CSSProperties,
+
+    searchInput: {
+        width: '100%',
+        padding: '12px 42px 12px 16px',
+        borderRadius: '8px',
+        border: `1px solid ${tokens.rule}`,
+        backgroundColor: tokens.paper,
+        color: tokens.ink,
+        fontSize: '14px',
+        fontFamily: tokens.fontSans,
+        outline: 'none',
+        boxSizing: 'border-box',
+        transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
+    } as CSSProperties,
+
+    searchClearBtn: {
+        position: 'absolute',
+        right: '12px',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        background: 'transparent',
+        border: 'none',
+        cursor: 'pointer',
+        color: tokens.inkMuted,
+        fontSize: '16px',
+        padding: '4px',
+        lineHeight: 1,
+    } as CSSProperties,
+
+    suggestionRow: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: '8px',
+        alignItems: 'center',
+    } as CSSProperties,
+
+    suggestionLabel: {
+        fontSize: '12px',
+        color: tokens.inkMuted,
+        fontWeight: 500,
+    } as CSSProperties,
+
+    suggestionChip: {
+        border: `1px solid ${tokens.rule}`,
+        backgroundColor: tokens.paperSubtle,
+        color: tokens.inkMid,
+        fontSize: '12px',
+        padding: '4px 10px',
+        borderRadius: '16px',
+        cursor: 'pointer',
+        transition: 'all 0.15s ease',
+        fontFamily: tokens.fontSans,
+    } as CSSProperties,
+
+    suggestionChipActive: {
+        backgroundColor: tokens.accent,
+        color: tokens.paper,
+        borderColor: tokens.accent,
+    } as CSSProperties,
+
+    searchResultsList: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '12px',
+        marginTop: '4px',
+    } as CSSProperties,
+
+    searchResultsCount: {
+        fontSize: '13px',
+        color: tokens.inkMid,
+        fontWeight: 600,
+    } as CSSProperties,
+
+    searchResultEmpty: {
+        padding: '16px',
+        borderRadius: '8px',
+        backgroundColor: tokens.paperSubtle,
+        color: tokens.inkMid,
+        fontSize: '13.5px',
+        lineHeight: 1.6,
+    } as CSSProperties,
+
+    searchResultItems: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '12px',
+    } as CSSProperties,
+
+    searchResultItem: {
+        padding: '14px 16px',
+        borderRadius: '8px',
+        border: `1px solid ${tokens.rule}`,
+        backgroundColor: tokens.paper,
+        boxShadow: tokens.shadow,
+    } as CSSProperties,
+
+    searchResultItemHeader: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: '8px',
+        marginBottom: '6px',
+    } as CSSProperties,
+
+    searchResultTag: {
+        fontSize: '11px',
+        fontWeight: 700,
+        color: tokens.accent,
+        backgroundColor: tokens.accentLight,
+        padding: '2px 8px',
+        borderRadius: '4px',
+        fontFamily: tokens.fontMono,
+    } as CSSProperties,
+
+    searchResultContent: {
+        margin: 0,
+        fontSize: '13.5px',
+        lineHeight: 1.6,
+        color: tokens.ink,
+        whiteSpace: 'pre-line',
+    } as CSSProperties,
+
+    // ── Project card ──────────────────────────────────────────────────────────
+    projectCardBase: {
+        width: '100%',
+        borderRadius: '10px',
+        border: '1px solid transparent',
+        boxShadow: 'none',
+        transition: 'all 0.3s ease',
+    } as CSSProperties,
+
+    projectCardSelected: {
+        border: `1px solid ${tokens.accent}`,
+        boxShadow: tokens.shadow,
+    } as CSSProperties,
+
+    // ── FAQ ───────────────────────────────────────────────────────────────────
+    faqList: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '0',
+        width: '100%',
+    } as CSSProperties,
+
+    faqRow: {
+        display: 'flex',
+        gap: '16px',
+        position: 'relative',
+    } as CSSProperties,
+
+    faqTimeline: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: '32px',
+        flexShrink: 0,
+    } as CSSProperties,
+
+    faqDot: {
+        width: '10px',
+        height: '10px',
+        borderRadius: '50%',
+        backgroundColor: tokens.accent,
+        border: `2px solid ${tokens.accentMid}`,
+        marginTop: '20px',
+        flexShrink: 0,
+        zIndex: 1,
+    } as CSSProperties,
+
+    faqLine: {
+        width: '1px',
+        flex: 1,
+        backgroundColor: tokens.rule,
+        marginTop: '6px',
+    } as CSSProperties,
+
+    faqContentCol: {
+        flex: 1,
+    } as CSSProperties,
+
+    faqContentColSpaced: {
+        flex: 1,
+        paddingBottom: '32px',
+    } as CSSProperties,
+
+    faqCard: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '6px',
+        padding: '14px 18px',
+        borderRadius: '8px',
+        backgroundColor: tokens.paperCard,
+        border: `1px solid ${tokens.rule}`,
+        boxShadow: tokens.shadow,
+        transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
+    } as CSSProperties,
+
+    faqCategoryBadge: {
+        display: 'inline-flex',
+        alignItems: 'center',
+        padding: '2px 8px',
+        backgroundColor: tokens.accentLight,
+        border: `1px solid ${tokens.accentMid}`,
+        borderRadius: '4px',
+        fontSize: '11px',
+        fontWeight: 700,
+        color: tokens.accent,
+        letterSpacing: '0.06em',
+        width: 'fit-content',
+        marginBottom: '4px',
+        fontFamily: tokens.fontMono,
+    } as CSSProperties,
+
+    faqQuestion: {
+        fontSize: 'clamp(14px, 1.8vw, 16px)',
+        fontWeight: 700,
+        margin: 0,
+        color: tokens.ink,
+        fontFamily: tokens.fontSans,
+    } as CSSProperties,
+
+    faqAnswer: {
+        margin: '6px 0 0 0',
+        color: tokens.inkMid,
+        fontSize: '13px',
+        lineHeight: 1.6,
+        fontFamily: tokens.fontSans,
     } as CSSProperties,
 }

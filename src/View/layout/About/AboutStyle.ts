@@ -2,19 +2,19 @@ import type { CSSProperties } from 'react'
 
 // Refined Slate tokens (light-mode)
 export const tokens = {
-    ink:         'oklch(14% 0.015 260)',
-    inkMid:      'oklch(42% 0.012 255)',
-    inkMuted:    'oklch(66% 0.008 255)',
-    paper:       'oklch(98.5% 0.005 250)',
+    ink: 'oklch(14% 0.015 260)',
+    inkMid: 'oklch(42% 0.012 255)',
+    inkMuted: 'oklch(66% 0.008 255)',
+    paper: 'oklch(98.5% 0.005 250)',
     paperSubtle: 'oklch(96.5% 0.008 250)',
-    paperCard:   'oklch(100% 0 0)',
-    accent:      'oklch(52% 0.18 265)',
+    paperCard: 'oklch(100% 0 0)',
+    accent: 'oklch(52% 0.18 265)',
     accentLight: 'oklch(52% 0.18 265 / 0.08)',
-    accentMid:   'oklch(52% 0.18 265 / 0.20)',
-    rule:        'oklch(90% 0.01 250)',
-    shadow:      '0 2px 12px oklch(0% 0 0 / 0.06)',
-    fontSans:    "'Inter', system-ui, -apple-system, sans-serif",
-    fontMono:    "'ui-monospace', 'Cascadia Code', Consolas, monospace",
+    accentMid: 'oklch(52% 0.18 265 / 0.20)',
+    rule: 'oklch(90% 0.01 250)',
+    shadow: '0 2px 12px oklch(0% 0 0 / 0.06)',
+    fontSans: "'Inter', system-ui, -apple-system, sans-serif",
+    fontMono: "'ui-monospace', 'Cascadia Code', Consolas, monospace",
 };
 
 export const sectionBadge: CSSProperties = {
@@ -24,11 +24,11 @@ export const sectionBadge: CSSProperties = {
     paddingLeft: '12px',
     borderLeft: `3px solid ${tokens.accent}`,
     color: tokens.accent,
-    fontSize: '11px',
+    fontSize: '18px',
     fontWeight: 700,
     letterSpacing: '0.14em',
     textTransform: 'uppercase',
-    marginBottom: '16px',
+    marginBottom: '4px',
     width: 'fit-content',
     fontFamily: tokens.fontMono,
 }

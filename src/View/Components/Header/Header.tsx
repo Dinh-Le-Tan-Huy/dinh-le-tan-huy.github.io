@@ -189,7 +189,6 @@ const Header = () => {
                         aria-label="Switch language"
                     >
                         <GlobeIcon />
-                        <span>{currentLang.flag}</span>
                         {!isMobile && <span>{currentLang.code.toUpperCase()}</span>}
                         <ChevronIcon open={langOpen} />
                     </button>
