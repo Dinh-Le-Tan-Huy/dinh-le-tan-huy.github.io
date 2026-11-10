@@ -1,0 +1,419 @@
+{
+    "project": {
+        "id": "palm-river",
+        "name": "Palm River",
+        "slogan": "Đô thị nghỉ dưỡng giữa lòng Sài Gòn – Tái tạo năng lượng mỗi ngày",
+        "category": "Căn hộ cao cấp & Đô thị nghỉ dưỡng",
+        "description": "Palm River được định vị là khu đô thị nghỉ dưỡng cao cấp khép kín ven sông tại Nam Rạch Chiếc, hội tụ tiêu chuẩn sống xanh biophilic, quy mô đa chức năng cùng hạ tầng kỹ thuật vượt trội.",
+        "developer": {
+            "name": "Liên doanh Nam Rạch Chiếc",
+            "associated_brand": "Keppel Land (Singapore), Tiến Phước và Trần Thái"
+        },
+        "design_unit": {
+            "name": "DP Architects",
+            "country": "Singapore",
+            "note": "Đơn vị tư vấn thiết kế kiến trúc uy tín hàng đầu thế giới."
+        },
+        "architecture_unit": {
+            "name": "Ong & Associates Architects Pte Ltd (OOA).",
+            "country": "Singapore",
+            "note": "Đơn vị tư vấn thiết kế kiến trúc uy tín hàng đầu thế giới."
+        },
+        "construction_unit": {
+            "name": "Đang cập nhật",
+            "short_name": "N/A"
+        },
+        "location": {
+            "address": "Mặt tiền đường Song Hành cao tốc, phường An Phú, TP. Thủ Đức, TP. Hồ Chí Minh",
+            "area": "Nam Rạch Chiếc",
+            "river_frontage": "Công viên ven sông dài gần 3km ôm trọn bán đảo",
+            "nearby_connections": [
+                {
+                    "destination": "Nút giao An Phú",
+                    "estimated_travel_time": "Khoảng 3-5 phút",
+                    "status": "Kết nối nhanh thông qua Song Hành cao tốc và Mai Chí Thọ"
+                },
+                {
+                    "destination": "Khu đô thị mới Thủ Thiêm & Quận 1",
+                    "estimated_travel_time": "Khoảng 10-12 phút",
+                    "status": "Di chuyển qua đại lộ Mai Chí Thọ"
+                },
+                {
+                    "destination": "Khu Công nghệ cao & Làng Đại học",
+                    "estimated_travel_time": "Khoảng 10-15 phút",
+                    "status": "Di chuyển theo hướng Bắc qua đường Võ Nguyên Giáp"
+                },
+                {
+                    "destination": "Sân bay Quốc tế Long Thành",
+                    "estimated_travel_time": "Khoảng 25-30 phút",
+                    "status": "Kết nối trực tiếp qua Cao tốc TP.HCM – Long Thành – Dầu Giây"
+                }
+            ],
+            "nearby_infrastructure": [
+                {
+                    "name": "Ga Metro",
+                    "description": "Tuyến đường sắt đô thị kết nối khu vực Nam Rạch Chiếc với trung tâm TP.HCM và các khu vực phụ cận.",
+                    "distance": "Vài trăm mét",
+                    "status": "Cư dân có thể dễ dàng đi bộ từ dự án đến ga"
+                },
+                {
+                    "name": "Ga đường sắt cao tốc Bắc - Nam (Thủ Thiêm)",
+                    "description": "Đầu mối giao thông đường sắt quốc gia kết nối TP.HCM với các tỉnh miền Trung và miền Bắc.",
+                    "estimated_travel_time": "Khoảng 5-7 phút",
+                    "status": "Thuộc quy hoạch hạ tầng giao thông trọng điểm"
+                },
+                {
+                    "name": "Hệ thống giáo dục & Y tế quốc tế lân cận",
+                    "description": "Hệ sinh thái tiện ích ngoại khu cao cấp bao quanh Nam Rạch Chiếc.",
+                    "facilities": [
+                        {
+                            "name": "The American School (TAS)",
+                            "travel_time": "1 phút"
+                        },
+                        {
+                            "name": "Australian International School (AIS)",
+                            "travel_time": "5 phút"
+                        },
+                        {
+                            "name": "American International Hospital (AIH)",
+                            "travel_time": "8 phút"
+                        },
+                        {
+                            "name": "Vietnam Australia International School (VAS)",
+                            "travel_time": "10 phút"
+                        },
+                        {
+                            "name": "British International School (BIS)",
+                            "travel_time": "12 phút"
+                        },
+                        {
+                            "name": "International School Ho Chi Minh City (ISHCMC)",
+                            "travel_time": "12 phút"
+                        }
+                    ]
+                },
+                {
+                    "name": "Trung tâm thương mại lân cận",
+                    "description": "Chuỗi trung tâm thương mại và dịch vụ giải trí khu vực xung quanh.",
+                    "facilities": [
+                        {
+                            "name": "Palm Mall / Khối đế Palm River",
+                            "travel_time": "1 phút"
+                        },
+                        {
+                            "name": "Lotte Mall",
+                            "travel_time": "8 phút"
+                        },
+                        {
+                            "name": "Estella Place",
+                            "travel_time": "12 phút"
+                        }
+                    ]
+                }
+            ]
+        },
+        "project_scale": {
+            "land_area_hectares": 1.89,
+            "tower_count": 4,
+            "floors": {
+                "min": null,
+                "max": null
+            },
+            "total_units": 704,
+            "parking": {
+                "basement_area_hectares_approx": null,
+                "car_capacity_approx": 704,
+                "motorbike_capacity_approx": null,
+                "note": "1 ô tô / 1 căn hộ – đảm bảo 100%"
+            }
+        },
+        "product_types": [
+            {
+                "id": "studio",
+                "name": "Studio",
+                "description": ""
+            },
+            {
+                "id": "1pn",
+                "name": "1 Phòng ngủ",
+                "description": ""
+            },
+            {
+                "id": "2pn",
+                "name": "2 Phòng ngủ",
+                "description": ""
+            },
+            {
+                "id": "3pn",
+                "name": "3 Phòng ngủ",
+                "description": ""
+            },
+            {
+                "id": "duplex",
+                "name": "Duplex",
+                "description": ""
+            },
+            {
+                "id": "penthouse",
+                "name": "Penthouse",
+                "description": ""
+            },
+            {
+                "id": "shophouse",
+                "name": "Shophouse",
+                "description": ""
+            },
+            {
+                "id": "officetel",
+                "name": "Officetel",
+                "description": ""
+            }
+        ],
+        "tower_inventory_reference": [],
+        "apartment_layouts": [
+            {
+                "type": "Căn 2PN (Tiêu chuẩn)",
+                "area_unit": "m²",
+                "size_range": "84.9 - 85.9"
+            },
+            {
+                "type": "Căn 2PN (Đặc biệt)",
+                "area_unit": "m²",
+                "size_range": "120.2 - 121.9"
+            },
+            {
+                "type": "Căn 3PN (Tiêu chuẩn)",
+                "area_unit": "m²",
+                "size_range": "125.3 - 126.1"
+            },
+            {
+                "type": "Căn 3PN (Đặc biệt)",
+                "area_unit": "m²",
+                "size_range": "157.0"
+            }
+        ],
+        "featured_apartment_options": [],
+        "handover_specifications": {
+            "clear_ceiling_height_m": 3.0,
+            "doors_and_windows": {
+                "main_door": {
+                    "description": "Cửa 2 cánh lớn, đạt tiêu chuẩn chống cháy PCCC cao cấp",
+                    "lock_features": [
+                        "Vân tay",
+                        "Mã số",
+                        "Thẻ từ",
+                        "Chìa khóa cơ"
+                    ],
+                    "brands_mentioned": [
+                        "Nhập khẩu từ Đức"
+                    ],
+                    "brand_confirmation": "Cần đối chiếu danh mục thiết bị bàn giao chính thức."
+                },
+                "windows": {
+                    "description": "Full kính Low-E cách nhiệt, chống tia UV, mở rộng tầm nhìn",
+                    "noise_reduction_claim": ""
+                }
+            },
+            "air_conditioning": "Hệ thống điều hòa âm trần cao cấp",
+            "kitchen": {
+                "brand": "Bosch",
+                "country": "Đức",
+                "features": [
+                    "Bếp điện từ",
+                    "Lò nướng âm tủ",
+                    "Đảo bếp tích hợp",
+                    "Đá nhân tạo mặt bóng dễ lau chùi"
+                ],
+                "confirmation": "Cần đối chiếu danh mục thiết bị bàn giao chính thức."
+            },
+            "bathroom": {
+                "brand": "",
+                "country": "",
+                "items": [
+                    "Bồn rửa mặt (Lavabo)",
+                    "Bồn cầu treo tường với két nước âm"
+                ],
+                "confirmation": "Cần đối chiếu danh mục thiết bị bàn giao chính thức."
+            },
+            "elevators": {
+                "brand": "",
+                "count_per_floor": 5,
+                "ratio": "Khoảng 1 căn / 1 thang / tầng",
+                "confirmation": ""
+            },
+            "flooring": {
+                "common_areas": "",
+                "living_room": "",
+                "bedrooms": "Lót sàn gỗ cao cấp",
+                "laundry_loggia": "",
+                "bathroom_and_loggia": "Gạch Porcelain 60x60 chống trượt, vân đá tự nhiên"
+            },
+            "wall_and_slab": {
+                "wall_thickness_cm": 20,
+                "slab_thickness_cm": 31
+            },
+            "water_treatment": "Hệ thống lọc tinh + khử khuẩn bằng tia UV",
+            "odor_control": "Hệ thống xử lý và chống mùi chuyên biệt",
+            "intercom": "Hệ thống Video Call kết nối an ninh từ khối đế"
+        },
+        "amenities": {
+            "total_count": 68,
+            "natural_features": "Công viên ven sông dài gần 3km",
+            "privacy": "Khu dân cư khép kín, đảm bảo tính riêng tư và an ninh tuyệt đối.",
+            "highlights": [
+                "Hồ bơi dài 70m & Hồ bơi vô cực",
+                "Khu tắm khoáng nóng Onsen & Phòng massage",
+                "Đài ngắm cảnh view sông & view toàn cảnh thành phố",
+                "Công viên nước mini cho trẻ em",
+                "Sân golf / Phòng tập golf mô phỏng",
+                "Rạp chiếu phim nội khu",
+                "Khu tiệc nướng BBQ ngoài trời & Thư viện đọc sách",
+                "Tổ hợp giải trí đa chức năng"
+            ],
+            "key_differentiators": [
+                "Khu compound khép kín, riêng tư",
+                "Công viên ven sông 3km",
+                "Thiết kế biophilic – tối ưu ánh sáng tự nhiên và mảng xanh",
+                "68 tiện ích nội khu",
+                "Mật độ căn/tầng siêu thấp (4-6 căn/tầng)",
+                "Tỷ lệ thang máy 1:1",
+                "Khối thương mại 30.000 m² tích hợp"
+            ]
+        },
+        "brand_pillars": [
+            {
+                "name": "Private",
+                "description": "Khu dân cư khép kín, đảm bảo tính riêng tư và an ninh tuyệt đối."
+            },
+            {
+                "name": "Biophilic",
+                "description": "Thiết kế vị thiên nhiên, tối ưu ánh sáng tự nhiên, gió trời và mảng xanh bao phủ."
+            },
+            {
+                "name": "Scale",
+                "description": "Khu đô thị đa chức năng đáp ứng trọn vẹn nhu cầu Sống - Làm việc - Giải trí."
+            },
+            {
+                "name": "International Landmarks",
+                "description": "Định hướng kiến trúc mang tính biểu tượng tầm cỡ quốc tế."
+            }
+        ],
+        "scale_and_products": {
+            "land_area": "1.89 ha",
+            "building_density": "Gần 51%",
+            "towers_count": 4,
+            "commercial_podium": "30,000 m² (Tầng trệt & Tầng 2, có thang cuốn riêng)",
+            "total_units": 704,
+            "product_breakdown": {
+                "residential_apartments": 620,
+                "officetel_units": 71,
+                "shophouses": 13
+            },
+            "unit_types": [
+                "Studio",
+                "1PN",
+                "2PN",
+                "3PN",
+                "Duplex",
+                "Penthouse",
+                "Shophouse"
+            ]
+        },
+        "architectural_and_elevator_specs": {
+            "units_per_floor": "4 - 6 căn / tầng (mật độ siêu thấp)",
+            "elevators_per_floor": 5,
+            "elevator_ratio": "Khoảng 1 căn / 1 thang / tầng (Đảm bảo hoàn toàn không bị kẹt thang máy)",
+            "corner_units_percentage": "80%",
+            "ventilation_design": "2 thoáng (Mỗi căn hộ có 2 hướng thông thoáng tự nhiên)",
+            "sky_void_floors": [
+                "Tầng trệt",
+                "Tầng 2",
+                "Tầng 20"
+            ],
+            "parking_ratio": "1 ô tô / 1 căn hộ (Đảm bảo 100%)",
+            "ceiling_height": "3.0 m"
+        },
+        "legal": {
+            "construction_permit": {
+                "reported_date": "",
+                "status": "Đã có giấy phép xây dựng phần móng/hầm"
+            },
+            "foreign_buyers": {
+                "reported_ownership_term": "50 năm theo quy định pháp luật",
+                "note": "Áp dụng cho căn hộ ở; Officetel và Shophouse sở hữu 50 năm. Cần kiểm tra điều kiện pháp luật tại thời điểm giao dịch."
+            },
+            "area_tolerance": {
+                "reported": "",
+                "note": ""
+            },
+            "sale_eligibility": {
+                "status": "",
+                "note": ""
+            },
+            "master_plan": "Đã phê duyệt quy hoạch chi tiết 1/500",
+            "bank_guarantee": "Đã được ngân hàng lớn bảo lãnh dòng tiền và tiến độ",
+            "ownership_details": {
+                "residential_apartment": {
+                    "vietnamese_citizens": "Sở hữu lâu dài",
+                    "foreigners": "Sở hữu 50 năm theo quy định pháp luật"
+                },
+                "officetel_and_shophouse": "Sở hữu 50 năm"
+            }
+        },
+        "construction_progress": {
+            "reported_status": "",
+            "as_of": "",
+            "display_rule": ""
+        },
+        "sales_information": {
+            "price": {
+                "status": "",
+                "display_text": "",
+                "do_not_assume": []
+            },
+            "payment_policy": {
+                "status": "",
+                "reported_claims": [],
+                "display_rule": ""
+            },
+            "banking": {
+                "reported_banks": [],
+                "status": ""
+            },
+            "rental_commitment": {
+                "reported_policy": "",
+                "status": ""
+            },
+            "investment_horizon": []
+        }
+    },
+    "sales_scripts": {
+        "intro_call": {
+            "title": "",
+            "text": ""
+        },
+        "follow_up_call": {
+            "title": "",
+            "text": ""
+        },
+        "interest_rate_objection": {
+            "title": "",
+            "text": ""
+        },
+        "investment_discovery": {
+            "title": "",
+            "text": ""
+        }
+    },
+    "website_display": {
+        "sections": [],
+        "contact": {
+            "consultant_name": "",
+            "company": "",
+            "phone": "",
+            "cta_text": ""
+        },
+        "chatbot_rules": []
+    },
+    "data_quality_notes": []
+}

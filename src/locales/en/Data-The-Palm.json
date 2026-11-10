@@ -1,0 +1,168 @@
+{
+    "project": {
+        "id": "the-palm",
+        "name": "The Palm",
+        "slogan": "",
+        "category": "",
+        "description": "",
+        "developer": {
+            "name": "",
+            "associated_brand": ""
+        },
+        "design_unit": {
+            "name": "",
+            "country": "",
+            "note": ""
+        },
+        "architecture_unit": {
+            "name": "",
+            "country": "",
+            "note": ""
+        },
+        "construction_unit": {
+            "name": "",
+            "short_name": ""
+        },
+        "location": {
+            "address": "",
+            "area": "",
+            "river_frontage": "",
+            "nearby_connections": [],
+            "nearby_infrastructure": []
+        },
+        "project_scale": {
+            "land_area_hectares": null,
+            "tower_count": null,
+            "floors": {
+                "min": null,
+                "max": null
+            },
+            "total_units": null,
+            "parking": {
+                "basement_area_hectares_approx": null,
+                "car_capacity_approx": null,
+                "motorbike_capacity_approx": null,
+                "note": ""
+            }
+        },
+        "product_types": [],
+        "tower_inventory_reference": [],
+        "apartment_layouts": [],
+        "featured_apartment_options": [],
+        "handover_specifications": {
+            "clear_ceiling_height_m": null,
+            "doors_and_windows": {
+                "main_door": {
+                    "description": "",
+                    "lock_features": [],
+                    "brands_mentioned": [],
+                    "brand_confirmation": ""
+                },
+                "windows": {
+                    "description": "",
+                    "noise_reduction_claim": ""
+                }
+            },
+            "air_conditioning": "",
+            "kitchen": {
+                "brand": "",
+                "country": "",
+                "features": [],
+                "confirmation": ""
+            },
+            "bathroom": {
+                "brand": "",
+                "country": "",
+                "confirmation": ""
+            },
+            "elevators": {
+                "brand": "",
+                "confirmation": ""
+            },
+            "flooring": {
+                "common_areas": "",
+                "living_room": "",
+                "bedrooms": "",
+                "laundry_loggia": ""
+            }
+        },
+        "amenities": {
+            "privacy": "",
+            "highlights": [],
+            "key_differentiators": []
+        },
+        "legal": {
+            "construction_permit": {
+                "reported_date": "",
+                "status": ""
+            },
+            "foreign_buyers": {
+                "reported_ownership_term": "",
+                "note": ""
+            },
+            "area_tolerance": {
+                "reported": "",
+                "note": ""
+            },
+            "sale_eligibility": {
+                "status": "",
+                "note": ""
+            }
+        },
+        "construction_progress": {
+            "reported_status": "",
+            "as_of": "",
+            "display_rule": ""
+        },
+        "sales_information": {
+            "price": {
+                "status": "",
+                "display_text": "",
+                "do_not_assume": []
+            },
+            "payment_policy": {
+                "status": "",
+                "reported_claims": [],
+                "display_rule": ""
+            },
+            "banking": {
+                "reported_banks": [],
+                "status": ""
+            },
+            "rental_commitment": {
+                "reported_policy": "",
+                "status": ""
+            },
+            "investment_horizon": []
+        }
+    },
+    "sales_scripts": {
+        "intro_call": {
+            "title": "",
+            "text": ""
+        },
+        "follow_up_call": {
+            "title": "",
+            "text": ""
+        },
+        "interest_rate_objection": {
+            "title": "",
+            "text": ""
+        },
+        "investment_discovery": {
+            "title": "",
+            "text": ""
+        }
+    },
+    "website_display": {
+        "sections": [],
+        "contact": {
+            "consultant_name": "",
+            "company": "",
+            "phone": "",
+            "cta_text": ""
+        },
+        "chatbot_rules": []
+    },
+    "data_quality_notes": []
+}

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import CardItem from "../../Components/CardItem/CardItem"
 import { styles, sectionBadge, sectionTitle, sectionDivider, tokens } from "./SaleStyle"
 import { useAbout } from "../../../ViewModel/useAbout"
@@ -44,6 +44,7 @@ interface SearchItem {
 }
 
 const Sale = () => {
+    const navigate = useNavigate();
     const { highlightedId, btnHover, setBtnHover, } = useAbout();
     const { t, i18n } = useTranslation();
 
@@ -111,7 +112,7 @@ const Sale = () => {
                         {t('salePage.introText')}
                     </p>
                     {/* <Link to="/contact" style={styles.contactLink}> */}
-                    <Link to="/SaleDetail" style={styles.contactLink}>
+                    <Link to="/SaleDetail/the-prive" style={styles.contactLink}>
                         <button
                             style={btnHover ? { ...styles.contactBtn, ...styles.contactBtnHover } : styles.contactBtn}
                             onMouseEnter={() => setBtnHover(true)}
@@ -262,7 +263,7 @@ const Sale = () => {
                                     <CardItem
                                         title={item.title}
                                         des={item.subtitle}
-                                        // onActionClick={() => { navigate(`/project/${item.id}`) }}
+                                        onActionClick={() => { navigate(`/SaleDetail/${item.id}`) }}
                                         responsibilities={item.highlights}
                                         image={item.image}
                                         containerStyle={{}}

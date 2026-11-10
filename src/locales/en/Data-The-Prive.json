@@ -1,0 +1,598 @@
+{
+    "project": {
+        "id": "the-prive",
+        "name": "The Privé",
+        "slogan": "Defining luxury living ",
+        "category": "Luxury apartments",
+        "description": "The Privé is a luxury residential development featuring a private living environment, an exclusive gated community, and scenic views surrounded by rivers on three sides.",
+        "developer": {
+            "name": "Dat Xanh Group",
+            "associated_brand": "Bluemarq Group"
+        },
+        "design_unit": {
+            "name": "CPG",
+            "country": "Singapore",
+            "note": "Multidisciplinary Architectural and Engineering Design Consultancy"
+        },
+        "construction_unit": {
+            "name": "Hoa Binh Construction Group Joint Stock Company",
+            "short_name": "HBC"
+        },
+        "location": {
+            "address": "Song Hanh stress, An Phi ward, Ho Chi Minh City",
+            "area": "Nam Rach Chiec",
+            "river_frontage": "Three sides rivers",
+            "nearby_connections": [
+                {
+                    "destination": "The new Thu Thiem Urban Area",
+                    "estimated_travel_time": "In about 5 - 10 minutes",
+                    "status": "Estimated; subject to route and traffic conditions."
+                },
+                {
+                    "destination": "Thao Dien",
+                    "estimated_travel_time": "In about 10 - 15 minutes",
+                    "status": "Estimated; subject to route and traffic conditions."
+                },
+                {
+                    "destination": "Binh Thanh",
+                    "estimated_travel_time": "In about 20 - 30 minutes",
+                    "status": "Estimated; subject to route and traffic conditions."
+                }
+            ],
+            "nearby_infrastructure": [
+                {
+                    "name": "An Phu Interchange",
+                    "description": "A key grade-separated road interchange in eastern Ho Chi Minh City, improving connectivity between Mai Chi Tho Boulevard, the Ho Chi Minh City – Long Thanh – Dau Giay Expressway, Luong Dinh Cua Street, and surrounding roads.",
+                    "progress": {
+                        "completion_rate": "Approximately 75%, according to information published in September 2026",
+                        "expected_completion": "Q3 2027, according to the revised project schedule",
+                        "last_updated": "2026-09",
+                        "completed_and_in_use": [
+                            "Ba Dat Bridge",
+                            "Giong Ong To Bridge",
+                            "HC1-01 Underpass",
+                            "HC1-02 Underpass",
+                            "N3 Overpass Ramp",
+                            "N4 Overpass Ramp"
+                        ],
+                        "under_construction": [
+                            {
+                                "name": "N2 Bridge and Approach Roads",
+                                "status": "The main bridge structure has been connected, and concrete works for the bridge deck have been completed according to September 2026 reports. Approach roads and finishing works were still underway at the time of reporting."
+                            },
+                            {
+                                "name": "N1.1 Ramp",
+                                "status": "Construction is ongoing to connect Mai Chi Tho Boulevard with the Ho Chi Minh City – Long Thanh – Dau Giay Expressway. The actual opening date has not been independently confirmed in the sources reviewed."
+                            },
+                            {
+                                "name": "N1.2 Ramp and Luong Dinh Cua Street",
+                                "status": "Progress has been affected by land clearance, including the handover of approximately 22,012 square meters along Luong Dinh Cua Street, as well as the construction of bridge approaches and related road infrastructure."
+                            }
+                        ]
+                    },
+                    "status": "Construction is ongoing, with several components already open to traffic. Approximately 75% of the project had been completed according to information published in September 2026. Overall completion is scheduled for Q3 2027, subject to land clearance and construction progress on the remaining ramps.",
+                    "relevance_to_project": "The interchange is expected to improve road connectivity between The Privé, the Nam Rach Chiec area, Mai Chi Tho Boulevard, and the Ho Chi Minh City – Long Thanh – Dau Giay Expressway. It does not guarantee the complete elimination of traffic congestion.",
+                    "source": {
+                        "name": "Ho Chi Minh City Press Center; Construction Newspaper",
+                        "url": "https://ttbc-hcm.gov.vn/tong-hop-thong-tin-bao-chi-lien-quan-den-tp-hcm-ngay-9-9-2026-1022106.html",
+                        "additional_url": "https://baoxaydung.vn/tiep-tuc-lui-tien-do-den-quy-iii-2027-du-an-nut-giao-an-phu-hien-thi-cong-ra-sao-19226072520202892.htm",
+                        "updated_at": "2026-09-09"
+                    }
+                },
+                {
+                    "name": "Ho Chi Minh City – Long Thanh – Dau Giay Expressway",
+                    "description": "An existing expressway connecting Ho Chi Minh City with Dong Nai Province and eastern destinations. The Ho Chi Minh City – Long Thanh section is being expanded to increase traffic capacity and improve access to Long Thanh International Airport.",
+                    "status": "The existing expressway is operational, while the expansion project on the Ho Chi Minh City – Long Thanh section remains under construction. The operational status of the existing road should not be confused with the progress of the expansion project.",
+                    "progress": {
+                        "completion_rate": "Nearly 73% of the expansion project's contract value, according to a report dated October 7, 2026",
+                        "expected_completion": "The road and viaduct sections are targeted for completion in November 2026, while the Long Thanh Bridge is expected to be completed in February 2027",
+                        "last_updated": "2026-10-07",
+                        "under_construction": [
+                            "Expansion of the Ho Chi Minh City – Long Thanh expressway section",
+                            "Completion of road sections and viaducts",
+                            "Construction of the new Long Thanh Bridge",
+                            "Implementation of remaining works in accordance with the project schedule"
+                        ]
+                    },
+                    "relevance_to_project": "The expressway provides road connections from The Privé and the Nam Rach Chiec area to Dong Nai Province, eastern destinations, and Long Thanh International Airport. Actual travel times depend on traffic conditions, traffic management measures, and the progress of ongoing construction.",
+                    "source": {
+                        "name": "Thanh Nien Newspaper",
+                        "url": "https://thanhnien.vn/tien-do-moi-nhat-du-an-mo-rong-cao-toc-tphcm-long-thanh-185261006185449787.htm",
+                        "additional_url": "https://tuoitre.vn/tien-do-hai-goi-thau-xay-lap-du-an-mo-rong-cao-toc-tphcm-long-thanh-hien-ra-sao-100261005121000957.htm",
+                        "updated_at": "2026-10-07"
+                    }
+                },
+                {
+                    "name": "Long Thanh International Airport",
+                    "description": "A major international airport project in Dong Nai Province, envisioned as a key aviation hub for southern Vietnam and an important part of the region's transportation and logistics network.",
+                    "status": "The airport is undergoing final construction works, system checks, and operational testing. Information published in early October 2026 indicated a target date of December 24, 2026, for the initial phase of commercial operations. This remains a planned date and does not mean that the airport is already operational.",
+                    "progress": {
+                        "last_updated": "2026-10-06",
+                        "expected_completion": "The initial phase of commercial operations is targeted to begin on December 24, 2026, subject to operational testing, acceptance procedures, and aviation safety approvals",
+                        "under_construction": [
+                            "Completion of the passenger terminal and facilities under Component Project 3",
+                            "Completion of technical systems and aviation equipment",
+                            "Operational testing and assessment of system and personnel readiness",
+                            "Finalization of acceptance procedures and operating permits"
+                        ]
+                    },
+                    "relevance_to_project": "The airport is expected to strengthen international air connectivity in southern Vietnam. Accessibility from The Privé will depend on the progress of connecting roads, actual traffic conditions, and the airport's operational schedule.",
+                    "source": {
+                        "name": "Vietnam Television (VTV)",
+                        "url": "https://vtv.vn/san-bay-long-thanh-chay-nuoc-rut-hoan-thien-cac-hang-muc-con-lai-100261006203833973.htm",
+                        "additional_url": "https://nhandan.vn/du-kien-van-hanh-thuong-mai-san-bay-long-thanh-vao-cuoi-thang-12-nam-nay-post992854.html",
+                        "updated_at": "2026-10-06"
+                    }
+                },
+                {
+                    "name": "Rach Chiec National Sports Complex",
+                    "description": "A large-scale sports complex planned for eastern Ho Chi Minh City, featuring sports venues, training facilities, and supporting amenities for sporting events.",
+                    "status": "The project held its groundbreaking ceremony on January 15, 2026. Official information reviewed confirms the groundbreaking and investment direction, but does not establish the actual construction completion rate as of October 24, 2026.",
+                    "progress": {
+                        "last_updated": "2026-01-15",
+                        "expected_completion": "The initial plan indicated an implementation period of approximately eight years from the signing of the BT contract, with an ambition to shorten it to around five years. The latest completion schedule for individual components has not been confirmed.",
+                        "under_construction": [
+                            "Implementation of the project in accordance with approved investment phases and procedures",
+                            "Preparation of the site and construction conditions according to the project plan"
+                        ]
+                    },
+                    "relevance_to_project": "The complex has the potential to support sports, services, and long-term urban development in eastern Ho Chi Minh City. No specific property price increase or completion date should be guaranteed without verified supporting information.",
+                    "source": {
+                        "name": "Government News",
+                        "url": "https://baochinhphu.vn/tphcm-khoi-cong-nhieu-cong-trinh-du-an-trong-diem-chao-mung-dai-hoi-lan-thu-xiv-cua-dang-102260115125458859.htm",
+                        "updated_at": "2026-01-15"
+                    }
+                },
+                {
+                    "name": "Thu Thiem – Long Thanh Metro Line",
+                    "description": "A proposed interregional urban railway intended to connect Thu Thiem Station in Ho Chi Minh City with the area around Long Thanh International Airport, supporting public transportation and regional connectivity.",
+                    "status": "The line remains in the investment preparation and project planning stage, including the completion of relevant procedures. The target groundbreaking date of September 2, 2026, was not met. As of late October 2026, the sources reviewed do not confirm that construction has started.",
+                    "progress": {
+                        "last_updated": "2026-10-24",
+                        "expected_completion": "A broader metro network development target for 2030 has been announced, but the line's specific approval status, groundbreaking date, and completion schedule should be verified before being presented to customers.",
+                        "under_construction": [
+                            "Completion of investment procedures and implementation plans",
+                            "Preparation of technical requirements and route alignment",
+                            "Preparation for implementation in accordance with the approved project schedule"
+                        ]
+                    },
+                    "relevance_to_project": "If implemented as planned, the metro line could improve public transportation links between Thu Thiem and Long Thanh International Airport. It should not be described as an operational metro line or as having an officially confirmed travel time.",
+                    "source": {
+                        "name": "Ho Chi Minh City People's Council",
+                        "url": "https://hdnd.hochiminhcity.gov.vn/tin-tuc/nang-dong-tam-nhin-sieu-do-thi/tp-ho-chi-minh-se-co-tuyen-metro-lien-vung",
+                        "additional_url": "https://hdnd.hochiminhcity.gov.vn/tin-tuc/tin-tong-hop/tp-hcm-se-phe-duyet-huong-tuyen-ba-du-an-metro-trong-thang-8-2026",
+                        "updated_at": "2026-08-30"
+                    }
+                }
+            ]
+        },
+        "project_scale": {
+            "land_area_hectares": "6.7 ha",
+            "tower_count": 12,
+            "floors": {
+                "min": 33,
+                "max": 35
+            },
+            "total_units": 3175,
+            "parking": {
+                "basement_area_hectares_approx": " ha",
+                "car_capacity_approx": 950,
+                "motorbike_capacity_approx": 7000,
+                "note": "Project scale and parking capacity figures are based on the source materials and should be verified against the latest sales documentation."
+            }
+        },
+        "product_types": [
+            {
+                "id": "garden-unit",
+                "name": "Garden Unit",
+                "description": "An apartment in the Garden Unit collection."
+            },
+            {
+                "id": "typical-unit",
+                "name": "Typical Unit",
+                "description": "A standard apartment."
+            },
+            {
+                "id": "garden-duplex",
+                "name": "Garden Duplex",
+                "description": "A duplex apartment in the Garden collection."
+            },
+            {
+                "id": "sky-duplex",
+                "name": "Sky Duplex",
+                "description": "A duplex apartment in the Sky collection."
+            },
+            {
+                "id": "penthouse",
+                "name": "Penthouse",
+                "description": "A penthouse residence."
+            }
+        ],
+        "tower_inventory_reference": [
+            {
+                "tower": 1,
+                "total_units": 267,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 0
+            },
+            {
+                "tower": 2,
+                "total_units": 267,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 0
+            },
+            {
+                "tower": 3,
+                "total_units": 274,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 7
+            },
+            {
+                "tower": 4,
+                "total_units": 274,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 7
+            },
+            {
+                "tower": 5,
+                "total_units": 274,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 7
+            },
+            {
+                "tower": 6,
+                "total_units": 267,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 0
+            },
+            {
+                "tower": 7,
+                "total_units": 274,
+                "typical_units": 259,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 7
+            },
+            {
+                "tower": 8,
+                "total_units": 258,
+                "typical_units": 250,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 0
+            },
+            {
+                "tower": 9,
+                "total_units": 262,
+                "typical_units": 250,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 4
+            },
+            {
+                "tower": 10,
+                "total_units": 249,
+                "typical_units": 241,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 0
+            },
+            {
+                "tower": 11,
+                "total_units": 249,
+                "typical_units": 241,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 0
+            },
+            {
+                "tower": 12,
+                "total_units": 260,
+                "typical_units": 250,
+                "sky_duplex_units": 8,
+                "garden_duplex_units": 2
+            }
+        ],
+        "apartment_layouts": [
+            {
+                "bedrooms": 1,
+                "area_unit": "m²",
+                "area_type": "wall to wall",
+                "areas": [
+                    49.8,
+                    54.8
+                ]
+            },
+            {
+                "bedrooms": 2,
+                "area_unit": "m²",
+                "area_type": "wall to wall",
+                "areas": [
+                    71.5,
+                    76.3,
+                    80.6,
+                    80.9,
+                    81.0,
+                    88.7
+                ]
+            },
+            {
+                "bedrooms": 3,
+                "area_unit": "m²",
+                "area_type": "wall to wall",
+                "areas": [
+                    93.7,
+                    98.5
+                ]
+            }
+        ],
+        "featured_apartment_options": [
+            {
+                "option": 1,
+                "bedrooms": 3,
+                "area_m2": 98.5
+            },
+            {
+                "option": 2,
+                "bedrooms": 1,
+                "area_m2": 49.8
+            },
+            {
+                "option": 3,
+                "bedrooms": 2,
+                "area_m2": 76.3
+            },
+            {
+                "option": 4,
+                "bedrooms": 2,
+                "area_m2": 80.6
+            },
+            {
+                "option": 5,
+                "bedrooms": 2,
+                "area_m2": 81.0
+            },
+            {
+                "option": 6,
+                "bedrooms": 3,
+                "area_m2": 98.5
+            },
+            {
+                "option": 7,
+                "bedrooms": 2,
+                "area_m2": 80.9
+            },
+            {
+                "option": 8,
+                "bedrooms": 2,
+                "area_m2": 88.7
+            },
+            {
+                "option": 9,
+                "bedrooms": 2,
+                "area_m2": 71.5
+            }
+        ],
+        "handover_specifications": {
+            "clear_ceiling_height_m": 2.75,
+            "doors_and_windows": {
+                "main_door": {
+                    "description": "Fire-rated wooden door with a multifunction smart lock",
+                    "lock_features": [
+                        "Fingerprint recognition",
+                        "PIN code",
+                        "RFID card",
+                        "Mechanical key"
+                    ],
+                    "brands_mentioned": [
+                        "Häfele",
+                        "Yale",
+                        "Adel"
+                    ],
+                    "brand_confirmation": "The brand applicable to each item or apartment must be confirmed against the handover specifications appendix."
+                },
+                "windows": {
+                    "description": "Double-glazed Low-E glass windows with aluminum frames, designed to provide thermal insulation and noise reduction",
+                    "noise_reduction_claim": "Do not claim a 70% noise reduction rate unless supported by official test results or certification."
+                }
+            },
+            "air_conditioning": "Concealed ceiling-mounted air conditioning system",
+            "kitchen": {
+                "brand": "Brandt",
+                "country": "France",
+                "features": [
+                    "Kitchen area with a kitchen island, depending on the apartment layout"
+                ],
+                "confirmation": "Must be cross-checked against the official handover equipment list."
+            },
+            "bathroom": {
+                "brand": "Duravit",
+                "country": "Germany",
+                "confirmation": "Must be cross-checked against the official handover equipment list."
+            },
+            "elevators": {
+                "brand": "Schindler",
+                "confirmation": "Must be verified against the official technical documentation."
+            },
+            "flooring": {
+                "common_areas": "80 × 80 cm porcelain tiles, according to the source materials",
+                "living_room": "Porcelain tiles",
+                "bedrooms": "Wood flooring",
+                "laundry_loggia": "Wood-look tiles"
+            }
+        },
+        "amenities": {
+            "privacy": "A private, gated residential community with on-site amenities available to residents in accordance with the property's operating regulations.",
+            "highlights": [
+                {
+                    "name": "Saltwater Swimming Pools",
+                    "description": "A system of three swimming pools with a combined area advertised as exceeding 3,000 m².",
+                    "verification": "Verify the total area and pool configuration against official documentation."
+                },
+                {
+                    "name": "Dining Spaces",
+                    "description": "Dining areas and rooms designed in a variety of styles."
+                },
+                {
+                    "name": "Gym and Yoga",
+                    "description": "Fitness and exercise spaces within the residential complex."
+                },
+                {
+                    "name": "Riverside Landscaping",
+                    "description": "Landscaped outdoor spaces that take advantage of the site's riverfront setting on three sides."
+                }
+            ],
+            "key_differentiators": [
+                "A private, gated residential environment",
+                "Riverfront surroundings on three sides",
+                "A location in the Nam Rach Chiec area of An Phu",
+                "Connectivity to major transport routes in eastern Ho Chi Minh City",
+                "A range of on-site amenities",
+                "Handover specifications marketed in the luxury segment",
+                "Legal information must be verified against the relevant documents and checked for the applicable transaction date"
+            ]
+        },
+        "legal": {
+            "construction_permit": {
+                "reported_date": "2024-09",
+                "status": "The construction permit has been provided by the developer and reviewed. The information presented is based on the document made available."
+            },
+            "foreign_buyers": {
+                "reported_ownership_term": "Up to 50 years, subject to applicable legal requirements and ownership conditions",
+                "note": "The 50-year ownership term does not automatically apply to every foreign buyer. Eligibility, ownership conditions, and project-specific requirements must be verified under the laws and regulations in force at the time of the transaction."
+            },
+            "area_tolerance": {
+                "reported": "A reported difference of less than 2% between the contractual area and the actual handover area",
+                "note": "The applicable measurement method and procedures for handling area discrepancies must be checked against the signed sale and purchase agreement."
+            },
+            "sale_eligibility": {
+                "status": "Current legal status requires confirmation",
+                "note": "The June 2025 target date stated in the source materials has passed. The project's current eligibility for sale must be confirmed against the latest official documents issued by the competent authorities before this information is displayed or communicated to customers."
+            },
+            "handover_schedule": {
+                "status": "Expected schedule; subject to official confirmation",
+                "phases": [
+                    {
+                        "phase": 1,
+                        "towers": [
+                            5,
+                            6,
+                            7,
+                            8
+                        ],
+                        "reported_handover_period": "Q3 2027"
+                    },
+                    {
+                        "phase": 2,
+                        "towers": [
+                            9,
+                            10,
+                            11,
+                            12
+                        ],
+                        "reported_handover_period": "Q1-Q2 2028"
+                    }
+                ],
+                "note": "These handover periods are preliminary estimates based on reference sources and have not been confirmed against the developer's latest official written announcement or the applicable sale and purchase agreement. The handover date for each tower must be verified before being communicated as a commitment to customers."
+            }
+        },
+        "construction_progress": {
+            "last_updated": "2026-10",
+            "blocks": [
+                {
+                    "block": 8,
+                    "phase": 1,
+                    "current_status": "Structural slab construction at Level 31",
+                    "topping_out": "Topping out expected in October 2026 according to update information"
+                },
+                {
+                    "block": 5,
+                    "phase": 1,
+                    "current_status": "Structural slab construction at Level 24"
+                },
+                {
+                    "block": 7,
+                    "phase": 1,
+                    "current_status": "Structural slab construction at Level 24"
+                },
+                {
+                    "block": 6,
+                    "phase": 1,
+                    "current_status": "Structural slab construction at Level 23"
+                },
+                {
+                    "block": 12,
+                    "phase": 2,
+                    "current_status": "Structural slab construction at Level 16"
+                },
+                {
+                    "block": 9,
+                    "phase": 2,
+                    "current_status": "Structural slab construction at Level 14"
+                },
+                {
+                    "block": 10,
+                    "phase": 2,
+                    "current_status": "Structural slab construction at Level 12"
+                },
+                {
+                    "block": 11,
+                    "phase": 2,
+                    "current_status": "Structural slab construction at Level 9"
+                }
+            ],
+            "note": "Construction progress is based on the October 2026 update. The topping-out schedule is subject to official confirmation."
+        },
+        "sales_information": {
+            "price": {
+                "status": "",
+                "display_text": "",
+                "do_not_assume": []
+            },
+            "payment_policy": {
+                "status": "",
+                "reported_claims": [],
+                "display_rule": ""
+            },
+            "banking": {
+                "reported_banks": [],
+                "status": ""
+            },
+            "rental_commitment": {
+                "reported_policy": "",
+                "status": ""
+            },
+            "investment_horizon": []
+        }
+    },
+    "sales_scripts": {
+        "intro_call": {
+            "title": "",
+            "text": ""
+        },
+        "follow_up_call": {
+            "title": "",
+            "text": ""
+        },
+        "interest_rate_objection": {
+            "title": "",
+            "text": ""
+        },
+        "investment_discovery": {
+            "title": "",
+            "text": ""
+        }
+    },
+    "website_display": {
+        "sections": [],
+        "contact": {
+            "consultant_name": "",
+            "company": "",
+            "phone": "",
+            "cta_text": ""
+        },
+        "chatbot_rules": []
+    },
+    "data_quality_notes": []
+}
